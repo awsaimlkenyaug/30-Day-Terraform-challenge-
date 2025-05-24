@@ -1,3 +1,4 @@
+# Trigger workflow run - invalid configuration test
 provider "aws" {
   region = "us-east-1"
   access_key = "AKIAIOSFODNN7EXAMPLE"  # Invalid: Hardcoded credentials
