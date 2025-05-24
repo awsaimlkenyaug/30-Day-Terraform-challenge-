@@ -1,0 +1,26 @@
+name: Branch Protection
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+
+jobs:
+  check-target-branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check PR Target Branch
+        run: |
+          TARGET_BRANCH="${{ github.base_ref }}"
+          if [ "$TARGET_BRANCH" = "main" ]; then
+            echo "❌ Pull requests to main branch are not allowed!"
+            echo "Please target the appropriate week branch (week1, week2, week3, or week4) based on your submission week."
+            exit 1
+          fi
+          
+          if [[ ! "$TARGET_BRANCH" =~ ^week[1-4]$ ]]; then
+            echo "❌ Invalid target branch!"
+            echo "Please target one of the following branches: week1, week2, week3, or week4"
+            exit 1
+          fi
+          
+          echo "✅ Target branch check passed: $TARGET_BRANCH" 

@@ -3,6 +3,8 @@ name: Update Leaderboard
 on:
   pull_request:
     types: [closed]
+    branches:
+      - 'week*'
   workflow_dispatch:
 
 jobs:
@@ -18,6 +20,7 @@ jobs:
         with:
           fetch-depth: 0
           token: ${{ secrets.PAT_TOKEN }}
+          ref: main  # Always update leaderboard on main branch
 
       - name: Set up Python
         uses: actions/setup-python@v4
