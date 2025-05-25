@@ -8,12 +8,9 @@
      -  Isolation via Workspaces
      -  Isolation via Files Layout
      -  The Remote State Source.
-2. **Udemy Videos**: 
-   - Video 51: "Terraform remote state - Enhanced Backend"
-   - Video 52: "Terraform state migration"
-   - Video 53: "Terraform Backend configuration"
-   - Video 54: "State Locking Best Practices"
-   - Video 55: "Terraform State in a Team Environment"
+2. **Hands-on Labs**: Complete the following labs:
+   - "Lab 08: State Management"
+   - "Lab 09: State Locking"
 3. **Activity**: 
    - Practice state isolation:
      - **Workspaces**: Set up isolated environments for development, staging, and production using Workspaces.
@@ -27,4 +24,8 @@
    - "Best Practices for Isolating Terraform State in Multi-Environment Setups"
 6. **Social Media Post**: 
    - "🗂 Learned how to manage Terraform state effectively today. Crucial for consistent deployments. #30daytfchallenge #HUG #hashicorp #HUGYDE @chiche #IaC"
+
+
+
+
 

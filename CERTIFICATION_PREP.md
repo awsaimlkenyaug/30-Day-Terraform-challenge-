@@ -58,7 +58,7 @@
 
 ### Additional Resources
 1. [Terraform Certified Associate (003) – Comprehensive Study Notes](https://www.freecodecamp.org/news/terraform-certified-associate-003-study-notes/) - Detailed guide with practical examples and domain-specific coverage
-2. Udemy's HashiCorp Terraform Associate Certification Course
+2. Video Course
 3. "Terraform: Up & Running" by Yevgeniy Brikman
 
 ## Key Concepts by Domain
@@ -155,3 +155,4 @@
 3. Contribute to community
 4. Document your learning
 5. Practice regularly 
+

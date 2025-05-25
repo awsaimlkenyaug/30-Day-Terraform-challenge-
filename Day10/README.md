@@ -11,11 +11,11 @@ Welcome to Day 10 of the Terraform 30-Day Challenge! Today, we will dive into ad
      - Sections: "Loops with `count` and `for_each`".
    - **Goal**: Understand how loops can make your Terraform configurations more dynamic and flexible.
 
-### 2. **Videos**
-   - **Udemy**: Watch the following videos: focus on section 11 of the course. Most of what we will be doing this week is in this section
-     - start with the video on input and output variables with Dynamic block. 
-   - **Goal**: Learn how to implement loops and variables  in your Terraform code to create dynamic and efficient infrastructure deployments.
-
+### 2. **Hands-on Labs**
+   - **Lab**: Complete the following hands-on labs:
+     - "Lab 11: Modules"
+     - "Lab 12: Module Sources"
+   - **Goal**: Gain hands-on experience with Terraform through practical exercises.
 ### 3. **Activity**
    - **Modify Existing Code**: Refactor your existing infrastructure code to use loops and conditionals. Use `count` to deploy multiple instances of the same resource, and use `for_each` to iterate over maps or lists of resources.
    - **Conditional Deployments**: Implement conditional logic to control resource deployment based on input variables (e.g., deploy resources in different regions based on a boolean variable).
@@ -52,7 +52,7 @@ Welcome to Day 10 of the Terraform 30-Day Challenge! Today, we will dive into ad
 ## Checklist
 
 - [ ] I have completed Chapter 5 of "Terraform: Up & Running".
-- [ ] I have watched the required Udemy videos on loops.
+- [ ] I have completed the required hands-on labs
 - [ ] I have refactored my Terraform code to use loops .
 - [ ] I have written and published a blog post about today's task.
 - [ ] I have made a social media post about today's task.
@@ -62,5 +62,9 @@ Welcome to Day 10 of the Terraform 30-Day Challenge! Today, we will dive into ad
 ## Additional Resources
 
 - [Terraform: Up & Running on Amazon](https://www.amazon.com/Terraform-Running-Infrastructure-Configuration-Management/dp/1492046906)
-- [Udemy Course on Terraform](https://www.udemy.com/course/terraform/)
+
 - [Terraform Documentation: Loops and Conditionals](https://www.terraform.io/docs/language/expressions/for.html)
+
+
+
+

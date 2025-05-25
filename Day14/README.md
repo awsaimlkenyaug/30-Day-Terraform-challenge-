@@ -11,13 +11,11 @@ Welcome to Day 14 of the Terraform 30-Day Challenge! Today, we will dive into Ch
      - Sections: "Working with One Provider", "What Is a Provider?", "How Do You Install Providers?", "How Do You Use Providers?", "Working with Multiple Copies of the Same Provider".
    - **Goal**: Understand the basics of Terraform providers, how to install and use them, and how to work with multiple copies of the same provider.
 
-### 2. **Videos**
-   - **Udemy**: Watch the following videos:
-     - Video 15: "Provider block"
-     - Video 24: "Provider installation and visioning"
-     - Video 25: "using multiple providers "
-   - **Goal**: Learn the concepts of working with multiple providers in Terraform and prepare for more complex, multi-provider setups.
-
+### 2. **Hands-on Labs**
+   - **Lab**: Complete the following hands-on labs:
+     - "Lab 15: Terraform Testing"
+     - "Lab 16: Terraform CI/CD Integration"
+   - **Goal**: Gain hands-on experience with Terraform through practical exercises.
 ### 3. **Activity**
    - **Provider Configuration**: Set up Terraform configurations that use multiple copies of the same provider, such as deploying resources in multiple AWS regions or accounts. Experiment with using provider aliases and understanding the role of provider versions.
    - **Goal**: Successfully deploy resources across multiple regions or accounts using multiple copies of the same provider.
@@ -55,7 +53,7 @@ Welcome to Day 14 of the Terraform 30-Day Challenge! Today, we will dive into Ch
 ## Checklist
 
 - [ ] I have completed the required reading in Chapter 7.
-- [ ] I have watched the required Udemy videos on working with multiple providers.
+- [ ] I have completed the required hands-on labs
 - [ ] I have successfully set up and deployed infrastructure using multiple copies of the same provider.
 - [ ] I have rewatched the videos on Terraform modules.
 - [ ] I have written and published a blog post about today's task.
@@ -66,5 +64,9 @@ Welcome to Day 14 of the Terraform 30-Day Challenge! Today, we will dive into Ch
 ## Additional Resources
 
 - [Terraform: Up & Running on Amazon](https://www.amazon.com/Terraform-Running-Infrastructure-Configuration-Management/dp/1492046906)
-- [Udemy Course on Terraform](https://www.udemy.com/course/terraform/)
+
 - [Terraform Documentation on Providers](https://www.terraform.io/docs/language/providers/index.html)
+
+
+
+

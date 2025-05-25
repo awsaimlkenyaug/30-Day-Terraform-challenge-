@@ -11,13 +11,11 @@ Welcome to Day 8 of the Terraform 30-Day Challenge! Today, we will focus on crea
      - Sections: "Module Basics", "Inputs", and "Outputs".
    - **Goal**: Understand how to create reusable modules in Terraform, define input variables, and output values from modules.
 
-### 2. **Videos**
-   - **Udemy**: Watch the following videos:
-     - Video 35: "Terraform Modules"
-     - Video 36: "Terraform modules - sources"
-     - Video 37: "Terraform modules - Input and Output"
-   - **Goal**: Learn the fundamentals of working with modules in Terraform and how to structure your code for reusability.
-
+### 2. **Hands-on Labs**
+   - **Lab**: Complete the following hands-on labs:
+     - "Lab 09: State Locking"
+     - "Lab 10: Workspaces"
+   - **Goal**: Gain hands-on experience with Terraform through practical exercises.
 ### 3. **Activity**
    - **Create a Module**: Build a basic Terraform module for a common infrastructure component (e.g., an EC2 instance, a VPC, or a load balancer).
    - **Deploy Infrastructure Using the Module**: Use your newly created module to deploy infrastructure in a real environment (e.g., AWS, Azure, GCP).
@@ -53,7 +51,7 @@ Welcome to Day 8 of the Terraform 30-Day Challenge! Today, we will focus on crea
 ## Checklist
 
 - [ ] I have read Chapter 4 of "Terraform: Up & Running".
-- [ ] I have watched the required Udemy videos.
+- [ ] I have completed the required hands-on labs
 - [ ] I have successfully created a Terraform module and deployed infrastructure using it.
 - [ ] I have refactored an existing Terraform configuration into a reusable module as part of the Bonus Hands-On Project.
 - [ ] I have written and published a blog post about today's task.
@@ -64,5 +62,9 @@ Welcome to Day 8 of the Terraform 30-Day Challenge! Today, we will focus on crea
 ## Additional Resources
 
 - [Terraform: Up & Running on Amazon](https://www.amazon.com/Terraform-Running-Infrastructure-Configuration-Management/dp/1492046906)
-- [Udemy Course on Terraform](https://www.udemy.com/course/terraform/)
+
 - [Terraform Module Documentation](https://www.terraform.io/docs/language/modules/index.html)
+
+
+
+

@@ -3,12 +3,9 @@
 ## Task Description
 
 1. **Reading**: Chapter 2 of "Terraform: Up & Running" by Yevgeniy (Jim) Brikman, focusing on "Setting Up Your AWS Account", "Installing Terraform." and "Deploying the first two servers"
-2. **Udemy Videos**: Watch the following videos: 
-   - Video 7: "Setting Up Your AWS Account"
-   - Video 8: "Installing Terraform"
-   - Video 9: "First Steps with Terraform"
-   - Video 10: "Understanding the Terraform Workflow"
-   - (Ensure you have completed Video 6 if not already done)
+2. **Hands-on Labs**: Complete the following labs:
+   - "Lab 02: Basic Terraform Commands"
+   - "Lab 03: Terraform Providers"
 3. **Activity**: 
    - Set up your AWS account.
    - Install Terraform locally.
@@ -25,3 +22,7 @@
 - Update the `daily-update.md` file with your name, task completed, date, and time.
 - Write and publish a blog post detailing your setup process.
 - Share your progress on social media with the required hashtags.
+
+
+
+

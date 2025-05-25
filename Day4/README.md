@@ -11,13 +11,11 @@ Welcome to Day 4 of the Terraform 30-Day Challenge! Today, we’re building on t
      - Pages: 60 - the first part of page 70.
    - **Goal**: Gain a deeper understanding of deploying infrastructure using Terraform. Understanding "DRY" concept 
 
-### 2. **Videos**
-   - **Udemy**: Watch the following videos:
-     - Rewatch Day 3 videos (Videos 11, 12, and 13) to reinforce your understanding.
-     - "Input Variables" (Video 17)
-     - "Local Variables" (Video 18)
-   - **Goal**: Learn how to use input and local variables in Terraform for more flexible and reusable configurations.
-
+### 2. **Hands-on Labs**
+   - **Lab**: Complete the following hands-on labs:
+     - "Lab 05: Data Sources"
+     - "Lab 06: Variables"
+   - **Goal**: Gain hands-on experience with Terraform through practical exercises.
 ### 3. **Activity**
    - **Deploy Configurable Web Server**: Use Terraform to deploy a configurable web server.
    - **Deploy Clustered Web Server**: Set up a clustered web server using Terraform and understand the difference between a configurable and a clustered web server.
@@ -54,7 +52,7 @@ Welcome to Day 4 of the Terraform 30-Day Challenge! Today, we’re building on t
 ## Checklist
 
 - [X] I have read pages 60 - 69 of Chapter 2 in "Terraform: Up & Running".
-- [X] I have watched and rewatched the required Udemy videos.
+- [ ] I have completed the required hands-on labs
 - [X] I have deployed a configurable web server using Terraform.
 - [X] I have deployed a clustered web server using Terraform.
 - [X] I have explored Terraform documentation on providers, resource blocks, and the workflow.
@@ -67,5 +65,9 @@ Welcome to Day 4 of the Terraform 30-Day Challenge! Today, we’re building on t
 
 - [Terraform Documentation](https://www.terraform.io/docs) - For exploring providers, resource blocks, and workflows.
 - [Terraform: Up & Running on Amazon](https://www.amazon.com/Terraform-Running-Infrastructure-Configuration-Management/dp/1492046906)
-- [Udemy Course on Terraform](https://www.udemy.com/course/terraform/)
+
+
+
+
+
 

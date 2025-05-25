@@ -2,7 +2,7 @@
 
 ## Overview
 
-Welcome to Day 18 of the Terraform 30-Day Challenge! Today, we will dive into the world of automated testing for Terraform code. Automated tests are crucial for maintaining confidence in your infrastructure as it evolves. We’ll cover unit tests, integration tests, and end-to-end tests, which are key to ensuring your Terraform code works as expected across different environments.
+Welcome to Day 18 of the Terraform 30-Day Challenge! Today, we will dive into the world of automated testing for Terraform code. Automated tests are crucial for maintaining confidence in your infrastructure as it evolves. We'll cover unit tests, integration tests, and end-to-end tests, which are key to ensuring your Terraform code works as expected across different environments.
 
 ## Tasks for Today
 
@@ -11,9 +11,11 @@ Welcome to Day 18 of the Terraform 30-Day Challenge! Today, we will dive into th
      - Sections: "Automated Tests", "Unit Tests", "Integration Tests", "End-to-End Tests", "Other Testing Approaches".
    - **Goal**: Understand the different types of automated tests for Terraform and how they can be implemented to validate infrastructure code.
 
-### 2. **Videos**
-   - **Udemy**: Rewatch videos from Section 7 that cover testing, focusing on automated Debugging terraform.
-   - **Goal**: Gain insights into best practices for automating tests for your Terraform code.
+### 2. **Hands-on Labs**
+   - **Lab**: Complete the following hands-on labs:
+     - "Lab 15: Terraform Testing"
+     - "Lab 16: Terraform CI/CD Integration"
+   - **Goal**: Gain hands-on experience with testing Terraform code and integrating it into CI/CD pipelines.
 
 ### 3. **Activity**
    - **Automated Testing**:
@@ -54,7 +56,7 @@ Welcome to Day 18 of the Terraform 30-Day Challenge! Today, we will dive into th
 ## Checklist
 
 - [ ] I have completed Chapter 9 of "Terraform: Up & Running".
-- [ ] I have rewatched the relevant Udemy videos on automated testing.
+- [ ] I have completed the required hands-on labs.
 - [ ] I have implemented unit tests, integration tests, and end-to-end tests for a Terraform project.
 - [ ] I have set up a CI/CD pipeline to automatically run Terraform tests.
 - [ ] I have written and published a blog post about today's task.
@@ -67,3 +69,7 @@ Welcome to Day 18 of the Terraform 30-Day Challenge! Today, we will dive into th
 - [Terraform: Up & Running on Amazon](https://www.amazon.com/Terraform-Running-Infrastructure-Configuration-Management/dp/1492046906)
 - [Terratest Documentation](https://terratest.gruntwork.io/)
 - [CI/CD with Terraform](https://www.terraform.io/docs/enterprise/workspaces/vcs.html)
+
+
+
+

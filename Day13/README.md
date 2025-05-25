@@ -11,10 +11,11 @@ Welcome to Day 13 of the Terraform 30-Day Challenge! Today, we focus on one of t
      - Section: "Secret Management Basics and Secret Management Tools".
    - **Goal**: Learn how to manage sensitive data securely within Terraform, ensuring that secrets are not exposed in your code or state files.
 
-### 2. **Videos**
-   - **Udemy**: refresh your knowledge with previously watched videos on State focus more on video 55:
-   - **Goal**: Understand different secure secret management approaches and how to integrate these tools into your Terraform workflows.
-
+### 2. **Hands-on Labs**
+   - **Lab**: Complete the following hands-on labs:
+     - "Lab 14: Module Versioning"
+     - "Lab 15: Terraform Testing"
+   - **Goal**: Gain hands-on experience with Terraform through practical exercises.
 ### 3. **Activity**
    - **Secure Secrets Management**: Implement secure management of sensitive data such as passwords, API keys, and tokens using AWS Secrets Manager. Please ensure that sensitive information is encrypted and properly masked in state files.
    - **Goal**: Successfully set up a secure secrets management system and integrate it into your Terraform workflows to protect sensitive data.
@@ -52,7 +53,7 @@ Welcome to Day 13 of the Terraform 30-Day Challenge! Today, we focus on one of t
 ## Checklist
 
 - [ ] I have completed Chapter 6 of "Terraform: Up & Running".
-- [ ] I have watched the required Udemy videos on secure secrets management.
+- [ ] I have completed the required hands-on labs
 - [ ] I have implemented secure management of sensitive data using Vault or AWS Secrets Manager.
 - [ ] I have written and published a blog post about today's task.
 - [ ] I have made a social media post about today's task.
@@ -63,6 +64,10 @@ Welcome to Day 13 of the Terraform 30-Day Challenge! Today, we focus on one of t
 ## Additional Resources
 
 - [Terraform: Up & Running on Amazon](https://www.amazon.com/Terraform-Running-Infrastructure-Configuration-Management/dp/1492046906)
-- [Udemy Course on Terraform](https://www.udemy.com/course/terraform/)
+
 - [HashiCorp Vault Documentation](https://www.vaultproject.io/docs)
 - [AWS Secrets Manager Documentation](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html)
+
+
+
+
