@@ -14,8 +14,8 @@ Welcome to Day 1 of the Terraform 30-Day Challenge! Today, we'll be focusing on 
 
 ### 2. **Hands-on Labs**
    - **Lab**: Complete the following hands-on labs:
-     - "Lab 01: [Installing Terraform](https://youtu.be/4ZCrRbPR3gc?si=x6cTuAm4T3L3qJFA)
-     - "Lab 02: [Benefits of IaC](https://github.com/btkrausen/hashicorp/blob/master/terraform/Hands-On%20Labs/Section%2002%20-%20Understand%20IAC%20Concepts/02%20-%20Benefits_of_Infrastructure_as_Code.md)
+    
+     - Lab 03: [Benefits of IaC](https://github.com/btkrausen/hashicorp/blob/master/terraform/Hands-On%20Labs/Section%2002%20-%20Understand%20IAC%20Concepts/02%20-%20Benefits_of_Infrastructure_as_Code.md)
    - **Goal**: Get hands-on experience with Terraform installation and understand the benefits of IaC.
 
 ### 3. **Activity**

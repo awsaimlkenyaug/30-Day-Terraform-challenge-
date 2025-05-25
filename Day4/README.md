@@ -13,9 +13,10 @@ Welcome to Day 4 of the Terraform 30-Day Challenge! Today, we’re building on t
 
 ### 2. **Hands-on Labs**
    - **Lab**: Complete the following hands-on labs:
-     - "Lab 05: Data Sources"
-     - "Lab 06: Variables"
+     - Lab 05: [Data Sources](https://github.com/btkrausen/hashicorp/blob/master/terraform/Hands-On%20Labs/Section%2004%20-%20Understand%20Terraform%20Basics/08%20-%20Intro_to_the_Terraform_Data_Block.md)
+     - Lab 06: [Intro to Variables](https://github.com/btkrausen/hashicorp/blob/master/terraform/Hands-On%20Labs/Section%2004%20-%20Understand%20Terraform%20Basics/06%20-%20Intro_to_the_Input_Variables_Block.md)
    - **Goal**: Gain hands-on experience with Terraform through practical exercises.
+   
 ### 3. **Activity**
    - **Deploy Configurable Web Server**: Use Terraform to deploy a configurable web server.
    - **Deploy Clustered Web Server**: Set up a clustered web server using Terraform and understand the difference between a configurable and a clustered web server.

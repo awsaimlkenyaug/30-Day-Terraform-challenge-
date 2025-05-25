@@ -9,13 +9,13 @@ Welcome to Day 3 of the Terraform 30-Day Challenge! Today, we're diving into dep
 ### 1. **Reading**
    - **Chapter**: Chapter 2 
      - Sections: "Deploying a Single Server" and "Deploying a Web Server". you should end at page 59
-   - **Goal**: Understand what a provider block and a resource block are, and learn how to design and deploy a web server on AWS, GCP, or Azure.
+   - **Goal**: Understand what a provider block and a resource block are, and learn how to design and deploy a web server on AWS.
 
 ### 2. **Hands-on Labs**
    - **Lab**: Complete the following hands-on labs:
-     - "Lab 03: Terraform Providers"
-     - "Lab 04: Resource Blocks"
-     - "Lab 05: Data Sources"
+     - Lab 03: [Configure AWS Terraform Providers](https://github.com/btkrausen/hashicorp/blob/master/terraform/Hands-On%20Labs/Section%2004%20-%20Understand%20Terraform%20Basics/04%20-%20Intro_to_the_Terraform_Provider_Block.md)
+     - Lab 04: [Configure AWS Resource Blocks](https://github.com/btkrausen/hashicorp/blob/master/terraform/Hands-On%20Labs/Section%2004%20-%20Understand%20Terraform%20Basics/05%20-%20Intro_to_the_Terraform_Resource_Block.md)
+     
    - **Goal**: Learn how to work with providers, resource blocks, and data sources in Terraform.
 
 ### 3. **Activity**
@@ -28,7 +28,7 @@ Welcome to Day 3 of the Terraform 30-Day Challenge! Today, we're diving into dep
    - **Title**: "Deploying Your First Server with Terraform: A Beginner's Guide"
 
 ### 5. **Social Media Post**
-   - **Text**: "🔥 Deployed my first server using Terraform today! It's amazing how simple IaC makes this.#30daytfchallenge #HUG #hashicorp #HUGYDE @Chi Che. #IaC #terraform
+   - **Text**: "🔥 Deployed my first server using Terraform today! It's amazing how simple IaC makes this.#30daytfchallenge #HUG #hashicorp #AWSAIMLKe #IaC #terraform
 "
 
 ### 6. **Video Tutorial (Optional)**

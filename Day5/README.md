@@ -13,8 +13,7 @@ Welcome to Day 5 of the Terraform 30-Day Challenge! Today, we will focus on scal
 
 ### 2. **Hands-on Labs**
    - **Lab**: Complete the following hands-on labs:
-     - "Lab 06: Variables"
-     - "Lab 07: Output Values"
+     - "Lab 06: [Understanding state](https://github.com/btkrausen/hashicorp/blob/master/terraform/Hands-On%20Labs/Section%2003%20-%20Understand%20The%20Purpose%20of%20Terraform/02%20-%20Benefits_of_State.md)
    - **Goal**: Gain hands-on experience with Terraform through practical exercises.
 ### 3. **Activity**
    - **Scale Infrastructure**: Use Terraform to scale your web server cluster to handle increased load.
