@@ -16,7 +16,7 @@
 
 ## Blog Post
 - **Title:** Infrastructure as Code: Revolutionizing DevOps Practices
-- **Link:** https://docs.google.com/document/d/1w_ZLTiyHnbqGX26HWyt6jWNuO166QplMg1ahbX7r5vY/edit?usp=sharing
+- **Link:** https://maven-13ttn.github.io/blog/post.html?post=infrastructure-as-code-revolutionizing-devops
 
 ## Social Media
 - **Platform:** Twitter/X
