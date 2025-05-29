@@ -46,11 +46,11 @@ Please place your infrastructure diagrams in the `architecture` folder with the 
 - **Post Link:** https://www.linkedin.com/posts/engeniusam_terraformsetup-aws-devops-activity-7333107862979633152-cmXg?utm_source=share&utm_medium=member_desktop&rcm=ACoAACtVt-QBTUtYeTvR-UpJjur8rN4DrHJK85A
 
 ## Notes and Observations
-[Share your key learnings, challenges faced, and how you overcame them]
+
 Understanding your operating system architecture is key when downloading and installing aws cli and terraform to your machine
 
 ## Additional Resources Used
-[List any additional resources you found helpful]
+
 "Terraform: Up & Running" by Yevgeniy (Jim) Brikman
 
 ## Time Spent
