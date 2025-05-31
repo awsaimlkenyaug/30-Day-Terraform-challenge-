@@ -40,8 +40,9 @@ some of screenshots taken
 - **Link:** [[ here](https://medium.com/@denisnganga16/deploying-your-first-server-with-terraform-a-beginners-guide-9e6c8638b1f3)]
 
 ## Social Media
-- **Platform:** Linkedin 
-- **Post Link:** [Add your social media post URL here]
+
+- **Platform:** LinkedIn
+- **Post Link:** [LinkedIn Post](https://www.linkedin.com/posts/denis-nganga16_30daytfchallenge-terraform-iac-activity-7334630571203014656-glVJ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6f18kBkqYbwrS6aVUAbqFNTkKbSj8rzzk)
 
 ## Notes and Observations
 Working with Terraform to deploy an EC2 instance on AWS was a great learning experience. Using the `random_id` resource helped avoid naming conflicts, especially with globally unique resources like S3 buckets. Defining security groups properly ensured secure access to the server. Running `terraform plan` before `apply` gave clear visibility into the changes. Overall, the declarative IaC approach is much more reliable and repeatable than manual setup.

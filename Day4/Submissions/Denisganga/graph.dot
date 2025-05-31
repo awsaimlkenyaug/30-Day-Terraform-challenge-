@@ -1,0 +1,20 @@
+digraph G {
+  rankdir = "RL";
+  node [shape = rect, fontname = "sans-serif"];
+  "data.aws_ami.amazon_linux" [label="data.aws_ami.amazon_linux"];
+  "data.aws_ami.ubuntu_22_04" [label="data.aws_ami.ubuntu_22_04"];
+  "data.aws_region.current" [label="data.aws_region.current"];
+  "aws_instance.single_server" [label="aws_instance.single_server"];
+  "aws_instance.web_server" [label="aws_instance.web_server"];
+  "aws_security_group.vpc_ping" [label="aws_security_group.vpc_ping"];
+  "aws_subnet.variables_subnet" [label="aws_subnet.variables_subnet"];
+  "aws_vpc.vpc" [label="aws_vpc.vpc"];
+  "aws_instance.single_server" -> "data.aws_ami.amazon_linux";
+  "aws_instance.single_server" -> "aws_security_group.vpc_ping";
+  "aws_instance.single_server" -> "aws_subnet.variables_subnet";
+  "aws_instance.web_server" -> "data.aws_ami.amazon_linux";
+  "aws_instance.web_server" -> "aws_security_group.vpc_ping";
+  "aws_instance.web_server" -> "aws_subnet.variables_subnet";
+  "aws_security_group.vpc_ping" -> "aws_vpc.vpc";
+  "aws_subnet.variables_subnet" -> "aws_vpc.vpc";
+}

@@ -25,8 +25,8 @@
 - **Title:** [What is Infrastructure as Code (IaC) and Why It’s Transforming DevOp](https://medium.com/@denisnganga16/what-is-infrastructure-as-code-iac-and-why-its-transforming-devop-7712d5ce0b69)
 
 ---
-
-
+### Social Media(Linkesin)
+https://www.linkedin.com/posts/denis-nganga16_30daytfchallenge-terraform-iac-activity-7334630571203014656-glVJ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6f18kBkqYbwrS6aVUAbqFNTkKbSj8rzzk
 
 ## Notes and Observations
 
