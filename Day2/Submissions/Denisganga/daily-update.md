@@ -21,7 +21,7 @@
 ## Social Media
 
 - **Platform:** LinkedIn
-- **Post Link:** [LinkedIn Post](https://www.linkedin.com/posts/yourprofile/your-post-id)
+- **Post Link:** [LinkedIn Post](https://www.linkedin.com/posts/denis-nganga16_30daytfchallenge-terraform-iac-activity-7334630571203014656-glVJ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6f18kBkqYbwrS6aVUAbqFNTkKbSj8rzzk)
 
 ## Notes and Observations
 
