@@ -8,9 +8,9 @@
 ## Task Completion
 - [ ] Read Chapter 2 of "Terraform: Up & Running" (Setting Up Your AWS Account & Installing Terraform)
 - [ ] Completed Required Hands-on Labs
-  - [ ] Lab 01: Setup your AWS Account (if needed)
-  - [ ] Lab 02: Install AWS CLI
-  - [ ] Lab 03: Installing Terraform and set up Terraform with AWS
+- [ ] Lab 01: Setup your AWS Account (if needed)
+- [ ] Lab 02: Install AWS CLI
+- [ ] Lab 03: Installing Terraform and set up Terraform with AWS
 - [ ] Set up AWS account
 - [ ] Install Terraform locally
 - [ ] Install and configure AWS CLI
