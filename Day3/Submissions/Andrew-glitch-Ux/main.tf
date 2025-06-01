@@ -80,12 +80,33 @@ resource "aws_security_group" "my-new-security-group" {
   description = "Allow inbound traffic on tcp/443"
   vpc_id      = var.vpc_id  
   ingress {
+    description = "Allow HTTP"
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+  ingress {
     description = "Allow 443 from the Internet"
     from_port   = 443
     to_port     = 443
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
+   ingress {
+    description = "Allow SSH"
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
   tags = {
     Name    = "web_server_inbound"
     Purpose = "Intro to Resource Blocks Lab"
@@ -93,4 +114,26 @@ resource "aws_security_group" "my-new-security-group" {
 }
 resource "random_id" "randomness" {
   byte_length = 16
+}
+resource "aws_instance" "web_server" {
+  ami                    = "ami-0c1ac8a41498c1a9c"  # Ubuntu 22.04 for eu-north-1 (Stockholm)
+  instance_type          = "t3.micro"
+  subnet_id              = var.public_subnet_ids["public_subnet_A"]  # choose public subnet
+  vpc_security_group_ids = [aws_security_group.my-new-security-group.id]
+
+  associate_public_ip_address = true
+
+  user_data = <<-EOF
+              #!/bin/bash
+              sudo apt update
+              sudo apt install -y nginx
+              sudo systemctl start nginx
+              sudo systemctl enable nginx
+              EOF
+
+  tags = {
+    Name = "Day3WebServer"
+  }
+
+  depends_on = [aws_nat_gateway.nat]
 }
