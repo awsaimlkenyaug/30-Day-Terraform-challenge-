@@ -80,7 +80,7 @@ Day4/
         │       ├── outputs.tf
         │       ├── providers.tf
         │       └── variables.tf
-        └── submission.md
+        └── day4-submission.md
 ``` 
 
 

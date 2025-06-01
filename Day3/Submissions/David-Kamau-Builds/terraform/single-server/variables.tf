@@ -35,12 +35,12 @@ variable "instance_type" {
 }
 
 variable "key_name" {
-  description = "my-key-pair.pm"
+  description = "my-key-pair"
   type        = string
 }
 
 variable "allowed_ip" {
-  description = "IP allowed for SSH access (e.g. your home IP)"
+  description = "IP allowed for SSH access"
   type        = string
   default     = "0.0.0.0/0"
 }

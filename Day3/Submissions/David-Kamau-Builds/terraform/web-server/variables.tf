@@ -29,6 +29,7 @@ variable "instance_type" {
 variable "key_name" {
   description = "EC2 key pair name"
   type        = string
+  default     = "my-web-server-key-pair"
 }
 variable "allowed_ip" {
   description = "Your IP for SSH access (CIDR)"

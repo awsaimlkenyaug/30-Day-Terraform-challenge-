@@ -90,5 +90,5 @@ Day3/
         │       ├── variables.tf
         │       ├── versions.tf
         │       └── README.MD
-        └── submission.md
+        └── day3-submission.md
 ``` 

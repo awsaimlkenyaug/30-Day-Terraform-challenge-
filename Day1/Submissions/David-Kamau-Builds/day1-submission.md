@@ -44,5 +44,5 @@ Day2/
 └── Submissions/
     └── David-Kamau-Builds/
         ├── daily-update.md
-        └── submission.md
+        └── day1-submission.md
 ```

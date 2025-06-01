@@ -83,7 +83,7 @@ Day5/
         │       ├── outputs.tf
         │       ├── providers.tf
         │       └── variables.tf
-        └── submission.md
+        └── day5-submission.md
 ``` 
 
 

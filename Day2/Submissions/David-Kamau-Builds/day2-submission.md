@@ -74,7 +74,7 @@ Day2/
         │   ├── terraform-version.png
         │   ├── aws-config-validation.png
         ├── daily-update.md
-        └── submission.md
+        └── day2-submission.md
 ```
 
 ## Setup Validation Commands
