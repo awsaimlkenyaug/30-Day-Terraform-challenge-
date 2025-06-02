@@ -68,3 +68,4 @@ dist/
 build/
 *.zip
 *.tar.gz
+__pycache__/
