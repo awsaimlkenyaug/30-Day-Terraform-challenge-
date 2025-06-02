@@ -1,28 +1,28 @@
 # Day 3 Submission
 
 ## Personal Information
-- **Name:** [Bosco Kipkosgei]
-- **Date:** [28/05/2025]
+- **Name:** Bosco Kipkosgei
+- **Date:** 28/05/2025
 - **GitHub Username:** [boscokosgei]
 
 ## Task Completion
-- [] Read Chapter 2 of "Terraform: Up & Running"
+- [x] Read Chapter 2 of "Terraform: Up & Running"
 - [ ] Completed Udemy Videos 7-10
-- [ ] Deployed Single Server
-- [ ] Deployed Web Server
-- [ ] Created Infrastructure Diagrams
+- [x] Deployed Single Server
+- [x] Deployed Web Server
+- [x] Created Infrastructure Diagrams
 
 ## Infrastructure Details
 
 ### Single Server Deployment
-- **Region:** [AWS Region]
-- **Instance Type:** [EC2 Instance Type]
-- **Key Features:** [List key configurations]
+- **Region:** us-east-2
+- **Instance Type:** t2.micro
+- **Key Features:** Deploying EC2 instance
 
 ### Web Server Deployment
-- **Region:** [AWS Region]
-- **Instance Type:** [EC2 Instance Type]
-- **Key Features:** [List key configurations]
+- **Region:** us-east2
+- **Instance Type:** t2.micro
+- **Key Features:** Creating Security Groups and VPC
 
 ## Infrastructure Diagrams
 Please place your infrastructure diagrams in the `architecture` folder with the following files:
@@ -44,9 +44,9 @@ Please place your infrastructure diagrams in the `architecture` folder with the 
 [List any additional resources you found helpful]
 
 ## Time Spent
-- Reading: [X hours]
-- Infrastructure Deployment: [X hours]
-- Diagram Creation: [X hours]
+- Reading: 1 hours
+- Infrastructure Deployment: 1 hours
+- Diagram Creation: 20 mins
 - Blog Writing: [X hours]
 - Total: [X hours]
 
@@ -60,8 +60,6 @@ Day3/
         │   └── web-server.png
         ├── terraform/
         │   ├── single-server/
-        │   │   └── main.tf
-        │   └── web-server/
-        │       └── main.tf
-        └── submission.md
+        │   │   └── main.tf 
+        └── submission_day3.md
 ``` 
