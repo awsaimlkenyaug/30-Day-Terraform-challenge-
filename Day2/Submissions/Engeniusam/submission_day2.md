@@ -18,7 +18,7 @@
 - **Region:** us-east-1
 - **Instance Type:** t2.micro
 - **AMI:** ami-0c55b159cbfafe1f0 (Amazon Linux 2)
-- **Key Features:** [List key configurations]
+- **Key Features:**
   - Security Group: Allow SSH (port 22) and HTTP (port 80)
   - User Data Script: Install Apache web server
   - Tags: Name, Environment, Owner
@@ -42,16 +42,17 @@ Please place your infrastructure diagrams in the `architecture` folder with the 
 - **Link:** https://engeniusam.hashnode.dev/step-by-step-guide-to-setting-up-terraform-aws-cli-and-your-aws-environment
 
 ## Social Media
-- **Platform:** [Twitter/LinkedIn]
+- **Platform:** LinkedIn
 - **Post Link:** https://www.linkedin.com/posts/engeniusam_terraformsetup-aws-devops-activity-7333107862979633152-cmXg?utm_source=share&utm_medium=member_desktop&rcm=ACoAACtVt-QBTUtYeTvR-UpJjur8rN4DrHJK85A
 
 ## Notes and Observations
 
-Understanding your operating system architecture is key when downloading and installing aws cli and terraform to your machine
+Learnt how to get ami using this handy tool: (https://cloud-images.ubuntu.com/locator/ec2/)
 
 ## Additional Resources Used
 
 "Terraform: Up & Running" by Yevgeniy (Jim) Brikman
+Gemini Code Assist + GitHub Copilot
 
 ## Time Spent
 - Reading: [1 hour]
@@ -64,7 +65,7 @@ Understanding your operating system architecture is key when downloading and ins
 ```
 Day2/
 └── Submissions/
-    └── [Your GitHub Username]/
+    └── Engeniusam/
         ├── architecture/
         │   ├── single-server.png
         │   └── web-server.png
@@ -73,7 +74,7 @@ Day2/
         │   │   └── main.tf
         │   └── web-server/
         │       └── main.tf
-        └── submission.md
+        └── submission_day2.md
 ```
 
 

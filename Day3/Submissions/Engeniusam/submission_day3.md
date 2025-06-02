@@ -28,8 +28,8 @@ Lab 04: Configure AWS Resource Blocks
 - **Link:** https://engeniusam.hashnode.dev/deploying-your-first-server-with-terraform-a-beginners-guide
 
 ## Social Media
-- **Platform:** LinkedIn
-- **Post Link:** [URL to your social media post]
+- **Platform:** Twitter
+- **Post Link:** https://x.com/engeniusam/status/1929435036224516185
 
 ## Notes and Observations
 Creating SSH Key using terraform was tricky but I managed to generate one.
@@ -42,3 +42,19 @@ Terraform: Up & Running" by Yevgeniy (Jim) Brikman
 - Infrastructure Deployment: [1 hours
 - Blog Writing: [1 hours]
 - Total: [3 hours]
+
+## Repository Structure
+```
+Day2/
+└── Submissions/
+    └── Engeniusam/
+        ├── terraform_aws_provider/
+        │   ├
+        │   └── terraform
+        ├── terraform_resource_block/
+        │   ├
+        │   │
+        │   └── terraform
+        │
+        └── submission_day3.md
+```
