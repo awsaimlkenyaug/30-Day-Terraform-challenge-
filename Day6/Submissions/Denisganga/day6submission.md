@@ -38,7 +38,7 @@ To generate the diagram, I have runned the following commands in my terminal:
 terraform graph > graph.dot
 dot -Tpng graph.dot -o graph.png
 ` folder.)
-
+```
 ## Blog Post
 - **Title:** [Managing Terraform State: Best Practices for DevOps]
 - **Link:** [https://medium.com/@denisnganga16/managing-terraform-state-best-practices-for-devops-61da10d801d4]
