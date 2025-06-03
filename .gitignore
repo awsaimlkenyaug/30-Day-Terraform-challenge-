@@ -69,3 +69,6 @@ build/
 *.zip
 *.tar.gz
 __pycache__/
+
+# PR description files
+Week-*-PR.md
