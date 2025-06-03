@@ -39,12 +39,15 @@ def count_completed_days(participant):
         if day_dir.startswith('Day'):
             try:
                 day_num = int(day_dir[3:])  # Extract number after 'Day'
-                # Look for submission file in Day*/Submissions/username
-                submission_path = os.path.join(day_dir, 'Submissions', f"{participant}")
+                # Look for participant directory in Day*/Submissions/username/
+                submission_path = os.path.join(day_dir, 'Submissions', participant)
                 print(f"Checking path: {submission_path}")
-                if os.path.exists(submission_path):
-                    print(f"Found submission for Day {day_num}")
-                    completed_days.add(day_num)
+                if os.path.isdir(submission_path):
+                    print(f"Found submission directory for Day {day_num}")
+                    # Check if directory contains any files
+                    if any(os.path.isfile(os.path.join(submission_path, f)) for f in os.listdir(submission_path)):
+                        print(f"Found submission files for Day {day_num}")
+                        completed_days.add(day_num)
             except ValueError:
                 continue
     
