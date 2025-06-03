@@ -1,0 +1,26 @@
+# Staging Environment Variables
+# Copy this file to terraform.tfvars and customize as needed
+
+aws_region       = "us-west-2"
+project_name     = "terraform-file-layout-isolation"
+application_name = "web-app"
+
+# Set this to your EC2 key pair name if you want SSH access
+# key_name = "your-key-pair-name"
+
+# Staging environment features
+enable_nat_gateway   = true
+create_database_sg   = true
+
+# Uncomment and set if you want ALB access logs
+# access_logs_bucket = "your-alb-logs-bucket"
+
+common_tags = {
+  Project     = "30-Day-Terraform-Challenge"
+  Day         = "7"
+  Owner       = "MaVeN-13TTN"
+  Challenge   = "File-Layout-Isolation"
+  Environment = "staging"
+  ManagedBy   = "Terraform"
+  Purpose     = "Testing"
+}
