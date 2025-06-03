@@ -3,19 +3,12 @@ import pandas as pd
 from github import Github
 from datetime import datetime, timezone
 from collections import defaultdict
+import glob
 
-# Define check-in dates
-CHECKIN_DATES = [
-    "2024-05-24",
-    "2024-05-31",
-    "2024-06-07",
-    "2024-06-14"
-]
-
-def calculate_points(pr, commits, comments):
+def calculate_points(pr, commits):
     points = 0
     
-    # Points for PR submission
+    # Points for PR submission (10 points per PR)
     points += 10
     
     # Points for number of commits (max 5 points)
@@ -34,67 +27,55 @@ def calculate_points(pr, commits, comments):
     if any('md' in file.filename for file in pr.get_files()):
         points += 2
 
-    # Points for community engagement (comments)
-    points += min(len(comments), 5)
-
     return points
 
-def get_checkin_points(repo, participant):
-    points = 0
-    # Look for check-in confirmation issues/comments by repo owner
-    for date in CHECKIN_DATES:
-        # Search for check-in confirmation issues
-        query = f"check-in {date} {participant} in:title repo:{repo.full_name}"
-        issues = repo.get_issues(state='all', labels=['check-in'])
-        
-        for issue in issues:
-            if (date in issue.title and 
-                participant in issue.title and 
-                issue.user.login == repo.owner.login):
-                points += 5
-                break
+def count_completed_days(participant):
+    """Count the number of days completed by checking submission files"""
+    completed_days = set()
+    print(f"\nChecking submissions for participant: {participant}")
     
-    return points
+    # Check all Day* directories for submissions
+    for day_dir in glob.glob('Day*'):
+        if day_dir.startswith('Day'):
+            try:
+                day_num = int(day_dir[3:])  # Extract number after 'Day'
+                # Look for submission file in Day*/Submissions/username
+                submission_path = os.path.join(day_dir, 'Submissions', f"{participant}")
+                print(f"Checking path: {submission_path}")
+                if os.path.exists(submission_path):
+                    print(f"Found submission for Day {day_num}")
+                    completed_days.add(day_num)
+            except ValueError:
+                continue
+    
+    print(f"Total days completed: {len(completed_days)}")
+    return completed_days
 
 def generate_leaderboard():
     # Initialize GitHub client
     g = Github(os.environ['GITHUB_TOKEN'])
     repo = g.get_repo(os.environ['GITHUB_REPOSITORY'])
+    print("\nStarting leaderboard generation...")
 
     # Get all PRs
     participants = defaultdict(lambda: {
         'points': 0,
         'prs_merged': 0,
         'last_activity': datetime.min.replace(tzinfo=timezone.utc),
-        'days_completed': set(),
-        'checkins_attended': 0
+        'days_completed': set()
     })
 
-    # Add test participant for development
-    test_participant = "awsaimlkenyaug"  # Your GitHub username
-    participants[test_participant] = {
-        'points': 25,  # Example points
-        'prs_merged': 2,
-        'last_activity': datetime.now(timezone.utc),
-        'days_completed': {1, 2},  # Completed days 1 and 2
-        'checkins_attended': 1  # Attended one check-in
-    }
-
     # Analyze PRs
+    print("\nAnalyzing PRs...")
     for pr in repo.get_pulls(state='closed'):
         if not pr.merged:
             continue
 
         author = pr.user.login
         commits = list(pr.get_commits())
-        comments = list(pr.get_issue_comments())
         
         # Calculate points from PR
-        points = calculate_points(pr, commits, comments)
-        
-        # Add check-in points
-        checkin_points = get_checkin_points(repo, author)
-        points += checkin_points
+        points = calculate_points(pr, commits)
         
         # Update participant stats
         participants[author]['points'] += points
@@ -103,15 +84,14 @@ def generate_leaderboard():
             participants[author]['last_activity'],
             pr.merged_at
         )
-        participants[author]['checkins_attended'] = checkin_points // 5
 
-        # Track completed days
-        if 'Day' in pr.title:
-            try:
-                day_num = int(''.join(filter(str.isdigit, pr.title.split('Day')[1])))
-                participants[author]['days_completed'].add(day_num)
-            except (ValueError, IndexError):
-                pass
+    # Count completed days for each participant
+    print("\nCounting completed days...")
+    for author in participants.keys():
+        completed_days = count_completed_days(author)
+        participants[author]['days_completed'] = completed_days
+        # Add bonus points for completed days (20 points per day)
+        participants[author]['points'] += len(completed_days) * 20
 
     # Convert to DataFrame
     if not participants:
@@ -119,9 +99,8 @@ def generate_leaderboard():
         df = pd.DataFrame(columns=[
             'Participant',
             'Points',
-            'PRs Merged',
             'Days Completed',
-            'Check-ins',
+            'PRs Merged',
             'Last Activity',
             'Progress'
         ])
@@ -130,23 +109,30 @@ def generate_leaderboard():
             {
                 'Participant': author,
                 'Points': stats['points'],
-                'PRs Merged': stats['prs_merged'],
                 'Days Completed': len(stats['days_completed']),
-                'Check-ins': stats['checkins_attended'],
+                'PRs Merged': stats['prs_merged'],
                 'Last Activity': stats['last_activity'].strftime('%Y-%m-%d'),
                 'Progress': f"{len(stats['days_completed'])/30*100:.1f}%"
             }
             for author, stats in participants.items()
         ])
 
-    # Sort by points and days completed (if DataFrame is not empty)
+    # Sort by points and days completed
     if not df.empty:
-        df = df.sort_values(['Points', 'Days Completed', 'Check-ins'], ascending=[False, False, False])
+        df = df.sort_values(['Points', 'Days Completed'], ascending=[False, False])
 
+    print("\nGenerating markdown...")
     # Generate markdown
     markdown = """# 🏆 Challenge Leaderboard
 
 Updated at: {}
+
+## 🎯 Points System
+- 20 points for each completed day (with submission)
+- 10 points for each merged PR
+- Up to 5 points for commits in a PR
+- Up to 3 points for code quality
+- 2 points for documentation
 
 ## 🎯 Top Participants
 
@@ -154,47 +140,24 @@ Updated at: {}
 
 ## 📊 Statistics
 - Total Participants: {}
+- Total Days Completed: {}
 - Total PRs Merged: {}
-- Average Completion: {}%
-- Total Check-ins: {}
-- Average Check-in Attendance: {}%
-
-## 📅 Next Check-in
-{}
-
-## 🎉 Perfect Attendance
-{}
+- Average Completion: {:.1f}%
 """.format(
         datetime.now().strftime('%Y-%m-%d %H:%M:%S UTC'),
         df.to_markdown(index=False) if not df.empty else "No participants yet.",
         len(df),
+        df['Days Completed'].sum() if not df.empty else 0,
         df['PRs Merged'].sum() if not df.empty else 0,
-        df['Days Completed'].mean() / 30 * 100 if not df.empty else 0,
-        df['Check-ins'].sum() if not df.empty else 0,
-        df['Check-ins'].mean() / len(CHECKIN_DATES) * 100 if not df.empty else 0,
-        get_next_checkin(),
-        get_perfect_attendance(df)
+        df['Days Completed'].mean() / 30 * 100 if not df.empty else 0
     )
 
+    print("\nWriting leaderboard file...")
     # Write to file
     with open('LEADERBOARD.md', 'w') as f:
         f.write(markdown)
 
-def get_next_checkin():
-    now = datetime.now()
-    for date in CHECKIN_DATES:
-        checkin_date = datetime.strptime(date, '%Y-%m-%d')
-        if checkin_date > now:
-            return f"Next check-in: {date} at 6:00 PM EAT"
-    return "All check-ins completed!"
-
-def get_perfect_attendance(df):
-    if df.empty:
-        return "No participants have perfect attendance yet."
-    perfect = df[df['Check-ins'] == len(CHECKIN_DATES)]['Participant'].tolist()
-    if perfect:
-        return "Participants with perfect check-in attendance:\n" + "\n".join(f"- {p}" for p in perfect)
-    return "No participants have perfect attendance yet."
+    print("Leaderboard generation complete!")
 
 if __name__ == '__main__':
     generate_leaderboard() 
