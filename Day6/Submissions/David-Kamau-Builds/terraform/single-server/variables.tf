@@ -23,7 +23,6 @@ variable "ami_id" {
 }
 
 variable "key_pair_name" {
-  description = "Name of your existing EC2 Key Pair for SSH access"
+  description = "my-test-key-pair"
   type        = string
-  default     = "my-test-key-pair"
 }
