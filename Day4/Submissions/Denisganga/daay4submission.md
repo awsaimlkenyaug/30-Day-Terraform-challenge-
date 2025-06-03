@@ -34,10 +34,6 @@
 Infrastructure diagrams were created using **Terraform graph** output and converted with **Graphviz's dot tool**.  
 The diagrams (`graph.dot` converted to `graph.png`) illustrate the deployed resources and their relationships.
 
-Please place your infrastructure diagrams in the `architecture` folder with the following files:  
-- `single-server.png` - Diagram for the single server deployment  
-- `web-server.png` - Diagram for the web server deployment  
-
 ## Blog Post
 - **Title:** Deploying a Highly Available Web App on AWS Using Terraform  
 - **Link:** [\[URL to your blog post\]](https://medium.com/@denisnganga16/deploying-a-highly-available-web-app-on-aws-using-terraform-3723e93e6cf5)  
