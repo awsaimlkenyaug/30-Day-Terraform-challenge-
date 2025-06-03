@@ -45,7 +45,7 @@ dot -Tpng graph.dot -o graph.png
 
 ## Social Media
 - **Platform:** [LinkedIn]
-- **Post Link:** [URL to your social media post]
+- **Post Link:** https://www.linkedin.com/posts/denis-nganga16_30daytfchallenge-terraform-iac-activity-7334630571203014656-glVJ?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6f18kBkqYbwrS6aVUAbqFNTkKbSj8rzzk
 
 ## Notes and Observations
 During this task, I learned how to deploy an AWS S3 bucket using Terraform and how to manage remote state by configuring an S3 backend with DynamoDB for state locking. I faced challenges with permission errors on DynamoDB, which I resolved by updating the IAM user policies to allow necessary DynamoDB actions. The deprecated ACL parameter required me to use the separate `aws_s3_bucket_acl` resource for bucket access control.
