@@ -1,0 +1,3 @@
+ "UserId": "AIxxxxxxxxxxxxxxxxxxx",
+ "Account": "xxxxxxxxxx77",
+ "Arn": "arn:aws:iam::xxxxxxxxxx77:user/Terraform"
