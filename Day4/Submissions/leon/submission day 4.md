@@ -1,28 +1,28 @@
-# Day 3 Submission
+# Day 4 Submission
 
 ## Personal Information
-- **Name:** [Your Name]
-- **Date:** [Date of Submission]
-- **GitHub Username:** [Your GitHub Username]
+- **Name:** leon Musungu
+- **Date:** 02/6/2025
+- **GitHub Username:** luileonzawadi
 
 ## Task Completion
-- [x] Read Chapter 2 of "Terraform: Up & Running"
-- [x] Completed Required Hands-on Labs
-- [x] Deployed Single Server
-- [x] Deployed Web Server
-- [x] Created Infrastructure Diagrams
+- [X] Read Chapter 2 of "Terraform: Up & Running"
+- [X] Completed Required Hands-on Labs
+- [X] Deployed Single Server
+- [X] Deployed Web Server
+- [X] Created Infrastructure Diagrams
 
 ## Infrastructure Details
 
 ### Single Server Deployment
-- **Region:** [AWS Region]
-- **Instance Type:** [t2.micro] 
-- **Key Features:** [IPV6,vcpu]
+- **Region:** [us-east-1]
+- **Instance Type:** [t2.micro]
+- **Key Features:** [AMI]
 
 ### Web Server Deployment
-- **Region:** [AWS Region]
+- **Region:** [us-east-1]
 - **Instance Type:** [t2.micro]
-- **Key Features:** [IPV6,]
+- **Key Features:** [Load Balancer]
 
 ## Infrastructure Diagrams
 Please place your infrastructure diagrams in the `architecture` folder with the following files:
@@ -30,8 +30,8 @@ Please place your infrastructure diagrams in the `architecture` folder with the 
 - `web-server.png` - Diagram for the web server deployment
 
 ## Blog Post
-- **Title:** [i-just-deployed-my-first-server-with-terraform-heres-how-it-went]
-- **Link:** [https://medium.com/@leonmusungu138/i-just-deployed-my-first-server-with-terraform-heres-how-it-went-a516eb36b144]
+- **Title:** [Your Blog Post Title]
+- **Link:** [URL to your blog post]
 
 ## Social Media
 - **Platform:** [Twitter/LinkedIn]
@@ -44,15 +44,15 @@ Please place your infrastructure diagrams in the `architecture` folder with the 
 [List any additional resources you found helpful]
 
 ## Time Spent
-- Reading: [X hours]
-- Infrastructure Deployment: [X hours]
-- Diagram Creation: [X hours]
-- Blog Writing: [X hours]
-- Total: [X hours]
+- Reading: [ 1hours]
+- Infrastructure Deployment: [2 hours]
+- Diagram Creation: [1 hours]
+- Blog Writing: [45 hours]
+- Total: [4 hours 45MIN]
 
 ## Repository Structure
 ```
-Day3/
+Day4/
 └── Submissions/
     └── [Your GitHub Username]/
         ├── architecture/
