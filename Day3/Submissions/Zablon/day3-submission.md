@@ -35,7 +35,7 @@ Please place your infrastructure diagrams in the `architecture` folder with the 
 
 ## Social Media
 - **Platform:** LinkedIn
-- **Post Link:** [LinkedIn]()
+- **Post Link:** [LinkedIn](https://www.linkedin.com/posts/zablon-oigo_30daytfchallenge-hug-hashicorp-activity-7336319437379096576-TFr7?utm_source=share&utm_medium=member_desktop&rcm=ACoAADpqOqwBjFTtzGtUYa4fYatIdIjqmNvTU1c)
 
 ## Notes and Observations
 - The web server failed to respond on port 8080 after deployment.
