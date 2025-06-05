@@ -35,7 +35,7 @@ You’ll see a **side-by-side comparison** of deploying application code and inf
    - **Bonus Idea**: Reflect on your journey through the challenge and highlight the key skills you’ve gained.
 
 ### 5. **Social Media Post**
-   - **Text**: "🎉 Finished reading Terraform: Up & Running! Combining application and infrastructure workflows today with Terraform Cloud and Sentinel policies. Next up: more hands-on projects! #30daytfchallenge #HUG #hashicorp #HUGYDE @Chi Che. #IaC #terraform"
+   - **Text**: "🎉 Finished reading Terraform: Up & Running! Combining application and infrastructure workflows today with Terraform Cloud and Sentinel policies. Next up: more hands-on projects! #30daytfchallenge #HUG #hashicorp #HUGMERU @awsaimlkenyaug #IaC #terraform"
 
 ## How to Submit Your Work
 

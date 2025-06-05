@@ -15,7 +15,7 @@
 4. **Blog Post Ideas**: 
    - "A Workflow for Deploying Application Code with Terraform"
 5. **Social Media Post**: 
-   - "🚀 Learning how to deploy application code step-by-step with version control and secure variables using Terraform Cloud! #30daytfchallenge #HUG #hashicorp #HUGYDE @Chi Che. #IaC #terraform"
+   - "🚀 Learning how to deploy application code step-by-step with version control and secure variables using Terraform Cloud! #30daytfchallenge #HUG #hashicorp #HUGMERU @awsaimlkenyaug #IaC #terraform"
 
 ### Submission Instructions
 

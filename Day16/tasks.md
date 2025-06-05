@@ -15,7 +15,7 @@
    - "Creating Production-Grade Infrastructure with Terraform"
    - "Best Practices for Building Production-Ready Terraform Modules"
 5. **Social Media Post**: 
-   - "🚀 Built my first production-grade infrastructure using Terraform today! #30daytfchallenge #HUG #hashicorp #HUGYDE @Chi Che. #IaC #terraform
+   - "🚀 Built my first production-grade infrastructure using Terraform today! #30daytfchallenge #HUG #hashicorp #HUGMERU @awsaimlkenyaug #IaC #terraform
 "
 
 

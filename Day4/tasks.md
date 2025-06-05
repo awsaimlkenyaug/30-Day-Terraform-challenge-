@@ -12,7 +12,7 @@
    - Deploy a clustered web server using Terraform.
    - Explore Terraform's documentation on providers, resource blocks, and workflow.
 4. **Blog Post**: "Deploying a Highly Available Web App on AWS Using Terraform".
-5. **Social Media Post**: "🔥 Deployed a highly available web app today! I'm beginning to enjoy the benefits of IaC. #30daytfchallenge #HUG #hashicorp #HUGYDE @chiche #IaC".
+5. **Social Media Post**: "🔥 Deployed a highly available web app today! I'm beginning to enjoy the benefits of IaC. #30daytfchallenge #HUG #hashicorp #HUGMERU @awsaimlkenyaug #IaC".
 
 ## Deliverables
 
