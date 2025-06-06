@@ -1,70 +1,69 @@
 # Day 4 Submission
 
 ## Personal Information
-- **Name:** [Your Name]
-- **Date:** [Date of Submission]
-- **GitHub Username:** [Your GitHub Username]
+- **Name:** [Andrew Muntet]  
+- **Date:** [6/06/2025]  
+- **GitHub Username:** [Andrew-glitch-ux]  
 
 ## Task Completion
-- [ ] Read Chapter 2 of "Terraform: Up & Running"
-- [ ] Completed Required Hands-on Labs
-- [ ] Deployed Single Server
-- [ ] Deployed Web Server
-- [ ] Created Infrastructure Diagrams
+- [x] Read Chapter 2 of "Terraform: Up & Running"
+- [x] Completed Required Hands-on Labs
+- [x] Deployed Single Server
+- [x] Deployed Web Server
+- [x] Created Infrastructure Diagrams
 
 ## Infrastructure Details
 
 ### Single Server Deployment
-- **Region:** [AWS Region]
-- **Instance Type:** [EC2 Instance Type]
-- **Key Features:** [List key configurations]
+- **Region:** eu-north-1  
+- **Instance Type:** t3.micro  
+- **Key Features:** Deployed a single EC2 instance using parameterized variables, connected to a public subnet, and attached with a security group allowing SSH and HTTP access.
 
 ### Web Server Deployment
-- **Region:** [AWS Region]
-- **Instance Type:** [EC2 Instance Type]
-- **Key Features:** [List key configurations]
-
-## Infrastructure Diagrams
-Please place your infrastructure diagrams in the `architecture` folder with the following files:
-- `single-server.png` - Diagram for the single server deployment
-- `web-server.png` - Diagram for the web server deployment
+- **Region:** eu-north-1  
+- **Instance Type:** t3.micro  
+- **Key Features:** Clustered deployment using `count`, with reusable variables, shared security group, and S3 backend configured for state management with DynamoDB locking.
 
 ## Blog Post
-- **Title:** [Your Blog Post Title]
-- **Link:** [URL to your blog post]
+- **Title:** [Your Blog Post Title]  
+- **Link:** [URL to your blog post]  
 
 ## Social Media
-- **Platform:** [Twitter/LinkedIn]
-- **Post Link:** [URL to your social media post]
+- **Platform:** [Twitter/LinkedIn]  
+- **Post Link:** [URL to your social media post]  
 
 ## Notes and Observations
-[Share your key learnings, challenges faced, and how you overcame them]
+- Learned the importance of reusable Terraform code using variables and the DRY principle.
+- Understood how to deploy both a single and clustered web server setup on AWS.
+- Practiced referencing existing infrastructure using data sources.
+- Improved confidence in planning, applying, and managing infrastructure state.
 
 ## Additional Resources Used
-[List any additional resources you found helpful]
+- Terraform official documentation  
+- Terraform: Up & Running by Yevgeniy Brikman  
 
 ## Time Spent
-- Reading: [X hours]
-- Infrastructure Deployment: [X hours]
-- Diagram Creation: [X hours]
-- Blog Writing: [X hours]
-- Total: [X hours]
+- Reading: 1 hour  
+- Infrastructure Deployment: 1.5 hours  
+- Diagram Creation: 30 minutes  
+- Blog Writing: 0 hours  
+- Total: 3 hours  
 
 ## Repository Structure
 ```
 Day4/
 └── Submissions/
-    └── [Your GitHub Username]/
-        ├── architecture/
-        │   ├── single-server.png
-        │   └── web-server.png
-        ├── terraform/
-        │   ├── single-server/
-        │   │   └── main.tf
-        │   └── web-server/
-        │       └── main.tf
-        └── submission.md
-``` 
-
-
-
+└── Andrew-glitch-Ux/
+        terraform
+          LICENCE.txt\
+          terraform-provider
+        .terraform.lock.hcl
+    ├── daily update.md
+        main.tf
+        submission day4.md
+        terraform.tfvars
+        variable.tf
+        README.md
+        submission_template.md
+│   README.md
+    tasks.md 
