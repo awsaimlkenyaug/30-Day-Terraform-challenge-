@@ -6,9 +6,9 @@
 - **GitHub Username:** Engeniusam
 
 ## Task Completion
-- [ ] Read Chapter 3 of "Terraform: Up & Running"
-- [ ] Completed Required Hands-on Labs
-- [ ] Deployed Single Server
+- [✔] Read Chapter 3 of "Terraform: Up & Running"
+- [✔] Completed Required Hands-on Labs on state locking
+![alt text](<Screenshot (1380).png>)
 
 ## Blog Post
 - **Title:** [Your Blog Post Title]
@@ -19,14 +19,15 @@
 - **Post Link:** https://x.com/engeniusam/status/1930169897155170483
 
 ## Notes and Observations
-By employing these isolation strategies and leveraging the terraform_remote_state data source, teams can effectively manage complex infrastructure deployments, maintain environmental integrity, and foster efficient collaboration within their DevOps workflows.
+Terraform's locking mechanism ensures consistency and prevents unintended modifications in shared infrastructure state files during collaboration.
 
 ## Additional Resources Used
-
+"Terraform: Up & Running" by Yevgeniy Brikman
+GitHub Copilot & Gemini Code Assist
 
 ## Time Spent
 - Reading: [2 hours]
-- Infrastructure Deployment: [1 hours]
+- Infrastructure Deployment: [1 hour]
 - Blog Writing: [1 hour]
 - Total: [4 hours]
 
@@ -34,16 +35,26 @@ By employing these isolation strategies and leveraging the terraform_remote_stat
 ```
 Day7/
 └── Submissions/
-    └── [Your GitHub Username]/
-        ├── architecture/
-        │   ├── single-server.png
-        │   └── web-server.png
-        ├── terraform/
-        │   ├── single-server/
-        │   │   └── main.tf
-        │   └── web-server/
-        │       └── main.tf
-        └── submission.md
+    └── Engeniusam/
+        └── state_locking/
+            ├── .terraform/
+            ├── modules/
+            │   └── server/
+            │       ├── main.tf
+            │       ├── outputs.tf
+            │       └── variables.tf
+            ├── web_server/
+            │   └── server.tf
+            ├── .terraform.lock.hcl
+            ├── main.tf
+            ├
+            ├── terraform.tf
+            ├── terraform.tfstate
+            ├── terraform.tfstate.backup
+            ├── variables.tf
+            ├── Screenshot (1380).png
+            └── submission_day7.md
+
 ```
 
 

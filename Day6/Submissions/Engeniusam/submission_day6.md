@@ -38,3 +38,20 @@ developer.hashicorp.com - Official documentation
 - Lab implementation: 2.5 hour
 - Infrastructure Deployment: 1 hour
 - Total: 4.5 hours
+
+```
+Day6/
+└── Submissions/
+    └── Engeniusam/
+        └── Output_values_lab/
+            ├── .terraform/                <-- Should be ignored by Git
+            ├── modules/
+            ├── .gitignore
+            ├── .terraform.lock.hcl        <-- Optional to commit
+            ├── main.tf
+            ├── terraform.tf
+            ├── terraform.tfstate          <-- Should be ignored by Git
+            ├── terraform.tfstate.backup   <-- Should be ignored by Git
+            ├── variables.tf
+            └── submission_day6.md
+```
