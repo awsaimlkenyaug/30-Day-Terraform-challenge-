@@ -1,0 +1,100 @@
+# Day 8 Submission
+
+## Personal Information
+- **Name:** Andrew Muntet
+- **Date:** 6/6/2025
+- **GitHub Username:** Andrew-glitch-Ux
+
+## Task Completion
+- [x] Read Chapter 2 of "Terraform: Up & Running"
+- [x] Completed Required Hands-on Labs (Lab 9: State Locking, Lab 10: Terraform Workspaces)
+- [x] Deployed Single Server with State Locking (Lab 9)
+- [x] Deployed Workspace-aware S3 Buckets (Lab 10)
+- [ ] Created Infrastructure Diagrams
+
+## Infrastructure Details
+
+### Lab 9: State Locking
+- **Region:** eu-north-1
+- **Resources:** S3 bucket backend with DynamoDB for locking
+- **Key Features:** Configured remote state locking to prevent concurrent Terraform applies
+
+### Lab 10: Terraform Workspaces
+- **Region:** eu-north-1
+- **Resources:** S3 buckets created dynamically per workspace (`dev`, `staging`, `prod`)
+- **Key Features:** Used `terraform.workspace` interpolation to isolate environment resources and states
+
+## Infrastructure Diagrams
+Please place your infrastructure diagrams in the `architecture` folder with the following files:
+- `single-server.png` - Diagram for the single server deployment
+- `web-server.png` - Diagram for the web server deployment
+
+## Blog Post
+- **Title:** [Your Blog Post Title]
+- **Link:** [URL to your blog post]
+
+## Social Media
+- **Platform:** [LinkedIn]
+- **Post Link:** [https://www.linkedin.com/feed/update/urn:li:activity:7336450117023035392/ ]
+
+## Notes and Observations
+1. Learned how DynamoDB state locking ensures safe concurrent Terraform operations.
+2. Workspaces allow multiple isolated environments using the same codebase, simplifying management.
+3. Dynamically naming resources with `terraform.workspace` is a practical way to avoid naming collisions.
+4. Remote backend configuration is essential for team collaboration and preventing state corruption.
+5. Switching workspaces and destroying environment-specific resources enhances safe deployment workflows.
+
+## Additional Resources Used
+[List any additional resources you found helpful]
+
+## Time Spent
+- Reading: 30 minutes
+- Infrastructure Deployment: 45 minutes
+- Diagram Creation: 20 minutes
+- Blog Writing: 15 minutes
+- Total: 1 hour 50 minutes
+
+## Repository Structure
+```
+Day8/
+└── Submissions/
+└── Andrew-glitch-Ux/
+│   ├──Architecture
+       ├──Lab 09_ State Locking.drawio.png
+       ├──Lab 10 architecture diagram.drawio.png
+├── lab09-state-locking/
+│ ├── .terraform/
+│ │ ├── providers/
+│ │ │ ├── LICENSE.txt
+│ │ │ └── terraform-provider-aws_v5.99.1_x5.exe
+│ │ └── terraform.tfstate
+│ ├── .terraform.lock.hcl
+│ ├── backend.tf
+│ ├── main.tf
+│ ├── outputs.tf
+│ ├── terraform.tfvars
+│ └── variables.tf
+├── lab10workspace/
+│ ├── .terraform/
+│ │ ├── providers/
+│ │ │ ├── LICENSE.txt
+│ │ │ └── terraform-provider-aws_v5.99.1_x5.exe
+│ │ └── environment/
+│ ├── terraform.tfstate.d/
+│ │ ├── dev/
+│ │ │ ├── terraform.tfstate
+│ │ │ └── terraform.tfstate.backup
+│ │ ├── lab10/
+│ │ │ ├── terraform.tfstate
+│ │ │ └── terraform.tfstate.backup
+│ ├── .terraform.lock.hcl
+│ ├── main.tf
+│ ├── output.tf
+│ └── variables.tf
+├──daily update.md
+├── submission_day8.md
+├── README.md
+└── submission_template.md
+README.md
+tasks.md
+```
