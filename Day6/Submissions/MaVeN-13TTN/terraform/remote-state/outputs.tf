@@ -10,7 +10,7 @@ output "dynamodb_table_name" {
 
 output "backend_configuration" {
   description = "Configuration for the S3 backend"
-  value = <<EOF
+  value       = <<EOF
 terraform {
   backend "s3" {
     bucket         = "${aws_s3_bucket.terraform_state.bucket}"

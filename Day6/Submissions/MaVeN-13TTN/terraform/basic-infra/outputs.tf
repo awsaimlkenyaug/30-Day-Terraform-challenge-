@@ -21,10 +21,10 @@ output "security_group_id" {
 output "vpc_details" {
   description = "Comprehensive details about the VPC"
   value = {
-    id                  = aws_vpc.main.id
-    cidr_block          = aws_vpc.main.cidr_block
-    enable_dns_support  = aws_vpc.main.enable_dns_support
+    id                   = aws_vpc.main.id
+    cidr_block           = aws_vpc.main.cidr_block
+    enable_dns_support   = aws_vpc.main.enable_dns_support
     enable_dns_hostnames = aws_vpc.main.enable_dns_hostnames
-    tags                = aws_vpc.main.tags
+    tags                 = aws_vpc.main.tags
   }
 }
