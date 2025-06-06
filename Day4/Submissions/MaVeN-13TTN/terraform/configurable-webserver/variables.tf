@@ -117,7 +117,7 @@ variable "create_key_pair" {
 variable "public_key_path" {
   description = "Path to the public key file"
   type        = string
-  default     = "~/.ssh/id_rsa.pub"
+  default     = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC... # Replace with your actual public key"
 }
 
 variable "existing_key_name" {

@@ -95,7 +95,7 @@ resource "aws_security_group" "single_server_sg" {
 # Lab 04: Resource Blocks - Key Pair
 resource "aws_key_pair" "single_server_key" {
   key_name   = "single-server-key"
-  public_key = file("~/.ssh/id_rsa.pub") # You'll need to create this key pair
+  public_key = var.public_key_content # SSH public key content
 
   tags = {
     Name = "single-server-key-pair"

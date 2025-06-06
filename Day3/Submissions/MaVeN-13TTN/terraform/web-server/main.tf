@@ -95,7 +95,7 @@ resource "aws_security_group" "web_server_sg" {
 # Key Pair for Web Server
 resource "aws_key_pair" "web_server_key" {
   key_name   = "web-server-key"
-  public_key = file("~/.ssh/id_rsa.pub")
+  public_key = var.public_key_content # SSH public key content
 
   tags = {
     Name = "web-server-key-pair"
