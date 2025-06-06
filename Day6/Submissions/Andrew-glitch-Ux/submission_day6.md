@@ -1,6 +1,6 @@
 # Day 6 Submission
 
-## Personal Information
+## Personal Information 
 - **Name:** Andrew Muntet
 - **Date:** 6/6/2025
 - **GitHub Username:** Andrew-glitch-Ux
