@@ -1,5 +1,0 @@
-{
-    "UserId": "AXXXXXXXXXXXXXXXXXXXX",
-    "Account": "8xxxxxxxxxxx",
-    "Arn": "arn:aws:iam::8xxxxxxxxxxx:user/simi-ops"
-}

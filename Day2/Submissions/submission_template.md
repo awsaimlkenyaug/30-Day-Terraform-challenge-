@@ -97,4 +97,3 @@ code --list-extensions | grep -E "(aws|terraform)"
 [Document any issues you encountered and how you resolved them] 
 
 
-
