@@ -31,8 +31,8 @@ Infrastructure diagrams for both labs are saved in the `architecture` folder:
 - **Link:** [URL to your blog post]
 
 ## Social Media
-- **Platform:** [Twitter/LinkedIn]
-- **Post Link:** [URL to your social media post]
+- **Platform:** [LinkedIn]
+- **Post Link:** [https://www.linkedin.com/feed/update/urn:li:activity:7335460268170256384/ ]
 
 ## Notes and Observations
 - I learned how Terraform outputs allow sharing resource information easily.
