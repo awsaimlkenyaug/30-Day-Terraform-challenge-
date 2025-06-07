@@ -1,0 +1,78 @@
+# Day 4 Submission
+
+## Personal Information
+- **Name:** ALLAN CHERUIYOT
+- **Date:** 6/5/2025
+- **GitHub Username:** ALLAN69CHERUIYOT
+
+## Task Completion
+- [ ✔️] Read Chapter 2 of "Terraform: Up & Running"
+- [✔️ ] Completed Required Hands-on Labs
+- [ ✔️] Deployed Single Server
+- [✔️ ] Deployed Web Server
+- [ ✔️] Created Infrastructure Diagrams
+
+## Infrastructure Details
+
+### configurable-web-server Deployment
+- **Region:** us-east-1
+- **Instance Type:** t2.micro
+- **Key Features:** Uses Terraform variables for region, instance_type, server_name, ami_filter_name, web_server_port, ssh_port, and web_content.
+Deploys a single EC2 instance running Amazon Linux 2023.
+Configures an AWS Security Group to allow inbound HTTP (Port 80) and SSH (Port 22) traffic from anywhere (0.0.0.0/0).
+Utilizes user_data to install and start Apache HTTP Server and serve custom web content.
+
+### clustered-web-server deployment
+- **Region:** [AWS Region]
+- **Instance Type:** t2.micro
+- **Key Features:** Deploys multiple EC2 instances (default 2) as a cluster using the count meta-argument.
+Utilizes Terraform variables for region, instance_type, instance_count, server_name_prefix, ami_filter_name, web_server_port, ssh_port, and web_content_base.
+Each instance runs Amazon Linux 2023 and has Apache installed via user_data.
+Uses a shared AWS Security Group, allowing inbound HTTP (Port 80) and SSH (Port 22) traffic from anywhere.
+Dynamically names each instance using count.index for easy identification (e.g., Day4-ClusteredWebServer-1, Day4-ClusteredWebServer-2).
+Each instance serves unique web content indicating its number in the cluster.
+
+## Infrastructure Diagrams
+Please place your infrastructure diagrams in the `architecture` folder with the following files:
+- `configurable-web-server.png` - Diagram for the configurable-web-server deployment
+- `clustered-web-server.png` - Diagram for the clustered-web-server deployment
+
+## Blog Post
+- **Title:** Deploying a Highly Available Web App on AWS Using Terraform
+- **Link:** https://allan-blog.hashnode.dev/deploying-a-highly-available-web-app-on-aws-using-terraform
+
+## Social Media
+- **Platform:** LinkedIn
+- **Post Link:** https://www.linkedin.com/posts/allan-cheruiyot-730896331_30daytfchallenge-hug-hashicorp-activity-7336347968733642754-BKos?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFOaNZQBPsFm1zkiP9oxzdKTVE9IbqnDYZU
+
+## Notes and Observations
+ The main challenge was correctly structuring the user_data script when using count.index to ensure each instance rendered its unique content. Ensuring all security group rules were correctly applied for both configurable and clustered setups also required careful verification.
+
+## Additional Resources Used
+1.Terraform Documentation
+
+## Time Spent
+- Reading: 1 hours
+- Infrastructure Deployment: 1 hours
+- Diagram Creation: 1 hours
+- Blog Writing: 30 hours
+- Total: 3.5 hours
+
+## Repository Structure
+```
+Day4/
+└── Submissions/
+    └── ALLAN69CHERUIYOT/
+        ├── architecture/
+        │   ├── clustered-web-server.png
+        │   └── configurable-web-server.png
+        ├── terraform/
+        │   ├── clustered-web-server/
+        │   │   └── main.tf
+        │   └── configurable-web-server/
+        │       └── main.tf
+        └── day4-ALLAN69CHERUIYOT.md
+``` 
+
+
+
