@@ -1,8 +1,8 @@
 # Day 9 Submission
 
 ## Personal Information
-- **Name:** David Kamau
-- **Date:** June 4, 2024
+- **Name:** David Washington Kamau Kibe
+- **Date:** June 4, 2025
 - **GitHub Username:** David-Kamau-Builds
 
 ## Task Completion

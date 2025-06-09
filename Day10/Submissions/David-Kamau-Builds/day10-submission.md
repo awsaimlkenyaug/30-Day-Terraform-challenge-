@@ -2,8 +2,8 @@
 
 ## Personal Information
 
-- **Name:** David Kamau
-- **Date:** June 5, 2024
+- **Name:** David Washington Kamau Kibe
+- **Date:** June 5, 2025
 - **GitHub Username:** David-Kamau-Builds
 
 ## Task Completion

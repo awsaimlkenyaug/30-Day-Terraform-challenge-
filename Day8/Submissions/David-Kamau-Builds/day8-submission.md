@@ -1,7 +1,7 @@
 # Day 8 Submission
 
 ## Personal Information
-- **Name:** David Kamau
+- **Name:** David Washington Kamau Kibe
 - **Date:** June 3, 2025
 - **GitHub Username:** David-Kamau-Builds
 
