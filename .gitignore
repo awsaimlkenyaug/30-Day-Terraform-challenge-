@@ -1,3 +1,6 @@
+# main.tf
+# variables.tf
+# outputs.tf
 .terraform.lock.hcl
 backend.hcl
 terraform.tfstate
@@ -68,4 +71,3 @@ dist/
 build/
 *.zip
 *.tar.gz
-
