@@ -1,0 +1,54 @@
+# Production Environment Configuration Example
+# Copy this file to terraform.tfvars and modify the values as needed
+
+aws_region = "us-west-2"
+
+# Project Configuration
+project_name = "terraform-challenge"
+environment  = "prod"
+
+# VPC Configuration
+vpc_cidr                = "10.2.0.0/16"
+public_subnet_cidrs     = ["10.2.1.0/24", "10.2.2.0/24"]
+private_subnet_cidrs    = ["10.2.10.0/24", "10.2.20.0/24"]
+enable_nat_gateway      = true
+enable_vpn_gateway      = false
+enable_dns_hostnames    = true
+enable_dns_support      = true
+
+# Compute Configuration
+instance_type             = "t3.medium"
+key_name                  = "your-key-pair-name"
+min_size                  = 2
+max_size                  = 10
+desired_capacity          = 4
+health_check_type         = "ELB"
+health_check_grace_period = 300
+vpc_zone_identifier       = []  # Will be populated by module
+
+# Auto Scaling Configuration
+scale_up_threshold    = 70
+scale_down_threshold  = 30
+scale_up_adjustment   = 2
+scale_down_adjustment = -1
+
+# Load Balancer Configuration
+enable_deletion_protection = true
+enable_cross_zone_load_balancing = true
+idle_timeout = 60
+enable_http2 = true
+
+# Monitoring Configuration
+enable_detailed_monitoring = true
+enable_cloudwatch_alarms   = true
+
+# Security Configuration
+allowed_cidr_blocks = ["0.0.0.0/0"]  # Restrict in production
+ssh_cidr_blocks     = ["10.0.0.0/8"]  # Only internal access
+
+# Tags
+additional_tags = {
+  BusinessUnit = "Engineering"
+  CostCenter   = "Infrastructure"
+  Compliance   = "SOC2"
+}

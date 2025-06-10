@@ -13,6 +13,7 @@ playground/*
 .history/
 .idea/
 
+
 # Local .terraform directories
 **/.terraform/*
 
@@ -44,6 +45,11 @@ terraform.rc
 *.swp
 *.swo
 *~
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
 
 # OS generated files
 .DS_Store
