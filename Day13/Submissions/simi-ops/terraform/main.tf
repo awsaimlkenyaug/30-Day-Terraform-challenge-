@@ -68,7 +68,7 @@ resource "aws_instance" "web_server" {
               yum install -y httpd
               systemctl start httpd
               systemctl enable httpd
-              echo "<h1>Hello World from Terraform 30 Day Challenge: Day 5</h1>" > /var/www/html/index.html
+              echo "<h1>Hello World from Terraform 30 Day Challenge: Day 7</h1>" > /var/www/html/index.html
               EOF
 
   tags = {
