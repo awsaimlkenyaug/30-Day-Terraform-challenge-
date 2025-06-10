@@ -1,0 +1,23 @@
+# Development Environment Variables
+# Copy this file to terraform.tfvars and customize as needed
+
+aws_region       = "us-west-2"
+project_name     = "terraform-file-layout-isolation"
+application_name = "web-app"
+
+# Set this to your EC2 key pair name if you want SSH access
+# key_name = "your-key-pair-name"
+
+# Cost optimization for dev environment
+enable_nat_gateway   = false
+create_database_sg   = false
+
+common_tags = {
+  Project     = "30-Day-Terraform-Challenge"
+  Day         = "7"
+  Owner       = "MaVeN-13TTN"
+  Challenge   = "File-Layout-Isolation"
+  Environment = "dev"
+  ManagedBy   = "Terraform"
+  Purpose     = "Learning"
+}

@@ -1,14 +1,12 @@
-main.tf
-variables.tf
-outputs.tf
+# main.tf
+# variables.tf
+# outputs.tf
 .terraform.lock.hcl
 backend.hcl
 terraform.tfstate
 terraform.tfstate.backup
 .terraform/*
 terraform/*
-
-/Day10/Submissions/day10-update-Adaeze-69.md
 
 playground/*
 .DS_Store
@@ -74,3 +72,36 @@ build/
 *.zip
 *.tar.gz
 
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Python virtual environments
+venv/
+env/
+ENV/
+.venv/
+.env/
