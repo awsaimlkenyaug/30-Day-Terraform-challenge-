@@ -21,9 +21,9 @@
 - **Link:** [https://medium.com/@denisnganga16/mastering-loops-in-terraform-18b9db560828](https://medium.com/@denisnganga16/mastering-loops-in-terraform-18b9db560828)
 
 ## Social Media
-- **Platform:** LinkedIn
-- **Post Link:**  
-  _"💡 Learned how to use loops and conditionals in Terraform for dynamic deployments! #TerraformChallenge #Automation"_
+- **Platform:** LinkedIn  
+- **Post:** [here](https://www.linkedin.com/posts/denis-nganga16_30daytfchallenge-terraform-iac-activity-7338590013581897728-ZgQq?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6f18kBkqYbwrS6aVUAbqFNTkKbSj8rzzk)
+
 
 ## Notes and Observations
 - Loops with `count` helped reduce repetition and allowed easy scaling of EC2 instances.
