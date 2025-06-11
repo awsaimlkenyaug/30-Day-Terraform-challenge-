@@ -22,3 +22,7 @@
 ## Social Media Post
 - "🎯 Finished my first two practice exams for the Terraform Associate Certification. Learning more with each attempt! #30daytfchallenge #HUG #terraform"
 
+
+
+
+

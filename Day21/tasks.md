@@ -4,10 +4,9 @@
 
 1. **Reading**: Read the section "A Workflow for Deploying Infrastructure Code" in Chapter 10 of "Terraform: Up & Running".
    - Learn the 7-step process of taking infrastructure code from development to production.
-2. **Udemy Videos**: 
-   - Watch the following videos from Section 12:
-     - "HCP Terraform (Terraform Cloud) - Version Control Integration" (Video 71)
-     - "HCP Terraform (Terraform Cloud) - Private Registry" (Video 72)
+2. **Hands-on Labs**: Complete the following labs:
+   - "Lab 22: Sentinel Policies"
+   - "Lab 23: Cost Estimation"
 3. **Activity**: 
    - Simulate a workflow for deploying infrastructure code by following the steps in the reading.
    - Use **version control** to manage your infrastructure code.
@@ -36,3 +35,7 @@
 
 3. **Create a Pull Request**
    - Open a pull request from your `day21-deploying-infra-code` branch to the main repository.
+
+
+
+

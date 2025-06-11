@@ -7,7 +7,7 @@
 
 ## Task Completion
 - [ ] Read Chapter 1 of "Terraform: Up & Running"
-- [ ] Completed Udemy Videos 1-6
+- [ ] Completed Required Hands-on Labs
 - [ ] Set up AWS Account
 - [ ] Installed Terraform
 - [ ] Installed and Configured AWS CLI
@@ -33,3 +33,6 @@
 - Setup and Configuration: [X hours]
 - Blog Writing: [X hours]
 - Total: [X hours] 
+
+
+

@@ -18,12 +18,11 @@ You’ll see a **side-by-side comparison** of deploying application code and inf
      - Deploy with Terraform, ensuring secure workflows using approval checks.
      - Promote immutable, versioned artifacts across environments.
 
-### 2. **Videos**
-   - **Udemy**: Finish Section 12 with:
-     - "HCP Terraform (Terraform Cloud) - Sentinel Policy" (Video 73)
-     - "HCP Terraform (Terraform Cloud) - VCS Workflow" (Video 74)
-   - **Goal**: Learn how to enforce compliance using **Sentinel policies** and manage workflows using version control with **Terraform Cloud**.
-
+### 2. **Hands-on Labs**
+   - **Lab**: Complete the following hands-on labs:
+     - "Lab 23: Cost Estimation"
+     - "Lab 24: Security Best Practices"
+   - **Goal**: Gain hands-on experience with Terraform through practical exercises.
 ### 3. **Activity**
    - **Integrating Workflows**:
      - Combine the workflows for deploying both application and infrastructure code.
@@ -62,9 +61,13 @@ You’ll see a **side-by-side comparison** of deploying application code and inf
 ## Checklist
 
 - [ ] I have finished reading the "Putting It All Together" section of Chapter 10.
-- [ ] I have watched the Udemy videos on Sentinel policy and VCS workflow.
+- [ ] I have completed the required hands-on labs
 - [ ] I have combined both the application and infrastructure workflows and implemented version control.
 - [ ] I have written and published a blog post about today's task and reflected on my journey.
 - [ ] I have made a fun, celebratory social media post about today's task.
 - [ ] I have created a `day22-update-your-github-username.md` file with details on integrating workflows and implementing Sentinel policies.
 - [ ] I have created a pull request with all the required details.
+
+
+
+

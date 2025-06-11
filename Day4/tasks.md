@@ -4,11 +4,9 @@
 
 1. **Reading**: Chapter 2 of "Terraform: Up & Running" by Yevgeniy Brikman.
    - Pages: 60 - 69.
-2. **Udemy Videos**: 
-   - Rewatch Day 3 videos (Videos 11, 12, and 13).
-   - Watch "Input Variables" (Video 14).
-   - Watch "Local Variables" (Video 15).
-   ## ensure you deeply understand this concpets before proceding 
+2. **Hands-on Labs**: Complete the following labs:
+   - "Lab 05: Data Sources"
+   - "Lab 06: Variables"
 3. **Activity**: 
    - Deploy a configurable web server using Terraform.
    - Deploy a clustered web server using Terraform.
@@ -23,3 +21,7 @@
 - Create a pull request with your changes.
   
 ## Good luck 
+
+
+
+

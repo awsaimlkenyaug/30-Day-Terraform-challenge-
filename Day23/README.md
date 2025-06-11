@@ -2,14 +2,14 @@
 
 ## Overview
 
-We're nearing the end of the 30-Day Terraform Challenge! 🎉 Now, it's time to make sure you’re fully prepared for the **Terraform Associate Certification Exam**. Today, we will focus on reviewing key videos from Sections 13 and 14 of the Udemy course and revisiting the official Terraform documentation, focusing on the key topics covered in the exam.
+We're nearing the end of the 30-Day Terraform Challenge! 🎉 Now, it's time to make sure you’re fully prepared for the **Terraform Associate Certification Exam**. Today, we will focus on reviewing key videos from Sections 13 and 14 of the video course and revisiting the official Terraform documentation, focusing on the key topics covered in the exam.
 
 By the end of today, you should feel more confident about the exam objectives and know which areas to focus on for additional study.
 
 ## Tasks for Today
 
 ### 1. **Videos**
-   - **Udemy Videos**: Watch the remaining videos in Section 13:
+   - **Videos**: Watch the remaining videos in Section 13:
      - "Extending Terraform with Non-Cloud Providers" (Video 75)
      - "Terraform Autocomplete" (Video 76)
      - "AWS Multi-Region Provider Aliasing" (Video 77)
@@ -50,10 +50,14 @@ By the end of today, you should feel more confident about the exam objectives an
 
 ## Checklist
 
-- [ ] I have watched the remaining videos in Section 13 and started Section 14 of the Udemy course.
+- [ ] I have completed the required hands-on labs
 - [ ] I have reviewed the Terraform Associate Certification documentation.
 - [ ] I have created a study plan for the exam based on the Terraform exam objectives.
 - [ ] I have written and published a blog post about today's exam preparation.
 - [ ] I have made a social media post about today's exam preparation.
 - [ ] I have created a `day23-update-your-github-username.md` file with details on the key concepts reviewed and my study plan.
 - [ ] I have created a pull request with all the required details.
+
+
+
+

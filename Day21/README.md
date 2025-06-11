@@ -20,12 +20,11 @@ By the end of today, you should understand how to apply the steps of the infrast
      6. Merge and release.
      7. Deploy.
 
-### 2. **Videos**
-   - **Udemy**: Watch the following videos from Section 12:
-     - "HCP Terraform (Terraform Cloud) - Version Control Integration" (Video 71)
-     - "HCP Terraform (Terraform Cloud) - Private Registry" (Video 72)
-   - **Goal**: Learn how to manage infrastructure code with version control and how to share Terraform modules using the private registry.
-
+### 2. **Hands-on Labs**
+   - **Lab**: Complete the following hands-on labs:
+     - "Lab 22: Sentinel Policies"
+     - "Lab 23: Cost Estimation"
+   - **Goal**: Gain hands-on experience with Terraform through practical exercises.
 ### 3. **Activity**
    - **Deploying Infrastructure Code**:
      - Follow the steps outlined in the reading to simulate a typical workflow for deploying infrastructure code.
@@ -61,9 +60,13 @@ By the end of today, you should understand how to apply the steps of the infrast
 ## Checklist
 
 - [ ] I have read the section "A Workflow for Deploying Infrastructure Code" in Chapter 10 of "Terraform: Up & Running".
-- [ ] I have watched the Udemy videos on version control integration and the private registry.
+- [ ] I have completed the required hands-on labs
 - [ ] I have simulated a workflow for deploying infrastructure code and integrated version control.
 - [ ] I have written and published a blog post about today's task.
 - [ ] I have made a social media post about today's task.
 - [ ] I have created a `day21-update-your-github-username.md` file with details on deploying infrastructure code and Terraform Cloud features.
 - [ ] I have created a pull request with all the required details.
+
+
+
+

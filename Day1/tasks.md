@@ -4,8 +4,9 @@
 ## Task Description
 
 1. **Reading**: Chapter 1 of "Terraform: Up & Running" by Yevgeniy (Jim) Brikman, focusing on "understanding what terraform is and why its important ",
-2. **Udemy Videos**: Watch the following videos: 
-   - Videos 1 to 6 and complete the following activities 
+2. **Hands-on Labs**: Complete the following labs:
+   - "Lab 01: Installing Terraform"
+   - "Lab 02: Basic Terraform Commands"
 3. **Activity**: 
    - Set up your AWS account.
    - Install Terraform locally.
@@ -21,3 +22,7 @@
 - create the `daily-update.md` file with your name, task completed, date, and time.
 - Write and publish a blog post detailing your setup process.
 - Share your progress on social media with the required hashtags.
+
+
+
+

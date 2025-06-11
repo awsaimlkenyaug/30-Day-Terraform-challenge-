@@ -4,8 +4,9 @@
 
 1. **Reading**: Complete Chapter 8 of "Terraform: Up & Running"
    - Sections: "The Production-Grade Infrastructure Checklist", "Building Testable and Composable Modules".
-2. **Udemy Videos**: 
-   - Rewatch videos of section 8
+2. **Hands-on Labs**: Complete the following labs:
+   - "Lab 17: Remote State"
+   - "Lab 18: State Migration"
 3. **Activity**: 
    - Refactor an existing Terraform project to meet production-grade standards, focusing on creating modular, testable, and version-controlled infrastructure.
    - Ensure that the refactored infrastructure is suitable for a production environment, with clear versioning and automated testing.
@@ -16,4 +17,8 @@
 5. **Social Media Post**: 
    - "🚀 Built my first production-grade infrastructure using Terraform today! #30daytfchallenge #HUG #hashicorp #HUGYDE @Chi Che. #IaC #terraform
 "
+
+
+
+
 

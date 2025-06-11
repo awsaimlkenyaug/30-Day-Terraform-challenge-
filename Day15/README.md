@@ -11,14 +11,11 @@ Welcome to Day 15 of the Terraform 30-Day Challenge! Today, we continue working 
      - Sections: "Working with Multiple AWS Regions", "Working with Multiple AWS Accounts", "Creating Modules That Can Work with Multiple Providers", "Working with Multiple Different Providers", "A Crash Course on Docker", "A Crash Course on Kubernetes", "Deploying Docker Containers in AWS Using Elastic Kubernetes Service", "Conclusion".
    - **Goal**: Understand how to manage infrastructure across multiple AWS regions and accounts, create modules that work with multiple providers, and deploy Docker containers and Kubernetes clusters using Terraform.
 
-### 2. **Videos**
-   - **Udemy**: Rewatch the videos on Terraform modules:
-     - Rewatch video of Day14
-     - **Video 77**: "AWS multiRegion alais"
-     - Focus on how modules can be adapted to work with multiple providers.
-       
-   - **Goal**: Prepare for creating multi-provider modules and deploying multi-cloud resources.
-
+### 2. **Hands-on Labs**
+   - **Lab**: Complete the following hands-on labs:
+     - "Lab 16: Terraform CI/CD Integration"
+     - "Lab 17: Remote State"
+   - **Goal**: Gain hands-on experience with Terraform through practical exercises.
 ### 3. **Activity**
    - **Multi-Provider Modules**: Create Terraform modules that can work with multiple providers. For example, create a module that deploys infrastructure on both AWS and GCP.
    - **Docker and Kubernetes**: Deploy Docker containers in AWS using Elastic Kubernetes Service (EKS) managed by Terraform.
@@ -69,7 +66,11 @@ Welcome to Day 15 of the Terraform 30-Day Challenge! Today, we continue working 
 ## Additional Resources
 
 - [Terraform: Up & Running on Amazon](https://www.amazon.com/Terraform-Running-Infrastructure-Configuration-Management/dp/1492046906)
-- [Udemy Course on Terraform](https://www.udemy.com/course/terraform/)
+
 - [Terraform Documentation on Multiple Providers](https://www.terraform.io/docs/language/providers/index.html)
 - [Terraform Documentation on Docker Provider](https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs)
 - [Terraform Documentation on Kubernetes Provider](https://registry.terraform.io/providers/hashicorp/kubernetes/latest/docs)
+
+
+
+

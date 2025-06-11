@@ -5,10 +5,9 @@
 1. **Reading**: Finish reading the **final section** of Chapter 10 in "Terraform: Up & Running":
    - Review the side-by-side comparison of application and infrastructure workflows.
    - Understand how to use **version control**, **CI servers**, **immutable artifacts**, and **Terraform** for deploying infrastructure code in the real world.
-2. **Udemy Videos**: 
-   - Finish Section 12 with:
-     - "HCP Terraform (Terraform Cloud) - Sentinel Policy" (Video 73)
-     - "HCP Terraform (Terraform Cloud) - VCS Workflow" (Video 74)
+2. **Hands-on Labs**: Complete the following labs:
+   - "Lab 23: Cost Estimation"
+   - "Lab 24: Security Best Practices"
 3. **Activity**: 
    - Combine the workflows for deploying both application and infrastructure code.
    - Implement **Sentinel policies** to enforce security and compliance.
@@ -39,3 +38,7 @@
 
 3. **Create a Pull Request**
    - Open a pull request from your `day22-integrated-workflows` branch to the main repository.
+
+
+
+

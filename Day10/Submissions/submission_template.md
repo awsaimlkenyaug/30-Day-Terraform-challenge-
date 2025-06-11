@@ -7,7 +7,7 @@
 
 ## Task Completion
 - [ ] Read Chapter 2 of "Terraform: Up & Running"
-- [ ] Completed Udemy Videos 7-10
+- [ ] Completed Required Hands-on Labs
 - [ ] Deployed Single Server
 - [ ] Deployed Web Server
 - [ ] Created Infrastructure Diagrams
@@ -65,3 +65,6 @@ Day10/
         │       └── main.tf
         └── submission.md
 ``` 
+
+
+

@@ -1,4 +1,4 @@
-# Day 4 Submission
+# Day 1 Submission
 
 ## Personal Information
 - **Name:** [Your Name]
@@ -6,28 +6,13 @@
 - **GitHub Username:** [Your GitHub Username]
 
 ## Task Completion
-- [ ] Read Chapter 2 of "Terraform: Up & Running"
-- [ ] Completed Udemy Videos 7-10
-- [ ] Deployed Single Server
-- [ ] Deployed Web Server
-- [ ] Created Infrastructure Diagrams
-
-## Infrastructure Details
-
-### Single Server Deployment
-- **Region:** [AWS Region]
-- **Instance Type:** [EC2 Instance Type]
-- **Key Features:** [List key configurations]
-
-### Web Server Deployment
-- **Region:** [AWS Region]
-- **Instance Type:** [EC2 Instance Type]
-- **Key Features:** [List key configurations]
-
-## Infrastructure Diagrams
-Please place your infrastructure diagrams in the `architecture` folder with the following files:
-- `single-server.png` - Diagram for the single server deployment
-- `web-server.png` - Diagram for the web server deployment
+- [ ] Read Chapter 1 of "Terraform: Up & Running"
+- [ ] Completed Required Hands-on Labs
+- [ ] Set up AWS Account
+- [ ] Installed Terraform
+- [ ] Installed and Configured AWS CLI
+- [ ] Installed VSCode with AWS Plugin
+- [ ] Configured VSCode for AWS
 
 ## Blog Post
 - **Title:** [Your Blog Post Title]
@@ -45,23 +30,9 @@ Please place your infrastructure diagrams in the `architecture` folder with the 
 
 ## Time Spent
 - Reading: [X hours]
-- Infrastructure Deployment: [X hours]
-- Diagram Creation: [X hours]
+- Setup and Configuration: [X hours]
 - Blog Writing: [X hours]
-- Total: [X hours]
+- Total: [X hours] 
 
-## Repository Structure
-```
-Day4/
-└── Submissions/
-    └── [Your GitHub Username]/
-        ├── architecture/
-        │   ├── single-server.png
-        │   └── web-server.png
-        ├── terraform/
-        │   ├── single-server/
-        │   │   └── main.tf
-        │   └── web-server/
-        │       └── main.tf
-        └── submission.md
-``` 
+
+

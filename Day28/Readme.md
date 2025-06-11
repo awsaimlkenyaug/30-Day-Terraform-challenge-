@@ -59,3 +59,7 @@ Today, we focus on preparing for the Terraform Associate Certification exam by t
 - [ ] I reviewed the **Terraform Associate Certification exam objectives**.
 - [ ] I wrote and published a blog post about my experience with practice exams.
 - [ ] I created a pull request with all the required details.
+
+
+
+
