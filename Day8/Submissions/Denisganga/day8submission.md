@@ -70,6 +70,11 @@ This allowed Terraform to authenticate and provision the EC2 instance successful
 **Title**: [Building Reusable Infrastructure with Terraform Modules](https://medium.com/@denisnganga16/building-reusable-infrastructure-with-terraform-modules-d3a9f9587c3a)
 
 ---
+## Social Media
+- **Platform:** LinkedIn  
+- **Post:** [here](https://www.linkedin.com/posts/denis-nganga16_30daytfchallenge-terraform-iac-activity-7338590013581897728-ZgQq?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6f18kBkqYbwrS6aVUAbqFNTkKbSj8rzzk)
+
+
 
 ## 💡 Key Learnings
 
