@@ -64,3 +64,4 @@ crash.log
 *.log
 *.zip
 .terraform/
+.terraform/
