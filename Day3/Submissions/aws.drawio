@@ -1,0 +1,28 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36 Edg/136.0.0.0" version="27.1.3">
+  <diagram name="Page-1" id="EWJHRt3B_T_YvyMJo-zS">
+    <mxGraphModel dx="731" dy="479" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="0sUz1zETXYoHHfvLERcf-5" value="&lt;h3&gt;vpc&lt;/h3&gt;" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.vpc;fillColor=#F58534;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="20" y="30" width="300" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="0sUz1zETXYoHHfvLERcf-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="0sUz1zETXYoHHfvLERcf-6" target="0sUz1zETXYoHHfvLERcf-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="0sUz1zETXYoHHfvLERcf-6" value="public subnet" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.ec2_compute_container;fillColor=#F58534;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="20" y="180" width="60" height="31.5" as="geometry" />
+        </mxCell>
+        <mxCell id="0sUz1zETXYoHHfvLERcf-7" value="ec2 ubuntu server" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.ec2;fillColor=#F58534;gradientColor=none;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="90" y="175.75" width="100" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="0sUz1zETXYoHHfvLERcf-11" value="&#xa;Apache Web Server&#xa;&#xa;" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.traditional_server;fillColor=#7D7C7C;gradientColor=none;textShadow=0;fontStyle=2;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="130" y="180" width="10" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="0sUz1zETXYoHHfvLERcf-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="0sUz1zETXYoHHfvLERcf-11" target="0sUz1zETXYoHHfvLERcf-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
