@@ -42,11 +42,11 @@ terraform apply -var-file="terraform.tfvars"
 - "Advanced Terraform Module Usage: Versioning, Nesting, and Reuse Across Environments"
 - "Best Practices for Managing Module Versions in Terraform"
 
-## 📢 Social Media Post
-```
-🔄 Expanded my knowledge of reusable Terraform modules by adding versioning and deploying across environments!
-#HUG #hashicorp #HUGYDE @chiche #IaC
-```
+## Social Media
+- **Platform:** LinkedIn  
+- **Post:** [here](https://www.linkedin.com/posts/denis-nganga16_30daytfchallenge-terraform-iac-activity-7338590013581897728-ZgQq?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6f18kBkqYbwrS6aVUAbqFNTkKbSj8rzzk)
+
+
 
 ## ⏱️ Time Taken
 **Total Time:** Approximately 5 hours  
