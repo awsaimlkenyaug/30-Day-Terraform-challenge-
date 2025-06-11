@@ -38,8 +38,9 @@ Set up separate directories for dev, staging, and production environments, each 
 - **Link:** [https://medium.com/@denisnganga16/state-isolation-layout-vs-workspace-665b835845c4](https://medium.com/@denisnganga16/state-isolation-layout-vs-workspace-665b835845c4)
 
 ## Social Media
-- To be posted:  
-  "🗂 Learned how to manage Terraform state effectively today. Crucial for consistent deployments. #30daytfchallenge #HUG #hashicorp #HUGYDE @chiche #IaC"
+- **Platform:** LinkedIn  
+- **Post:** [here](https://www.linkedin.com/posts/denis-nganga16_30daytfchallenge-terraform-iac-activity-7338590013581897728-ZgQq?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6f18kBkqYbwrS6aVUAbqFNTkKbSj8rzzk)
+
 
 ## Additional Resources Used
 - Terraform official documentation on Workspaces
