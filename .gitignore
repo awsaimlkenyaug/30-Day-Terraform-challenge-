@@ -57,3 +57,10 @@ vendor/
 # variables.tf
 # outputs.tf
 # .terraform directories
+.terraform/
+terraform.tfstate*
+crash.log
+*.tfvars
+*.log
+*.zip
+.terraform/
