@@ -51,7 +51,7 @@ vendor/
 # so do NOT ignore:
 # terraform.tfstate
 # terraform.tfstate.backup
-# .terraform.lock.hcl
+ .terraform.lock.hcl
 # backend.hcl
 # main.tf
 # variables.tf
@@ -65,3 +65,26 @@ crash.log
 *.zip
 .terraform/
 .terraform/
+# Ignore Terraform state files
+terraform.tfstate
+terraform.tfstate.backup
+
+# Ignore variables override
+*.tfvars
+
+# Ignore crash logs
+crash.log
+
+# Ignore plan output
+*.tfplan
+
+# Ignore .terraform directory
+.terraform/
+
+# Ignore any temporary or sensitive files
+*.bak
+*.backup
+*.log
+
+# Ignore Gitpod workspace files (if any)
+.gitpod/
