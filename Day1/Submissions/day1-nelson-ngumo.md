@@ -1,9 +1,9 @@
 # Day 1 Submission
 
 ## Personal Information
-- **Name:** Ndungu Kinyanjui
-- **Date:** May 26, 2025
-- **GitHub Username:** MaVeN-13TTN
+- **Name:** Nelson Ngumo
+- **Date:** May 31, 2025
+- **GitHub Username:** Ngumonelson123
 
 ## Task Completion
 - [x] Read Chapter 1 of "Terraform: Up & Running"
@@ -16,11 +16,11 @@
 
 ## Blog Post
 - **Title:** Infrastructure as Code: Revolutionizing DevOps Practices
-- **Link:** https://maven-13ttn.github.io/blog/post.html?post=infrastructure-as-code-revolutionizing-devops
+- **Link:** https://medium.com/@nelsonmbui88/blog-post-what-is-infrastructure-as-code-iac-and-why-its-transforming-devops-9a634b20f3bd
 
 ## Social Media
-- **Platform:** Twitter/X
-- **Post Link:** https://x.com/Maven_TTN/status/1927105771155701919
+- **Platform:** LinkedIn
+- **Post Link:** https://www.linkedin.com/posts/nelson-ngumo-869033162_30daytfchallenge-iac-devops-activity-7334514604137406464-f-TV?utm_source=share&utm_medium=member_desktop&rcm=ACoAACbNrBEBpmqmiEP6hVsk2sv4gd_ZU_n3IzM
 
 ## Notes and Observations
 During this first day, I learned about the core concepts of Infrastructure as Code and why it's transforming how we manage cloud resources. The ability to version control infrastructure just like application code is a game-changer for maintaining consistency and reliability. I faced some initial challenges with AWS CLI configuration but resolved them by carefully following the documentation.
