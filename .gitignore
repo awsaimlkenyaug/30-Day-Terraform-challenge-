@@ -1,6 +1,6 @@
-main.tf
-variables.tf
-outputs.tf
+#main.tf
+#variables.tf
+#outputs.tf
 .terraform.lock.hcl
 backend.hcl
 terraform.tfstate
