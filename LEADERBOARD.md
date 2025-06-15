@@ -1,16 +1,16 @@
 # 🏆 Challenge Leaderboard
 
-Updated at: 2025-05-24 13:04:49 UTC
+Updated at: 2025-05-24 15:28:20 UTC
 
 ## 🎯 Top Participants
 
 | Participant    |   Points |   PRs Merged |   Days Completed |   Check-ins | Last Activity   | Progress   |
 |:---------------|---------:|-------------:|-----------------:|------------:|:----------------|:-----------|
-| awsaimlkenyaug |       37 |            3 |                2 |           0 | 2025-05-24      | 6.7%       |
+| awsaimlkenyaug |       75 |            5 |                2 |           0 | 2025-05-24      | 6.7%       |
 
 ## 📊 Statistics
 - Total Participants: 1
-- Total PRs Merged: 3
+- Total PRs Merged: 5
 - Average Completion: 6.666666666666667%
 - Total Check-ins: 0
 - Average Check-in Attendance: 0.0%
