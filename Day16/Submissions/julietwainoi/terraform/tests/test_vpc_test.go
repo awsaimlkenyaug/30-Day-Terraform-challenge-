@@ -9,7 +9,7 @@ import (
 
 func TestVpcModule(t *testing.T) {
 	terraformOptions := &terraform.Options{
-		TerraformDir: "../modules/vpc", // adjust path to your main Terraform code
+		TerraformDir: "..", // adjust path to your main Terraform code
 	}
 
 	// Clean up with `terraform destroy` at the end of the test
