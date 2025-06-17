@@ -1,4 +1,3 @@
-output "vpc_id"{
-value=aws_vpc.vpc.id
-
+output "vpc_id" {
+  value = module.vpc.vpc_id  # ✅ Correct way to access output from module
 }
