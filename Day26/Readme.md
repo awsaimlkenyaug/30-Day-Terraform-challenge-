@@ -73,7 +73,7 @@ project-root/
 
 ## 🐦 Social Media Post Idea
 **Text**:  
-"🚀 Built a scalable web app on AWS with EC2, Auto Scaling, and ELB! Learning to design for scale with Terraform. #30daytfchallenge #HUG #hashicorp #HUGYDE @Chi Che. #IaC #terraform"
+"🚀 Built a scalable web app on AWS with EC2, Auto Scaling, and ELB! Learning to design for scale with Terraform. #30daytfchallenge #HUG #hashicorp #HUGMERU @awsaimlkenyaug #IaC #terraform"
 
 ## ✅ How to Submit Your Work
 

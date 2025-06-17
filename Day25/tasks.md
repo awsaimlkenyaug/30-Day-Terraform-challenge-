@@ -21,7 +21,7 @@
 - **Bonus**: Add details on how following best practices helped structure your project better.
 
 ### Social Media Post:
-- "🚀 Deployed my first static website on AWS S3 with Terraform today! Learning best practices is key to success. #30daytfchallenge #HUG #hashicorp #HUGYDE @Chi Che. #IaC #terraform"
+- "🚀 Deployed my first static website on AWS S3 with Terraform today! Learning best practices is key to success. #30daytfchallenge #HUG #hashicorp #HUGMERU @awsaimlkenyaug #IaC #terraform"
 
 
 

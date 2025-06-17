@@ -35,7 +35,7 @@ By the end of today, you should have a solid understanding of how to deploy appl
    - **Title**: "A Workflow for Deploying Application Code with Terraform"
 
 ### 5. **Social Media Post**
-   - **Text**: "🚀 Learning how to deploy application code step-by-step with version control and secure variables using Terraform Cloud! #30daytfchallenge #HUG #hashicorp #HUGYDE @Chi Che. #IaC #terraform"
+   - **Text**: "🚀 Learning how to deploy application code step-by-step with version control and secure variables using Terraform Cloud! #30daytfchallenge #HUG #hashicorp #HUGMERU @awsaimlkenyaug #IaC #terraform"
 
 ## How to Submit Your Work
 

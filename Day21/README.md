@@ -35,7 +35,7 @@ By the end of today, you should understand how to apply the steps of the infrast
    - **Title**: "A Workflow for Deploying Infrastructure Code with Terraform"
 
 ### 5. **Social Media Post**
-   - **Text**: "🔧 Deploying infrastructure code with version control and Terraform Cloud's private registry. Ready for production! #30daytfchallenge #HUG #hashicorp #HUGYDE @Chi Che. #IaC #terraform"
+   - **Text**: "🔧 Deploying infrastructure code with version control and Terraform Cloud's private registry. Ready for production! #30daytfchallenge #HUG #hashicorp #HUGMERU @awsaimlkenyaug #IaC #terraform"
 
 ## How to Submit Your Work
 
