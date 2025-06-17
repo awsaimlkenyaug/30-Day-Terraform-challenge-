@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 module "vpc" {
-  source        = "git::https://github.com/julietwainoi/vpc-module.git?ref=v1.0.0"
+  source        = "git::https://github.com/julietwainoi/vpc-module.git?ref=v1.0.2"
    vpc_name       = "my-vpc"
   vpc_cidr       = "10.0.0.0/16"
   azs            = ["us-east-1a", "us-east-1b"]
