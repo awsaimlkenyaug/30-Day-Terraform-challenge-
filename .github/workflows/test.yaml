@@ -28,7 +28,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v3
         with:
           aws-access-key-id: AKIARWPFITOBJFH4YC2V
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-secret-access-key: ${{ secrets.JULIETWANJIKU1 }} 
           aws-region: us-west-2
 
       - name: Run Terratest
