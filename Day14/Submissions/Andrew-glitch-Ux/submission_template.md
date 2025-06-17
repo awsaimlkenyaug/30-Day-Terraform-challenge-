@@ -39,7 +39,7 @@ Please place your infrastructure diagrams in the `architecture` folder with the 
 
 ## Social Media
 - **Platform:** [LinkedIn]
-- **Post Link:** [URL to your social media post]
+- **Post Link:** [https://www.linkedin.com/feed/update/urn:li:activity:7340765541130772480/ ]
 
 ## Notes and Observations
 [.learned how to use the same Terraform module for multiple regions using provider aliases and dynamic inputs
