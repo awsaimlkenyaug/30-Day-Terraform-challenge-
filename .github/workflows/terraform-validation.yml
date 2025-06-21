@@ -3,7 +3,7 @@ name: Terraform Validation
 on:
   pull_request:
     branches:
-      - "week*"
+      - 'week*'
     types: [opened, synchronize, reopened]
 
 jobs:
@@ -36,7 +36,7 @@ jobs:
         run: |
           FILES_CHECKED=0
           INVALID_FILES=0
-
+          
           for tf_file in $(find . -name "*.tf" -type f); do
             ((FILES_CHECKED++))
             if [[ ! $tf_file =~ /Day[0-9]+/Submissions/[^/]+/.*\.tf$ ]]; then
@@ -49,7 +49,7 @@ jobs:
               echo "EOF" >> $GITHUB_ENV
             fi
           done
-
+          
           if [ $INVALID_FILES -eq 0 ]; then
             echo "FILE_STRUCTURE_RESULTS<<EOF" >> $GITHUB_ENV
             echo "### ✅ File Structure Check Passed" >> $GITHUB_ENV
@@ -65,10 +65,10 @@ jobs:
           echo "SECURITY_RESULTS<<EOF" >> $GITHUB_ENV
           echo "### 🔒 Security and Syntax Check Results" >> $GITHUB_ENV
           echo "" >> $GITHUB_ENV
-
+          
           for tf_file in $(find . -name "*.tf" -type f); do
             FILE_HAS_ISSUES=false
-
+            
             # Check for hardcoded credentials
             if CREDS=$(grep -n -i "access_key\|secret_key\|password\|token" "$tf_file"); then
               SECURITY_ISSUES=true
@@ -80,7 +80,7 @@ jobs:
               echo "\`\`\`" >> $GITHUB_ENV
               echo "" >> $GITHUB_ENV
             fi
-
+            
             # Check for public access
             if PUBLIC=$(grep -n -i "acl.*=.*public" "$tf_file"); then
               SECURITY_ISSUES=true
@@ -92,7 +92,7 @@ jobs:
               echo "\`\`\`" >> $GITHUB_ENV
               echo "" >> $GITHUB_ENV
             fi
-
+            
             # Check for malformed tags
             if TAGS=$(grep -A5 "tags.*=.*{" "$tf_file" | grep -E '=\s*$|=\s*"[^"]*$'); then
               SECURITY_ISSUES=true
@@ -117,13 +117,13 @@ jobs:
                 echo "" >> $GITHUB_ENV
               fi
             fi
-
+            
             if [ "$FILE_HAS_ISSUES" = false ]; then
               echo "✅ No security or syntax issues found in \`$tf_file\`" >> $GITHUB_ENV
               echo "" >> $GITHUB_ENV
             fi
           done
-
+          
           if [ "$SECURITY_ISSUES" = false ]; then
             echo "✅ All files passed security and syntax checks" >> $GITHUB_ENV
           fi
@@ -137,7 +137,7 @@ jobs:
           echo "FORMAT_RESULTS<<EOF" >> $GITHUB_ENV
           echo "### 🔍 Format Check Results" >> $GITHUB_ENV
           echo "" >> $GITHUB_ENV
-
+          
           for dir in $(find . -name "*.tf" -type f -exec dirname {} \; | sort -u); do
             if ! terraform fmt -check -recursive -diff "$dir" > fmt_output 2>&1; then
               FORMAT_ISSUES=true
@@ -152,7 +152,7 @@ jobs:
               echo "" >> $GITHUB_ENV
             fi
           done
-
+          
           if [ "$FORMAT_ISSUES" = false ]; then
             echo "✅ All files are properly formatted" >> $GITHUB_ENV
           fi
@@ -166,11 +166,11 @@ jobs:
           echo "VALIDATION_RESULTS<<EOF" >> $GITHUB_ENV
           echo "### 🔧 Terraform Validation Results" >> $GITHUB_ENV
           echo "" >> $GITHUB_ENV
-
+          
           for dir in $(find . -name "*.tf" -type f -exec dirname {} \; | sort -u); do
             cd $dir
             echo "Checking directory: \`$dir\`" >> $GITHUB_ENV
-
+            
             # Initialize without backend and providers
             if ! terraform init -backend=false > init_output 2>&1; then
               VALIDATION_ISSUES=true
@@ -184,7 +184,7 @@ jobs:
               echo "✅ Initialization successful" >> $GITHUB_ENV
               echo "" >> $GITHUB_ENV
             fi
-
+            
             # Run validation
             if ! terraform validate -no-color > validate_output 2>&1; then
               VALIDATION_ISSUES=true
@@ -200,7 +200,7 @@ jobs:
             fi
             cd - > /dev/null
           done
-
+          
           if [ "$VALIDATION_ISSUES" = false ]; then
             echo "✅ All directories passed validation" >> $GITHUB_ENV
           fi
@@ -216,18 +216,18 @@ jobs:
             const format = process.env.FORMAT_RESULTS || '';
             const validation = process.env.VALIDATION_RESULTS || '';
             const hasIssues = process.env.HAS_ISSUES === 'true';
-
+            
             let comment = '## 📋 Terraform Validation Summary\n\n';
-            comment += hasIssues ?
+            comment += hasIssues ? 
               '### Status: Changes Required ⚠️\n' :
               '### Status: All Checks Passed ✅\n';
-
+            
             comment += '\n## Detailed Results\n\n';
             comment += fileStructure + '\n';
             comment += security + '\n';
             comment += format + '\n';
             comment += validation;
-
+            
             github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
@@ -240,4 +240,4 @@ jobs:
         run: |
           if [ "$HAS_ISSUES" = "true" ]; then
             echo "Validation checks failed. Please fix the issues before merging."
-            exit 1
+            exit 1 
