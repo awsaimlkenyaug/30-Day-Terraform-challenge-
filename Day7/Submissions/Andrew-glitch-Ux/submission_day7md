@@ -1,0 +1,97 @@
+Day 7 Submission
+
+## Personal Information
+- **Name:** [Andrew Muntet]
+- **Date:** [6/6/2025]
+- **GitHub Username:** [Andrew-glitch-Ux]
+
+## Task Completion
+- [x] Completed Lab 08: State Management (local and remote backend using S3)
+- [x] Completed Lab 09: State Locking (using DynamoDB for state lock)
+- [ ] Deployed Single Server
+- [ ] Deployed Web Server
+- [ ] Created Infrastructure Diagrams
+
+## Infrastructure Details
+
+### Lab 08 & Lab 09 Deployments
+- **Region:** eu-north-1
+- **Resources:**
+  - S3 Buckets (`andrew-lab08-local-test`, lab09 bucket)
+  - DynamoDB table for locking (`terraform-lock-table`)
+- **Key Features:**
+  - Configured local backend and migrated state to remote S3 backend
+  - Enabled state locking with DynamoDB to prevent concurrent state corruption
+  - Used unique state keys for labs to isolate states
+
+## Infrastructure Diagrams
+Please place your infrastructure diagrams in the `architecture` folder with the following files:
+- `single-server.png` - Diagram for the single server deployment
+- `web-server.png` - Diagram for the web server deployment
+
+## Blog Post
+- **Title:** [Your Blog Post Title]
+- **Link:** [URL to your blog post]
+
+## Social Media
+- **Platform:** [LinkedIn]
+- **Post Link:** [https://www.linkedin.com/feed/update/urn:li:activity:7335864713731284992/ ]
+
+## Notes and Observations
+- Learned the difference between local and remote Terraform state backends.
+- Practiced safely migrating Terraform state from local to remote S3 backend.
+- Understood how DynamoDB state locking prevents simultaneous applies.
+- Simulated concurrent Terraform runs to observe lock conflicts.
+- Fixed variable declaration issues that caused config warnings.
+
+## Additional Resources Used
+[List any additional resources you found helpful]
+
+## Time Spent
+- Reading: 15-20 minutes
+- Infrastructure Deployment: 10-15 minutes
+- Diagram Creation: 5-10 minutes
+- Blog Writing: [X hours]
+- Total: 30-45 minutes
+
+## Repository Structure
+```
+Day7/
+└── Submissions/
+└── Andrew-glitch-Ux/
+├── Architecture/
+│ ├── LAB 8.drawio.png
+│ └── Lab 09_ State Locking.drawio.png
+├── Day8/
+│ ├── .terraform/
+│ │ ├── providers/
+│ │ │ ├── LICENSE.txt
+│ │ │ └── terraform-provider-aws_v5.99.1_x5.exe
+│ │ └── terraform.tfstate
+│ ├── .terraform.lock.hcl
+│ ├── backend.tf
+│ ├── main.tf
+│ ├── outputs.tf
+│ ├── terraform.tfstate
+│ ├── terraform.tfstate.backup
+│ ├── terraform.tfvars
+│ ├── variables.tf
+│ └── lab09-state-locking/
+│ ├── .terraform/
+│ │ ├── providers/
+│ │ │ ├── LICENSE.txt
+│ │ │ └── terraform-provider-aws_v5.99.1_x5.exe
+│ │ └── terraform.tfstate
+│ ├── .terraform.lock.hcl
+│ ├── backend.tf
+│ ├── main.tf
+│ ├── outputs.tf
+│ ├── terraform.tfvars
+│ └── variables.tf
+├── daily update.md
+├── submission_day7.md
+├── README.md
+└── submission_template.md
+├── README.md
+└── tasks.md
+```
