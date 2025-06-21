@@ -71,3 +71,8 @@ dist/
 build/
 *.zip
 *.tar.gz
+
+# Lab 15 secure files
+*.gpg
+secrets.json
+scripts/decrypt-secrets.sh

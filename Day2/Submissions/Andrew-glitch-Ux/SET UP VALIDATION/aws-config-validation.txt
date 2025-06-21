@@ -1,6 +1,0 @@
-PS C:\Users\HomePC> aws sts get-caller-identity
-{
-    "UserId": "XXXXXXXXXXXXXXXXXXXXXXXX",
-    "Account": "XXXXXXXXXXXXXXXXXXXXXXX",
-    "Arn": "arn:aws:iam::XXXXXXXXXXX:user/XXXXXX"
-}
