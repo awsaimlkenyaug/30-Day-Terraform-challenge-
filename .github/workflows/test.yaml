@@ -33,5 +33,9 @@ jobs:
 
       - name: Run Terratest
         run: |
+          if [ -z "${{ secrets.JULIETWANJIKU1 }}" ]; then
+            echo "Skipping tests: secrets unavailable in forked PR."
+            exit 0
+          fi
           cd Day16/Submissions/julietwainoi/terraform/tests
           go test -v
