@@ -1,0 +1,25 @@
+# Terraform
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfplan
+.terraform/
+.terraform.lock.hcl
+myPlan.txt
+
+# SSH Keys
+id_rsa
+id_rsa.pub
+
+# Node.js
+node_modules/
+npm-debug.log*
+.env
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

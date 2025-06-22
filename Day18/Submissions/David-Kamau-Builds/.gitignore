@@ -1,0 +1,48 @@
+# Terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfplan
+*.tfvars
+!*.tfvars.example
+.terraform.lock.hcl
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraformrc
+terraform.rc
+
+# AWS & Secrets
+*.pem
+*.key
+*.tfvars.json
+.env
+secrets.auto.tfvars
+.aws/
+aws-credentials
+credentials
+
+# Go
+go.sum
+vendor/
+*.test
+*.out
+coverage.txt
+
+# IDE & OS
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Logs & Temp
+*.log
+tmp/
+temp/
+.tmp/

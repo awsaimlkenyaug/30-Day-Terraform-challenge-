@@ -1,0 +1,254 @@
+name: Terraform CI/CD
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+env:
+  TF_VERSION: 1.5.0
+  GO_VERSION: '1.21'
+  TF_CLI_ARGS: '-no-color'
+  # This flag ensures we don't accidentally apply resources
+  TEST_MODE: 'true'
+
+jobs:
+  validate:
+    name: Validate & Format
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: ${{ env.TF_VERSION }}
+
+      - name: Terraform Format
+        run: terraform fmt -recursive
+        
+      - name: Terraform Format Check
+        run: terraform fmt -check -recursive
+
+      - name: Validate All Modules
+        run: |
+          for dir in modules/*/; do
+            echo "Validating $dir"
+            cd "$dir"
+            terraform init -backend=false
+            terraform validate
+            cd - > /dev/null
+          done
+
+      - name: Validate Production
+        run: |
+          cd production
+          terraform init
+          terraform validate
+
+  unit-tests:
+    name: Unit Tests
+    runs-on: ubuntu-latest
+    needs: validate
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: ${{ env.GO_VERSION }}
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: ${{ env.TF_VERSION }}
+
+      - name: Cache Go modules
+        uses: actions/cache@v4
+        with:
+          path: ~/go/pkg/mod
+          key: ${{ runner.os }}-go-${{ hashFiles('tests/go.sum') }}
+
+      - name: Download Dependencies
+        run: |
+          cd tests
+          go mod download
+          go mod tidy
+
+      - name: Run Unit Tests
+        run: |
+          cd tests
+          go test -v -run "TestTerraformSyntax|TestVpcModuleValidation"
+
+  integration-tests:
+    name: Integration Tests
+    runs-on: ubuntu-latest
+    needs: unit-tests
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: ${{ env.GO_VERSION }}
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: ${{ env.TF_VERSION }}
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+
+      - name: Cache Go modules
+        uses: actions/cache@v4
+        with:
+          path: ~/go/pkg/mod
+          key: ${{ runner.os }}-go-${{ hashFiles('tests/go.sum') }}
+
+      - name: Download Dependencies
+        run: |
+          cd tests
+          go mod download
+          go mod tidy
+
+      - name: Run Integration Tests
+        timeout-minutes: 5
+        run: |
+          cd tests
+          go test -v -timeout 3m -parallel 6 -run "TestModuleCompatibility"
+
+  security-scan:
+    name: Security Scan
+    runs-on: ubuntu-latest
+    needs: validate
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run Checkov
+        uses: bridgecrewio/checkov-action@master
+        with:
+          directory: .
+          framework: terraform
+          output_format: sarif
+          output_file_path: checkov-report.sarif
+          soft_fail: true
+
+      - name: Upload Checkov results
+        uses: github/codeql-action/upload-sarif@v3
+        if: always()
+        with:
+          sarif_file: checkov-report.sarif
+
+  plan:
+    name: Plan
+    runs-on: ubuntu-latest
+    needs: [integration-tests, security-scan]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: ${{ env.TF_VERSION }}
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+
+      - name: Terraform Plan
+        run: |
+          cd production
+          terraform init
+          terraform plan -var="deployment_mode=test" -out=tfplan
+
+      - name: Upload Plan
+        uses: actions/upload-artifact@v4
+        with:
+          name: tfplan
+          path: production/tfplan
+
+  apply:
+    name: Apply (Plan Only - No Resources Created)
+    runs-on: ubuntu-latest
+    needs: [plan]
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    environment: production
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: ${{ env.TF_VERSION }}
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+
+      - name: Plan Remote State (No Apply)
+        run: |
+          cd remote-state
+          terraform init -backend=false
+          terraform plan -var="deployment_mode=test"
+
+      - name: Plan Production (No Apply)
+        run: |
+          cd production
+          terraform init
+          terraform plan -var="deployment_mode=test"
+
+  post-deploy-tests:
+    name: Post-Deploy Tests (Simulation)
+    runs-on: ubuntu-latest
+    needs: apply
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: ${{ env.GO_VERSION }}
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+
+      - name: Cache Go modules
+        uses: actions/cache@v4
+        with:
+          path: ~/go/pkg/mod
+          key: ${{ runner.os }}-go-${{ hashFiles('tests/go.sum') }}
+
+      - name: Download Dependencies
+        run: |
+          cd tests
+          go mod download
+          go mod tidy
+
+      - name: Run Post-Deploy Validation Tests
+        run: |
+          cd tests
+          go test -v -run "TestPostDeployValidation|TestSecurityCompliance|TestResourceTags"
