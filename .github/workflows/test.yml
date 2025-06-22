@@ -33,5 +33,5 @@ jobs:
 
       - name: Run Terratest
         run: |
-          cd tests
+          cd Day16/Submissions/julietwainoi/terraform/tests
           go test -v
