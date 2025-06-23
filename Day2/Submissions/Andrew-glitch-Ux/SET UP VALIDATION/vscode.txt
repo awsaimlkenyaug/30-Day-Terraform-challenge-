@@ -1,0 +1,4 @@
+PS C:\Users\HomePC> code --version
+1.100.2
+848b80aeb52026648a8ff9f7c45a9b0a80641e2e
+x64
