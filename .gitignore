@@ -1,12 +1,14 @@
-# main.tf
-# variables.tf
-# outputs.tf
 .terraform.lock.hcl
 backend.hcl
 terraform.tfstate
 terraform.tfstate.backup
 .terraform/*
 terraform/*
+
+# Allow .tf files in Submissions directory
+!**/Submissions/**/*.tf
+
+/Day10/Submissions/day10-update-Adaeze-69.md
 
 playground/*
 .DS_Store
