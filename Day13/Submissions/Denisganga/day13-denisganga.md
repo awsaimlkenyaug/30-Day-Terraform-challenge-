@@ -86,7 +86,6 @@ Summary: I explored how to secure Terraform secrets using AWS Secrets Manager. T
 
 ## 🔗 Social Media Post
 
-```
 🔗 [View Post on LinkedIn](https://www.linkedin.com/posts/denis-nganga16_30daytfchallenge-30daytfchallenge-hug-activity-7343195475329626112--v6s?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6f18kBkqYbwrS6aVUAbqFNTkKbSj8rzzk)```
 
 ---
