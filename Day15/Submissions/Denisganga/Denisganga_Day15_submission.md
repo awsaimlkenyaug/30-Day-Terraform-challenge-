@@ -45,9 +45,7 @@
 - **Link:** [Add your blog post link here]
 
 ## Social Media
-- **Platform:** Twitter
-- **Post Text:** 🌐 Deployed multi-cloud infrastructure using Terraform today, including Docker and Kubernetes—taking my Terraform skills to the next level! #30daytfchallenge #HUG #hashicorp #HUGYDE @Chi Che. #IaC #terraform
-- **Post Link:** [Add your tweet/post link here]
+🔗 [View Post on LinkedIn](https://www.linkedin.com/posts/denis-nganga16_30daytfchallenge-30daytfchallenge-hug-activity-7343195475329626112--v6s?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6f18kBkqYbwrS6aVUAbqFNTkKbSj8rzzk)
 
 ## Notes and Observations
 - Got deep understanding of provider aliasing and modular Terraform.

@@ -47,8 +47,7 @@ https://medium.com/@denisnganga16/mastering-loops-and-conditionals-in-terraform-
 
 ## 📣 Social Media Post
 
-💡 Learned how to use loops and conditionals in Terraform for dynamic deployments!  
-#TerraformChallenge #Automation
+🔗 [View Post on LinkedIn](https://www.linkedin.com/posts/denis-nganga16_30daytfchallenge-30daytfchallenge-hug-activity-7343195475329626112--v6s?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD6f18kBkqYbwrS6aVUAbqFNTkKbSj8rzzk)
 
 ---
 
