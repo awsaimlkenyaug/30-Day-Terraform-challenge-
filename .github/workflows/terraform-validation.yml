@@ -4,143 +4,233 @@ on:
   pull_request:
     branches:
       - 'week*'
+    types: [opened, synchronize, reopened]
     paths:
       - '**/*.tf'
       - '**/*.tfvars'
 
 jobs:
-  terraform-validate:
+  terraform-validation:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
       pull-requests: write
-
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
       - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v3
+        uses: hashicorp/setup-terraform@v2
         with:
-          terraform_version: "1.7.0"
+          terraform_version: "1.5.0"
 
-      - name: Check File Structure
+      - name: Initialize Results
         run: |
-          for dir in Day*/; do
-            if [ -d "$dir" ]; then
-              echo "Checking $dir..."
-              required_files=("main.tf" "variables.tf" "outputs.tf" "README.md")
-              for file in "${required_files[@]}"; do
-                if [ ! -f "$dir/$file" ]; then
-                  echo "❌ Missing required file: $dir/$file"
-                  exit 1
-                fi
-              done
-              echo "✅ File structure check passed for $dir"
+          echo "FILE_STRUCTURE_RESULTS=" >> $GITHUB_ENV
+          echo "SECURITY_RESULTS=" >> $GITHUB_ENV
+          echo "FORMAT_RESULTS=" >> $GITHUB_ENV
+          echo "VALIDATION_RESULTS=" >> $GITHUB_ENV
+          echo "HAS_ISSUES=false" >> $GITHUB_ENV
+
+      - name: Check file structure
+        id: file_structure
+        continue-on-error: true
+        run: |
+          FILES_CHECKED=0
+          INVALID_FILES=0
+          
+          for tf_file in $(find . -name "*.tf" -type f); do
+            ((FILES_CHECKED++))
+            if [[ ! $tf_file =~ /Day[0-9]+/Submissions/[^/]+/.*\.tf$ ]]; then
+              ((INVALID_FILES++))
+              echo "HAS_ISSUES=true" >> $GITHUB_ENV
+              echo "FILE_STRUCTURE_RESULTS<<EOF" >> $GITHUB_ENV
+              echo "### ❌ File Structure Check Failed" >> $GITHUB_ENV
+              echo "- File: \`$tf_file\`" >> $GITHUB_ENV
+              echo "- Required format: \`Day<number>/Submissions/<username>/*.tf\`" >> $GITHUB_ENV
+              echo "EOF" >> $GITHUB_ENV
             fi
           done
+          
+          if [ $INVALID_FILES -eq 0 ]; then
+            echo "FILE_STRUCTURE_RESULTS<<EOF" >> $GITHUB_ENV
+            echo "### ✅ File Structure Check Passed" >> $GITHUB_ENV
+            echo "- All $FILES_CHECKED Terraform files follow the correct structure" >> $GITHUB_ENV
+            echo "EOF" >> $GITHUB_ENV
+
+      - name: Security and Syntax Check
+        id: security
+        continue-on-error: true
+        run: |
+          SECURITY_ISSUES=false
+          echo "SECURITY_RESULTS<<EOF" >> $GITHUB_ENV
+          echo "### 🔒 Security and Syntax Check Results" >> $GITHUB_ENV
+          echo "" >> $GITHUB_ENV
+          
+          for tf_file in $(find . -name "*.tf" -type f); do
+            FILE_HAS_ISSUES=false
+            
+            if CREDS=$(grep -n -i "access_key\|secret_key\|password\|token" "$tf_file"); then
+              SECURITY_ISSUES=true
+              FILE_HAS_ISSUES=true
+              echo "HAS_ISSUES=true" >> $GITHUB_ENV
+              echo "❌ Hardcoded Credentials found in \`$tf_file\`:" >> $GITHUB_ENV
+              echo "\`\`\`" >> $GITHUB_ENV
+              echo "$CREDS" >> $GITHUB_ENV
+              echo "\`\`\`" >> $GITHUB_ENV
+              echo "" >> $GITHUB_ENV
+            fi
+            
+            if PUBLIC=$(grep -n -i "acl.*=.*public" "$tf_file"); then
+              SECURITY_ISSUES=true
+              FILE_HAS_ISSUES=true
+              echo "HAS_ISSUES=true" >> $GITHUB_ENV
+              echo "⚠️ Public Access configured in \`$tf_file\`:" >> $GITHUB_ENV
+              echo "\`\`\`" >> $GITHUB_ENV
+              echo "$PUBLIC" >> $GITHUB_ENV
+              echo "\`\`\`" >> $GITHUB_ENV
+              echo "" >> $GITHUB_ENV
+            fi
+            
+            if TAGS=$(grep -A5 "tags.*=.*{" "$tf_file" | grep -E '=\s*$|=\s*"[^"]*$'); then
+              SECURITY_ISSUES=true
+              FILE_HAS_ISSUES=true
+              echo "HAS_ISSUES=true" >> $GITHUB_ENV
+              echo "❌ Malformed Tags in \`$tf_file\`:" >> $GITHUB_ENV
+              echo "\`\`\`" >> $GITHUB_ENV
+              echo "$TAGS" >> $GITHUB_ENV
+              echo "\`\`\`" >> $GITHUB_ENV
+              echo "" >> $GITHUB_ENV
+            fi
+            
+            if grep -n "{" "$tf_file" | wc -l > bracket_open && grep -n "}" "$tf_file" | wc -l > bracket_close; then
+              if [ "$(cat bracket_open)" -ne "$(cat bracket_close)" ]; then
+                SECURITY_ISSUES=true
+                FILE_HAS_ISSUES=true
+                echo "HAS_ISSUES=true" >> $GITHUB_ENV
+                echo "❌ Unmatched Brackets in \`$tf_file\`:" >> $GITHUB_ENV
+                echo "- Opening brackets: $(cat bracket_open)" >> $GITHUB_ENV
+                echo "- Closing brackets: $(cat bracket_close)" >> $GITHUB_ENV
+                echo "" >> $GITHUB_ENV
+              fi
+            fi
+            
+            if [ "$FILE_HAS_ISSUES" = false ]; then
+              echo "✅ No security or syntax issues found in \`$tf_file\`" >> $GITHUB_ENV
+              echo "" >> $GITHUB_ENV
+            fi
+          done
+          
+          if [ "$SECURITY_ISSUES" = false ]; then
+            echo "✅ All files passed security and syntax checks" >> $GITHUB_ENV
+          fi
+          echo "EOF" >> $GITHUB_ENV
 
       - name: Terraform Format Check
+        id: fmt
+        continue-on-error: true
         run: |
-          for dir in Day*/; do
-            if [ -d "$dir" ]; then
-              echo "Checking format in $dir..."
-              cd "$dir"
-              terraform fmt -check -recursive
-              if [ $? -ne 0 ]; then
-                echo "❌ Terraform format check failed in $dir"
-                echo "Please run 'terraform fmt' to fix formatting"
-                exit 1
-              fi
-              cd ..
+          FORMAT_ISSUES=false
+          echo "FORMAT_RESULTS<<EOF" >> $GITHUB_ENV
+          echo "### 🔍 Format Check Results" >> $GITHUB_ENV
+          echo "" >> $GITHUB_ENV
+          
+          for dir in $(find . -name "*.tf" -type f -exec dirname {} \; | sort -u); do
+            if ! terraform fmt -check -recursive -diff "$dir" > fmt_output 2>&1; then
+              FORMAT_ISSUES=true
+              echo "HAS_ISSUES=true" >> $GITHUB_ENV
+              echo "❌ Formatting issues in \`$dir\`:" >> $GITHUB_ENV
+              echo "\`\`\`diff" >> $GITHUB_ENV
+              cat fmt_output >> $GITHUB_ENV
+              echo "\`\`\`" >> $GITHUB_ENV
+              echo "" >> $GITHUB_ENV
+            else
+              echo "✅ Directory \`$dir\` is properly formatted" >> $GITHUB_ENV
+              echo "" >> $GITHUB_ENV
             fi
           done
+          
+          if [ "$FORMAT_ISSUES" = false ]; then
+            echo "✅ All files are properly formatted" >> $GITHUB_ENV
+          fi
+          echo "EOF" >> $GITHUB_ENV
 
-      - name: Initialize and Validate Terraform
+      - name: Terraform Validation
+        id: validate
+        continue-on-error: true
         run: |
-          for dir in Day*/; do
-            if [ -d "$dir" ]; then
-              echo "Validating $dir..."
-              cd "$dir"
-              
-              # Initialize Terraform
-              terraform init -backend=false
-              
-              # Validate Terraform configuration
-              terraform validate
-              
-              if [ $? -ne 0 ]; then
-                echo "❌ Terraform validation failed in $dir"
-                exit 1
-              fi
-              
-              cd ..
-              echo "✅ Terraform validation passed for $dir"
+          VALIDATION_ISSUES=false
+          echo "VALIDATION_RESULTS<<EOF" >> $GITHUB_ENV
+          echo "### 🔧 Terraform Validation Results" >> $GITHUB_ENV
+          echo "" >> $GITHUB_ENV
+          
+          for dir in $(find . -name "*.tf" -type f -exec dirname {} \; | sort -u); do
+            cd $dir
+            echo "Checking directory: \`$dir\`" >> $GITHUB_ENV
+            
+            if ! terraform init -backend=false > init_output 2>&1; then
+              VALIDATION_ISSUES=true
+              echo "HAS_ISSUES=true" >> $GITHUB_ENV
+              echo "❌ Initialization failed:" >> $GITHUB_ENV
+              echo "\`\`\`" >> $GITHUB_ENV
+              cat init_output >> $GITHUB_ENV
+              echo "\`\`\`" >> $GITHUB_ENV
+              echo "" >> $GITHUB_ENV
+            else
+              echo "✅ Initialization successful" >> $GITHUB_ENV
+              echo "" >> $GITHUB_ENV
             fi
-          done
-
-      - name: Security Checks
-        run: |
-          for dir in Day*/; do
-            if [ -d "$dir" ]; then
-              echo "Running security checks in $dir..."
-              cd "$dir"
-              
-              # Check for hardcoded credentials
-              if grep -r "access_key\|secret_key\|password\|token" *.tf; then
-                echo "❌ Found potential hardcoded credentials in $dir"
-                exit 1
-              fi
-              
-              # Check for public access in security groups
-              if grep -r "0.0.0.0/0" *.tf; then
-                echo "⚠️ Warning: Found potential unrestricted access (0.0.0.0/0) in $dir"
-                echo "Please ensure this is intentional and documented"
-              fi
-              
-              # Check for required tags
-              if ! grep -r "tags\s*=" *.tf; then
-                echo "❌ Missing resource tags in $dir"
-                exit 1
-              fi
-              
-              cd ..
-              echo "✅ Security checks passed for $dir"
+            
+            if ! terraform validate -no-color > validate_output 2>&1; then
+              VALIDATION_ISSUES=true
+              echo "HAS_ISSUES=true" >> $GITHUB_ENV
+              echo "❌ Validation failed:" >> $GITHUB_ENV
+              echo "\`\`\`" >> $GITHUB_ENV
+              cat validate_output >> $GITHUB_ENV
+              echo "\`\`\`" >> $GITHUB_ENV
+              echo "" >> $GITHUB_ENV
+            else
+              echo "✅ Validation successful" >> $GITHUB_ENV
+              echo "" >> $GITHUB_ENV
             fi
+            cd - > /dev/null
           done
+          
+          if [ "$VALIDATION_ISSUES" = false ]; then
+            echo "✅ All directories passed validation" >> $GITHUB_ENV
+          fi
+          echo "EOF" >> $GITHUB_ENV
 
-      - name: Comment PR
-        if: always()
+      - name: Post Results
         uses: actions/github-script@v6
+        if: always()
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const output = `### Terraform Validation Results
-            
-            #### File Structure Check
-            ${process.env.FILE_STRUCTURE_OUTPUT || '✅ Passed'}
-            
-            #### Format Check
-            ${process.env.FORMAT_CHECK_OUTPUT || '✅ Passed'}
-            
-            #### Validation Check
-            ${process.env.VALIDATION_OUTPUT || '✅ Passed'}
-            
-            #### Security Check
-            ${process.env.SECURITY_CHECK_OUTPUT || '✅ Passed'}
-            
-            Please make sure to:
-            - Run \`terraform fmt\` before committing
-            - Include all required files (main.tf, variables.tf, outputs.tf, README.md)
-            - Remove any hardcoded credentials
-            - Add proper resource tags
-            - Document any intentional public access
-            `;
-            
+            const fileStructure = process.env.FILE_STRUCTURE_RESULTS || '';
+            const security = process.env.SECURITY_RESULTS || '';
+            const format = process.env.FORMAT_RESULTS || '';
+            const validation = process.env.VALIDATION_RESULTS || '';
+            const hasIssues = process.env.HAS_ISSUES === 'true';
+            let comment = '## 📋 Terraform Validation Summary\n\n';
+            comment += hasIssues ? 
+              '### Status: Changes Required ⚠️\n' :
+              '### Status: All Checks Passed ✅\n';
+            comment += '\n## Detailed Results\n\n';
+            comment += fileStructure + '\n';
+            comment += security + '\n';
+            comment += format + '\n';
+            comment += validation;
             github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: output
-            }) 
+              body: comment
+            });
+
+      - name: Check for Issues
+        if: always()
+        run: |
+          if [ "$HAS_ISSUES" = "true" ]; then
+            echo "Validation checks failed. Please fix the issues before merging."
+            exit 1
