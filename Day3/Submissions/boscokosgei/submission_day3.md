@@ -30,12 +30,12 @@ Please place your infrastructure diagrams in the `architecture` folder with the 
 - `web-server.png` - Diagram for the web server deployment
 
 ## Blog Post
-- **Title:** [Your Blog Post Title]
-- **Link:** [URL to your blog post]
+- **Title:** Deploying Your First Server with Terraform: A Beginner’s Guide
+- **Link:** [\[Deploying Your First Server with Terraform\]](https://medium.com/@bosskoech/deploying-your-first-server-with-terraform-a-beginners-guide-9e7548165cae)
 
 ## Social Media
-- **Platform:** [Twitter/LinkedIn]
-- **Post Link:** [URL to your social media post]
+- **Platform:** Twitter
+- **Post Link:** [\[I just published Deploying Your First Server with Terraform: A Beginner’s Guide\]](https://x.com/bosco46616137/status/1929619275217534995?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1929619275217534995%7Ctwgr%5E63df9f79a25e28c641c514a864d38a76e775f82e%7Ctwcon%5Es1_c10&ref_url=https%3A%2F%2Fpublish.twitter.com%2F%3Furl%3Dhttps%3A%2F%2Ftwitter.com%2Fbosco46616137%2Fstatus%2F1929619275217534995)
 
 ## Notes and Observations
 [Share your key learnings, challenges faced, and how you overcame them]
