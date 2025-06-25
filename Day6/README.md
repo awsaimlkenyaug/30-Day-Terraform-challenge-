@@ -11,14 +11,11 @@ Welcome to Day 6 of the Terraform 30-Day Challenge! Today, we will focus on unde
      - Sections: "What is Terraform State?", "Shared Storage for State Files", and "Managing State Across Teams".
    - **Goal**: Gain a thorough understanding of Terraform state, its purpose, and how to store and manage state files across different environments.
 
-### 2. **Videos**
-   - **Udemy**: Watch the following videos:
-     - "Benefits of Terraform State" (Video 47)
-     - "Managing Terraform State" (Video 48)
-     - "Remote State Storage" (Video 49)
-     - "State Locking and Backend Authentication" (Video 50)
-   - **Goal**: Understand how Terraform state works, its significance in infrastructure as code, and how to manage state effectively in a team environment.
-
+### 2. **Hands-on Labs**
+   - **Lab**: Complete the following hands-on labs:
+     - "Lab 07: Output Values"
+     - "Lab 08: State Management"
+   - **Goal**: Gain hands-on experience with Terraform through practical exercises.
 ### 3. **Activity**
    - **Review Terraform State**: Deploy infrastructure and inspect the Terraform state file.
 
@@ -51,7 +48,7 @@ Welcome to Day 6 of the Terraform 30-Day Challenge! Today, we will focus on unde
 ## Checklist
 
 - [x] I have read Chapter 3 of "Terraform: Up & Running".
-- [x] I have watched the required Udemy videos.
+- [ ] I have completed the required hands-on labs
 - [ ] I have deployed infrastructure and reviewed the Terraform state file.
 - [ ] I have configured remote state storage and state locking.
 - [ ] I have written and published a blog post about today's task.
@@ -62,5 +59,9 @@ Welcome to Day 6 of the Terraform 30-Day Challenge! Today, we will focus on unde
 ## Additional Resources
 
 - [Terraform: Up & Running on Amazon](https://www.amazon.com/Terraform-Running-Infrastructure-Configuration-Management/dp/1492046906)
-- [Udemy Course on Terraform](https://www.udemy.com/course/terraform/)
+
 - [Documentation on Remote State Storage](https://www.terraform.io/docs/language/state/remote.html)
+
+
+
+

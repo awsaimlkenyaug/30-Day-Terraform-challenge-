@@ -4,11 +4,9 @@
 
 1. **Reading**: Read the section "A Workflow for Deploying Application Code" in Chapter 10 of "Terraform: Up & Running".
    - Learn the 7-step process of taking application code from development to production.
-2. **Udemy Videos**: 
-   - Watch the following videos from Section 12:
-     - "HCP Terraform (Terraform Cloud) - Secure Variables" (Video 70)
-     - "HCP Terraform (Terraform Cloud) - Version Control Integration" (Video 71)
-     - "HCP Terraform (Terraform Cloud) - Private Registry" (Video 72)
+2. **Hands-on Labs**: Complete the following labs:
+   - "Lab 21: Terraform Enterprise"
+   - "Lab 22: Sentinel Policies"
 3. **Activity**: 
    - Simulate a workflow for deploying application code by following the steps in the reading.
    - Secure sensitive variables in **Terraform Cloud**.
@@ -38,3 +36,7 @@
 
 3. **Create a Pull Request**
    - Open a pull request from your `day20-deploying-app-code` branch to the main repository.
+
+
+
+

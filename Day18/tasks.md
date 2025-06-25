@@ -4,8 +4,9 @@
 
 1. **Reading**: Complete Chapter 9 of "Terraform: Up & Running"
    - Sections: "Automated Tests", "Unit Tests", "Integration Tests", "End-to-End Tests", "Other Testing Approaches".
-2. **Udemy Videos**: 
-   - Rewatch videos from Section 7 that cover automated testing practices.
+2. **Hands-on Labs**: Complete the following labs:
+   - "Lab 19: Import Existing Infrastructure"
+   - "Lab 20: Terraform Cloud"
 3. **Activity**: 
    - Implement unit tests, integration tests, and end-to-end tests for a Terraform project.
    - Use tools like Terratest to automate these tests and ensure they can be run in a CI/CD pipeline.
@@ -17,4 +18,8 @@
    - "Best Practices for Automated Testing in Terraform"
 6. **Social Media Post**: 
    - "🚀 Automated testing for my Terraform code is now up and running—confidence in infrastructure has never been higher! #TerraformChallenge #DevOps #InfrastructureAsCode"
+
+
+
+
 

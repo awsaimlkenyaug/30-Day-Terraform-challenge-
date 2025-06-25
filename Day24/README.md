@@ -9,7 +9,7 @@ By the end of today, you should feel confident in all aspects of the certificati
 ## Tasks for Today
 
 ### 1. **Videos**
-   - **Udemy Videos**: Finish watching the last videos in Section 14:
+   - **Videos**: Finish watching the last videos in Section 14:
      - "Terraform Associate Exam Tips" (Video 78)
      - "Final Exam Review" (Video 79)
 
@@ -48,10 +48,14 @@ By the end of today, you should feel confident in all aspects of the certificati
 
 ## Checklist
 
-- [ ] I have finished watching the Udemy videos in Section 14.
+- [ ] I have finished watching the required videos
 - [ ] I have reviewed the official Terraform Associate Certification documentation.
 - [ ] I have simulated an exam environment and tested myself on the exam objectives.
 - [ ] I have written and published a blog post about today's exam preparation.
 - [ ] I have made a social media post about today's exam preparation.
 - [ ] I have created a `day24-update-your-github-username.md` file with details on my final exam prep.
 - [ ] I have created a pull request with all the required details.
+
+
+
+

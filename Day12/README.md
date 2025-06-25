@@ -11,11 +11,11 @@ Welcome to Day 12 of the Terraform 30-Day Challenge! Today, you will learn how t
      - Section: "Zero-Downtime Deployment Techniques".
    - **Goal**: Understand the key concepts and techniques behind zero-downtime deployments, such as blue/green deployment and canary releases.
 
-### 2. **Videos**
-   - **Udemy**: At this point, you have to cover the core of Terraform head over to section 9 and watch the video on Terraform workflow 
-    
-   - **Goal**: ensure that you brush up your skills in terraform workflow 
-
+### 2. **Hands-on Labs**
+   - **Lab**: Complete the following hands-on labs:
+     - "Lab 13: Module Composition"
+     - "Lab 14: Module Versioning"
+   - **Goal**: Gain hands-on experience with Terraform through practical exercises.
 ### 3. **Activity**
    - **Zero-Downtime Deployment**: Use Terraform to deploy infrastructure updates with zero downtime. Implement blue/green deployment strategies or canary releases using load balancers and carefully manage updates to your web application.
    - **Goal**: Successfully deploy a web application update without causing downtime, using techniques like blue/green deployments.
@@ -53,7 +53,7 @@ Welcome to Day 12 of the Terraform 30-Day Challenge! Today, you will learn how t
 ## Checklist
 
 - [ ] I have completed Chapter 5 of "Terraform: Up & Running".
-- [ ] I have watched the required Udemy videos on zero-downtime deployments.
+- [ ] I have completed the required hands-on labs
 - [ ] I have implemented a zero-downtime deployment strategy with Terraform.
 - [ ] I have written and published a blog post about today's task.
 - [ ] I have made a social media post about today's task.
@@ -64,6 +64,10 @@ Welcome to Day 12 of the Terraform 30-Day Challenge! Today, you will learn how t
 ## Additional Resources
 
 - [Terraform: Up & Running on Amazon](https://www.amazon.com/Terraform-Running-Infrastructure-Configuration-Management/dp/1492046906)
-- [Udemy Course on Terraform](https://www.udemy.com/course/terraform/)
+
 - [Zero-Downtime Deployment Documentation](https://docs.hashicorp.com/terraform/)
+
+
+
+
 

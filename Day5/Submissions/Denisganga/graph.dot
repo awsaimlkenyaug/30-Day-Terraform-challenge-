@@ -1,0 +1,31 @@
+digraph G {
+  rankdir = "RL";
+  node [shape = rect, fontname = "sans-serif"];
+  "data.aws_availability_zones.available" [label="data.aws_availability_zones.available"];
+  "aws_autoscaling_group.web_asg" [label="aws_autoscaling_group.web_asg"];
+  "aws_internet_gateway.igw" [label="aws_internet_gateway.igw"];
+  "aws_launch_template.web" [label="aws_launch_template.web"];
+  "aws_lb.web_alb" [label="aws_lb.web_alb"];
+  "aws_lb_listener.web_listener" [label="aws_lb_listener.web_listener"];
+  "aws_lb_target_group.web_tg" [label="aws_lb_target_group.web_tg"];
+  "aws_route_table.public" [label="aws_route_table.public"];
+  "aws_route_table_association.public_association" [label="aws_route_table_association.public_association"];
+  "aws_security_group.alb_sg" [label="aws_security_group.alb_sg"];
+  "aws_subnet.main" [label="aws_subnet.main"];
+  "aws_vpc.main" [label="aws_vpc.main"];
+  "aws_autoscaling_group.web_asg" -> "aws_launch_template.web";
+  "aws_autoscaling_group.web_asg" -> "aws_lb_target_group.web_tg";
+  "aws_autoscaling_group.web_asg" -> "aws_subnet.main";
+  "aws_internet_gateway.igw" -> "aws_vpc.main";
+  "aws_lb.web_alb" -> "aws_security_group.alb_sg";
+  "aws_lb.web_alb" -> "aws_subnet.main";
+  "aws_lb_listener.web_listener" -> "aws_lb.web_alb";
+  "aws_lb_listener.web_listener" -> "aws_lb_target_group.web_tg";
+  "aws_lb_target_group.web_tg" -> "aws_vpc.main";
+  "aws_route_table.public" -> "aws_internet_gateway.igw";
+  "aws_route_table_association.public_association" -> "aws_route_table.public";
+  "aws_route_table_association.public_association" -> "aws_subnet.main";
+  "aws_security_group.alb_sg" -> "aws_vpc.main";
+  "aws_subnet.main" -> "data.aws_availability_zones.available";
+  "aws_subnet.main" -> "aws_vpc.main";
+}

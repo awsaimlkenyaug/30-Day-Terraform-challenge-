@@ -11,10 +11,11 @@ Welcome to Day 17 of the Terraform 30-Day Challenge! Today, we’ll dive into th
      - Sections: "Manual Tests", "Manual Testing Basics", "Cleaning Up After Tests".
    - **Goal**: Understand the fundamentals of manual testing, why it’s important, and how to properly clean up your environment after tests.
 
-### 2. **Videos**
-   - **Udemy**: Rewatch the videos from Section 7 on testing.
-   - **Goal**: Refresh your understanding of the concepts related to testing Terraform code.
-
+### 2. **Hands-on Labs**
+   - **Lab**: Complete the following hands-on labs:
+     - "Lab 18: State Migration"
+     - "Lab 19: Import Existing Infrastructure"
+   - **Goal**: Gain hands-on experience with Terraform through practical exercises.
 ### 3. **Activity**
    - **Manual Testing**: Choose an existing Terraform configuration and perform manual tests on it. This could include:
      - Verifying that resources are created correctly.
@@ -57,7 +58,7 @@ Welcome to Day 17 of the Terraform 30-Day Challenge! Today, we’ll dive into th
 ## Checklist
 
 - [ ] I have completed the required reading in Chapter 9.
-- [ ] I have rewatched the Udemy videos from Section 7 on testing.
+- [ ] I have rewatched the required videos
 - [ ] I have successfully performed manual tests on a Terraform configuration.
 - [ ] I have cleaned up the environment after testing to avoid unnecessary costs.
 - [ ] I have written and published a blog post about manual testing in Terraform.
@@ -68,5 +69,9 @@ Welcome to Day 17 of the Terraform 30-Day Challenge! Today, we’ll dive into th
 ## Additional Resources
 
 - [Terraform: Up & Running on Amazon](https://www.amazon.com/Terraform-Running-Infrastructure-Configuration-Management/dp/1492046906)
-- [Udemy Course on Terraform](https://www.udemy.com/course/terraform/)
+
 - [Terraform Documentation on Testing](https://www.terraform.io/docs/language/testing/index.html)
+
+
+
+

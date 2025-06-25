@@ -11,11 +11,11 @@ Welcome to Day 16 of the Terraform 30-Day Challenge! Today, we're stepping up ou
      - Sections: "The Production-Grade Infrastructure Checklist", "Building Testable and Composable Modules".
    - **Goal**: Understand the essential elements that make Terraform code production-ready, focusing on best practices for module design, versioning, and testability.
 
-### 2. **Videos**
-   - **Udemy**: Watch the following videos:
-     - rewatch the videos on modules section 8
-   - **Goal**: Learn how to design and implement Terraform infrastructure that meets the rigorous demands of a production environment.
-
+### 2. **Hands-on Labs**
+   - **Lab**: Complete the following hands-on labs:
+     - "Lab 17: Remote State"
+     - "Lab 18: State Migration"
+   - **Goal**: Gain hands-on experience with Terraform through practical exercises.
 ### 3. **Activity**
    - **Refactor Infrastructure**: Take an existing Terraform project and refactor it to meet production-grade standards. This includes:
      - Breaking down configurations into small, composable, and reusable modules.
@@ -55,7 +55,7 @@ Welcome to Day 16 of the Terraform 30-Day Challenge! Today, we're stepping up ou
 ## Checklist
 
 - [ ] I have completed Chapter 8 of "Terraform: Up & Running".
-- [ ] I have watched the required Udemy videos on building production-grade Terraform infrastructure.
+- [ ] I have completed the required hands-on labs
 - [ ] I have refactored an existing infrastructure project to meet production-grade standards.
 - [ ] I have written and published a blog post about today's task.
 - [ ] I have made a social media post about today's task.
@@ -65,6 +65,10 @@ Welcome to Day 16 of the Terraform 30-Day Challenge! Today, we're stepping up ou
 ## Additional Resources
 
 - [Terraform: Up & Running on Amazon](https://www.amazon.com/Terraform-Running-Infrastructure-Configuration-Management/dp/1492046906)
-- [Udemy Course on Terraform](https://www.udemy.com/course/terraform/)
+
 - [Terratest Documentation](https://terratest.gruntwork.io/)
 - [CI/CD with Terraform](https://www.terraform.io/docs/enterprise/workspaces/vcs.html)
+
+
+
+

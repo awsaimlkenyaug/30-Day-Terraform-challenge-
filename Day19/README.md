@@ -13,13 +13,11 @@ By the end of today, you should understand the strategies for convincing your te
      - Section: "Adopting Infrastructure as Code (IaC) in Your Team".
    - **Goal**: Understand the cultural and process changes required to successfully adopt IaC in your team, along with tips on how to convince your boss, work incrementally, and give your team the time to learn.
 
-### 2. **Videos**
-   - **Udemy**: Watch the following videos from Section 12:
-     - "HCP Terraform (Terraform Cloud) - Getting Started" (Video 67)
-     - "HCP Terraform (Terraform Cloud) - Remote State" (Video 68)
-     - "HCP Terraform (Terraform Cloud) - Workspaces" (Video 69)
-   - **Goal**: Understand how to get started with Terraform Cloud, manage remote state, and use workspaces to organize and isolate your environments.
-
+### 2. **Hands-on Labs**
+   - **Lab**: Complete the following hands-on labs:
+     - "Lab 20: Terraform Cloud"
+     - "Lab 21: Terraform Enterprise"
+   - **Goal**: Gain hands-on experience with Terraform through practical exercises.
 ### 3. **Activity**
    - **Adopting IaC**:
      - Reflect on your own team's infrastructure management process. Create a plan for how you would propose adopting Infrastructure as Code in your team.
@@ -54,9 +52,13 @@ By the end of today, you should understand the strategies for convincing your te
 ## Checklist
 
 - [ ] I have read the section "Adopting Infrastructure as Code (IaC) in Your Team" in Chapter 10 of "Terraform: Up & Running".
-- [ ] I have watched the Udemy videos on getting started with HCP Terraform, remote state, and workspaces.
+- [ ] I have completed the required hands-on labs
 - [ ] I have created a plan for adopting IaC in my team and outlined incremental steps.
 - [ ] I have written and published a blog post about today's task.
 - [ ] I have made a social media post about today's task.
 - [ ] I have created a `day19-update-your-github-username.md` file with details on adopting IaC in teams.
 - [ ] I have created a pull request with all the required details.
+
+
+
+

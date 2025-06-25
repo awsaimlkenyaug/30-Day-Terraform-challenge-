@@ -93,3 +93,7 @@ project-root/
 - [ ] I have deployed my static website using S3 and CloudFront.
 - [ ] I have written and published a blog post about today's project.
 - [ ] I have created a pull request with all the required details.
+
+
+
+

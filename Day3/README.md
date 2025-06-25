@@ -1,4 +1,4 @@
-# C
+
 
 ## Overview
 
@@ -9,14 +9,14 @@ Welcome to Day 3 of the Terraform 30-Day Challenge! Today, we're diving into dep
 ### 1. **Reading**
    - **Chapter**: Chapter 2 
      - Sections: "Deploying a Single Server" and "Deploying a Web Server". you should end at page 59
-   - **Goal**: Understand what a provider block and a resource block are, and learn how to design and deploy a web server on AWS, GCP, or Azure.
+   - **Goal**: Understand what a provider block and a resource block are, and learn how to design and deploy a web server on AWS.
 
-### 2. **Videos**
-   - **Udemy**: Watch the following videos:
-     - "Terraform Plug-in Based Architecture" (Video 11)
-     - "Provider Block" (Video 12)
-     - "Resource Block" (Video 13)
-   - **Goal**: you should be able to explain what is a plug-in based architecture and also what is a provider and resource block to a 5-year-old 
+### 2. **Hands-on Labs**
+   - **Lab**: Complete the following hands-on labs:
+     - Lab 03: [Configure AWS Terraform Providers](https://github.com/btkrausen/hashicorp/blob/master/terraform/Hands-On%20Labs/Section%2004%20-%20Understand%20Terraform%20Basics/04%20-%20Intro_to_the_Terraform_Provider_Block.md)
+     - Lab 04: [Configure AWS Resource Blocks](https://github.com/btkrausen/hashicorp/blob/master/terraform/Hands-On%20Labs/Section%2004%20-%20Understand%20Terraform%20Basics/05%20-%20Intro_to_the_Terraform_Resource_Block.md)
+     
+   - **Goal**: Learn how to work with providers, resource blocks, and data sources in Terraform.
 
 ### 3. **Activity**
    - **Deploy a Basic Server**: Use Terraform to deploy a basic web server on AWS, GCP, or Azure. 
@@ -28,7 +28,7 @@ Welcome to Day 3 of the Terraform 30-Day Challenge! Today, we're diving into dep
    - **Title**: "Deploying Your First Server with Terraform: A Beginner's Guide"
 
 ### 5. **Social Media Post**
-   - **Text**: "🔥 Deployed my first server using Terraform today! It’s amazing how simple IaC makes this.#30daytfchallenge #HUG #hashicorp #HUGYDE @Chi Che. #IaC #terraform
+   - **Text**: "🔥 Deployed my first server using Terraform today! It's amazing how simple IaC makes this.#30daytfchallenge #HUG #hashicorp #AWSAIMLKe #IaC #terraform
 "
 
 ### 6. **Video Tutorial (Optional)**
@@ -60,7 +60,7 @@ Welcome to Day 3 of the Terraform 30-Day Challenge! Today, we're diving into dep
 ## Checklist
 
 - [X] I have read Chapter 2 of "Terraform: Up & Running".
-- [X] I have watched the required Udemy videos.
+- [X] I have completed the required hands-on labs.
 - [X] I have deployed a basic web server using Terraform.
 - [X] I have created an architecture diagram for my server.
 - [X] I have written and published a blog post about today's task.
@@ -72,4 +72,7 @@ Welcome to Day 3 of the Terraform 30-Day Challenge! Today, we're diving into dep
 
 - [draw.io](https://www.draw.io/) - For creating architecture diagrams.
 - [Terraform: Up & Running on Amazon](https://www.amazon.com/Terraform-Running-Infrastructure-Configuration-Management/dp/1492046906)
-- [Udemy Course on Terraform](https://www.udemy.com/course/terraform/)
+
+
+
+

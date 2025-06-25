@@ -11,13 +11,11 @@ Welcome to Day 9 of the Terraform 30-Day Challenge! Today, we will build on the 
      - Sections: "Moudel Gotchas ", "Module Versioning".
    - **Goal**: Learn more advanced concepts of working with modules, including how to manage versioning, use nested modules, and reuse modules in different environments.
 
-### 2. **Videos**
-   - **Udemy**: Watch the following videos:
-     - Video 38: "Terraform module - Scope"
-     - Video 39: "Terraform module -  Public registry "
-     - Video 40: "Terraform module - Versioning"
-   - **Goal**: Deepen your understanding of Terraform modules and learn how to manage modules across different versions and environments.
-
+### 2. **Hands-on Labs**
+   - **Lab**: Complete the following hands-on labs:
+     - "Lab 10: Workspaces"
+     - "Lab 11: Modules"
+   - **Goal**: Gain hands-on experience with Terraform through practical exercises.
 ### 3. **Activity**
    - **Enhance Your Module**: Add advanced features to your module from Day 9, such as supporting multiple environments (dev, staging, production) or enabling versioning for the module.
    - **Deploy Across Environments**: Use your enhanced module to deploy infrastructure across multiple environments (e.g., dev, staging, production).
@@ -58,7 +56,7 @@ The submissions folder has been updated with a [submissionTemplate](https://gith
 ## Checklist
 
 - [ ] I have continued reading Chapter 4 of "Terraform: Up & Running".
-- [ ] I have watched the required Udemy videos on advanced module usage.
+- [ ] I have completed the required hands-on labs
 - [ ] I have enhanced my Terraform module to support versioning and multiple environments.
 - [ ] I have refactored my Terraform module for the Bonus Hands-On Project and deployed infrastructure across environments.
 - [ ] I have written and published a blog post about today's task.
@@ -69,5 +67,9 @@ The submissions folder has been updated with a [submissionTemplate](https://gith
 ## Additional Resources
 
 - [Terraform: Up & Running on Amazon](https://www.amazon.com/Terraform-Running-Infrastructure-Configuration-Management/dp/1492046906)
-- [Udemy Course on Terraform](https://www.udemy.com/course/terraform/)
+
 - [Terraform Module Documentation](https://www.terraform.io/docs/language/modules/index.html)
+
+
+
+

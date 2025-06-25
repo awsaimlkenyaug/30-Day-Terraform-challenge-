@@ -11,13 +11,11 @@ Welcome to Day 11 of the Terraform 30-Day Challenge! Today, we will focus on mas
      - Sections: "Conditionals with Terraform".
    - **Goal**: Understand how to implement conditional logic within your Terraform configurations to control resource deployments based on input variables or specific criteria.
 
-### 2. **Videos**
-   - **Udemy**: Rewatch day 10 vidoes the following videos:
-     - Variable Collection and Structure Types
-     - Working with Data Blocks
-     - Terraform Built-in Functions
-   - **Goal**: Learn how to use variables, data blocks, and built-in functions alongside conditionals to create more flexible and reusable Terraform configurations.
-
+### 2. **Hands-on Labs**
+   - **Lab**: Complete the following hands-on labs:
+     - "Lab 12: Module Sources"
+     - "Lab 13: Module Composition"
+   - **Goal**: Gain hands-on experience with Terraform through practical exercises.
 ### 3. **Activity**
    - **Modify Existing Code**: Refactor your existing Terraform code to use conditionals for dynamic deployments. Use conditional expressions to deploy resources only when certain criteria are met (e.g., specific regions, environment flags, or resource requirements).
    - **Goal**: Successfully implement conditionals in your Terraform code, making your deployments more adaptable to varying conditions.
@@ -52,7 +50,7 @@ Welcome to Day 11 of the Terraform 30-Day Challenge! Today, we will focus on mas
 ## Checklist
 
 - [ ] I have completed Chapter 5 of "Terraform: Up & Running".
-- [ ] I have watched the required Udemy videos on conditionals, variables, and data blocks.
+- [ ] I have completed the required hands-on labs
 - [ ] I have refactored my Terraform code to use conditionals for dynamic infrastructure deployments.
 - [ ] I have written and published a blog post about today's task.
 - [ ] I have made a social media post about today's task.
@@ -62,5 +60,9 @@ Welcome to Day 11 of the Terraform 30-Day Challenge! Today, we will focus on mas
 ## Additional Resources
 
 - [Terraform: Up & Running on Amazon](https://www.amazon.com/Terraform-Running-Infrastructure-Configuration-Management/dp/1492046906)
-- [Udemy Course on Terraform](https://www.udemy.com/course/terraform/)
+
 - [Terraform Documentation: Conditionals](https://www.terraform.io/docs/language/expressions/conditionals.html)
+
+
+
+

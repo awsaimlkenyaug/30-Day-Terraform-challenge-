@@ -48,7 +48,7 @@ View the current rankings at [LEADERBOARD.md](LEADERBOARD.md)
 
 1. **Primary Book**: "Terraform: Up & Running" by Yevgeniy Brikman
 2. **Official Documentation**: [Terraform Documentation](https://www.terraform.io/docs)
-3. **Video Course**: Udemy's "HashiCorp Terraform Associate Certification Course"
+3. **Video Course**: Video Course"
 4. **Practice Exams**: [HashiCorp's Sample Questions](https://learn.hashicorp.com/tutorials/terraform/associate-questions)
 5. **Study Guide**: [Terraform Certified Associate (003) – Comprehensive Study Notes](https://www.freecodecamp.org/news/terraform-certified-associate-003-study-notes/) - A detailed guide covering all exam domains with practical examples
 
@@ -150,3 +150,5 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on contributing to this ch
 ## 📜 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+

@@ -1,8 +1,15 @@
 # Weekly Submission - Week [Number]
 
+## ⚠️ IMPORTANT: Branch Selection
+- This PR must target the appropriate week branch (`week1`, `week2`, `week3`, or `week4`)
+- PRs to `main` branch will be automatically rejected
+- Select the week branch that matches your submission week
+- You can submit multiple PRs to the same week branch if needed
+
 ## Participant Information
 - **GitHub Username:** [Your GitHub Username]
 - **Week Number:** [1-4]
+- **Target Branch:** week[1-4]
 - **Days Completed:** [List of days completed this week, e.g., Days 1-7]
 - **Check-in Attendance:** [Yes/No - Did you attend this week's check-in?]
 

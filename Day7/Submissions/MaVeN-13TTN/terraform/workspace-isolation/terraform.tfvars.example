@@ -1,0 +1,11 @@
+# Example terraform.tfvars for workspace isolation
+aws_region   = "us-west-2"
+project_name = "terraform-workspace-isolation"
+
+common_tags = {
+  Project   = "30-Day-Terraform-Challenge"
+  Day       = "7"
+  Owner     = "MaVeN-13TTN"
+  Challenge = "State-Isolation"
+  Method    = "Workspace"
+}

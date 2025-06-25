@@ -1,0 +1,7 @@
+digraph G {
+  rankdir = "RL";
+  node [shape = rect, fontname = "sans-serif"];
+  "aws_s3_bucket.example" [label="aws_s3_bucket.example"];
+  "random_id.bucket_suffix" [label="random_id.bucket_suffix"];
+  "aws_s3_bucket.example" -> "random_id.bucket_suffix";
+}

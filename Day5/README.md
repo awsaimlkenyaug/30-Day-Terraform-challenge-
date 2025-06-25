@@ -11,14 +11,10 @@ Welcome to Day 5 of the Terraform 30-Day Challenge! Today, we will focus on scal
      - Sections: "Scaling Infrastructure" and "Terraform State".
    - **Goal**: Understand the concepts of scaling infrastructure and the importance of managing Terraform state.
 
-### 2. **Videos**
-   - **Udemy**: Watch the following videos:
-     - "Terraform data block " (Video 19)
-     - "Terraform configuration block" (Video 20)
-     - "Terraform module block" (Video 21)
-     - "Terraform output block " (Video 22)
-   - **Goal**: Understanding how the different block operate and when to use them in your terraform code .
-
+### 2. **Hands-on Labs**
+   - **Lab**: Complete the following hands-on labs:
+     - "Lab 06: [Understanding state](https://github.com/btkrausen/hashicorp/blob/master/terraform/Hands-On%20Labs/Section%2003%20-%20Understand%20The%20Purpose%20of%20Terraform/02%20-%20Benefits_of_State.md)
+   - **Goal**: Gain hands-on experience with Terraform through practical exercises.
 ### 3. **Activity**
    - **Scale Infrastructure**: Use Terraform to scale your web server cluster to handle increased load.
    - **understand  State**: understand the concept of state. what happens when you manully update the state file.
@@ -55,7 +51,7 @@ Welcome to Day 5 of the Terraform 30-Day Challenge! Today, we will focus on scal
 ## Checklist
 
 - [x] I have read Chapter 2 and started Chapter 3 of "Terraform: Up & Running".
-- [x] I have watched the required Udemy videos.
+- [ ] I have completed the required hands-on labs
 - [x] I have scaled my infrastructure using Terraform.
 - [ ] I have written and published a blog post about today's task.
 - [x] I have made a social media post about today's task.
@@ -65,5 +61,9 @@ Welcome to Day 5 of the Terraform 30-Day Challenge! Today, we will focus on scal
 ## Additional Resources
 
 - [Terraform: Up & Running on Amazon](https://www.amazon.com/Terraform-Running-Infrastructure-Configuration-Management/dp/1492046906)
-- [Udemy Course on Terraform](https://www.udemy.com/course/terraform/)
+
 - [Documentation on ELB](https://docs.aws.amazon.com/elasticloadbalancing/latest/application/introduction.html)
+
+
+
+
