@@ -1,0 +1,5 @@
+{
+    "UserId": "AIDA2Uxxxxxxxxxxxxxxx",
+    "Account": "730xxxxxxxxx",
+    "Arn": "arn:aws:iam::730xxxxxxxxx:user/Alxxx"
+}
