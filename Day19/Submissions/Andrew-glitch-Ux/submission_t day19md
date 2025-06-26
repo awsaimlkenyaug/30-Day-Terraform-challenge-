@@ -1,0 +1,105 @@
+# Day 19 Submission
+
+## Personal Information
+- **Name:** [Andrew Muntet]
+- **Date:** [2025-06-26]
+- **GitHub Username:** [Andrew-glitch-Ux ]
+
+## Task Completion
+- [X] Read Chapter 10 of "Terraform: Up & Running"
+- [x] Completed Required Hands-on Labs
+- [X] Terraform Cloud Single EC2 Deployment
+- [X] simulated Terraform Cloud Single EC2 Deployment on Terraform enterprise
+- [X] Created Infrastructure Diagrams
+
+## Infrastructure Details
+ ## Terraform Cloud Single EC2 Deployment
+
+- **Region:** eu-north-1
+- **Instance Type:** t3.micro
+- **Deployment Tool:** Terraform Cloud (via remote backend and workspace)
+- **Workspace:** lab20-cloud
+- **Organization:** tf-challenge
+
+### Key Features:
+- Remote state management via **Terraform Cloud**
+- Managed infrastructure-as-code using **Terraform Cloud Workspaces**
+- Deployed a **single EC2 instance** in AWS with custom AMI and instance type
+- Secrets (AWS credentials) securely stored using **Terraform Cloud variable store**
+- Applied provisioning from local terminal via Terraform CLI with `terraform init`, `plan`, and `apply`
+- Simple, clean deployment structure using `main.tf`, `variables.tf`, and `terraform.tfvars`
+
+
+## Infrastructure Diagrams
+Please place your infrastructure diagrams in the `architecture` folder with the following files:
+- `single-server.png` - Diagram for the single server deployment
+- `web-server.png` - Diagram for the web server deployment
+
+## Blog Post
+- **Title:** [Your Blog Post Title]
+- **Link:** [URL to your blog post]
+
+## Social Media
+- **Platform:** [LinkedIn]
+- **Post Link:** [https://www.linkedin.com/feed/update/urn:li:activity:7343964685114798080/ ]
+
+## Notes and Observations
+
+## Five Key Learnings from Day 19 – Terraform Cloud
+
+[ 1. **Terraform Cloud Enables Remote State Management**
+   - Instead of using a local `terraform.tfstate` file, Terraform Cloud stores state remotely, which improves collaboration, versioning, and recovery.
+
+2. **Variables Cannot Be Used in the `terraform {}` Block**
+   - Terraform requires hardcoded strings for the `organization` and `workspace` inside the `terraform { cloud {} }` block. These cannot reference variables or data sources.
+
+3. **Secure Credential Handling with Environment Variables**
+   - AWS credentials (`AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY`) must be securely passed via Terraform Cloud's **workspace environment variables**, avoiding exposure in code.
+
+4. **CLI Authentication Is Required to Connect to Terraform Cloud**
+   - Terraform must authenticate to Terraform Cloud using a user token stored in the `credentials.tfrc.json` file, which is placed in the default Terraform configuration directory.
+
+5. **Terraform Cloud Workspaces Are Mapped to Codebases**
+   - A workspace in Terraform Cloud is tied to a specific state file. It allows teams to track runs, manage variables, and apply changes remotely via the browser or CLI.
+
+]
+
+## Additional Resources Used
+[List any additional resources you found helpful]
+
+## Time Spent
+- Reading: [1 hours]
+- Infrastructure Deployment: [1 hours]
+- Diagram Creation: [1/2 hours]
+- Blog Writing: [1/2 hours]
+- Total: [3 hours]
+
+## Repository Structure
+```
+Day19/
+└── Submissions/
+    └── [Andrew-glitch-Ux]/
+        ├── Architecture/
+        │   ├── lab20.drawio.png
+        ├──lab 21
+            ├── terraform/   
+                ├──providers
+                   ├──LICENSE.txt
+                ├──environment
+                ├──terraform.tfstate
+            ├──.terraform.lock.hcl
+            ├──main.tf
+            ├──terraform.tfvars
+            ├──varaiables.tf
+            ├──lab 22
+               ├──README.md
+            └──  daily update.md
+            └── submission.md
+    ├──README.md
+    ├──submission_template.md
+├──README.md
+├──tasks.md
+``` 
+
+
+
