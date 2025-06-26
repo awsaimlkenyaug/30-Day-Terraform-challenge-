@@ -1,3 +1,5 @@
+
+# Trigger apply from GitHub commit
 terraform {
   cloud {
     organization = "tf-challenge" 
