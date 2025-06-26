@@ -1,6 +1,6 @@
 terraform {
   cloud {
-    organization = "tf-challenge" # Replace with your actual org
+    organization = "tf-challenge" 
     workspaces {
       name = "30-Day-Terraform-challenge-lab23"
     }
