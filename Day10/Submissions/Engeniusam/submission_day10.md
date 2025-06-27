@@ -12,8 +12,8 @@
 
 
 ## Blog Post
-- **Title:** [Your Blog Post Title]
-- **Link:** [URL to your blog post]
+- **Title:** Understanding Module Sources in Terraform
+- **Link:** https://medium.com/@engeniusam/understanding-module-sources-in-terraform-6550feac76c9
 
 ## Social Media
 - **Platform:** Twitter
