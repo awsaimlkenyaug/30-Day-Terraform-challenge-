@@ -10,8 +10,6 @@ resource "aws_launch_template" "this" {
 }
 
 
-  user_data = base64encode(var.user_data)
-
   lifecycle {
     create_before_destroy = true
   }

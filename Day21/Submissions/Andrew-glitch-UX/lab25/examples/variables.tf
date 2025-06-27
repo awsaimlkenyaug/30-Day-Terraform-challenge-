@@ -154,10 +154,6 @@ variable "instance_type" {
   description = "EC2 instance type"
 }
 
-variable "user_data" {
-  type        = string
-  description = "User data script"
-}
 
 variable "min_size" {
   type        = number

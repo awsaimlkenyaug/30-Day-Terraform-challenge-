@@ -51,7 +51,6 @@ module "asg" {
   name                      = var.asg_name
   ami_id                    = var.ami_id
   instance_type             = var.instance_type
-  user_data                 = var.user_data
   min_size                  = var.min_size
   max_size                  = var.max_size
   desired_capacity          = var.desired_capacity

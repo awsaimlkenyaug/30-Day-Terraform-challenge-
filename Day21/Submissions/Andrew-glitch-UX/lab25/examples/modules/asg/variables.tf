@@ -13,11 +13,6 @@ variable "instance_type" {
   type        = string
 }
 
-variable "user_data" {
-  description = "User data for launching EC2 instances"
-  type        = string
-}
-
 variable "min_size" {
   description = "Minimum number of instances"
   type        = number
