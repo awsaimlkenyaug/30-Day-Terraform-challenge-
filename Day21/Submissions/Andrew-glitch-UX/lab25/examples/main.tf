@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 module "vpc" {
-  source = "../modules/vpc"
+  source = "./modules/vpc"
 
   name                 = var.vpc_name
   vpc_cidr_block       = var.vpc_cidr_block
@@ -14,7 +14,7 @@ module "vpc" {
 }
 
 module "alb" {
-  source = "../modules/alb"
+  source = "./modules/alb"
 
   name                        = var.name
   subnet_ids                  = module.vpc.public_subnet_ids
@@ -46,7 +46,7 @@ module "alb" {
 }
 
 module "asg" {
-  source = "../modules/asg"
+  source = "./modules/asg"
 
   name                      = var.asg_name
   ami_id                    = var.ami_id
