@@ -14,7 +14,7 @@
    - "Building Reusable Infrastructure with Terraform Modules"
    - "Best Practices for Structuring Terraform Modules"
 6. **Social Media Post**: 
-   - "🔄 Implemented reusable Terraform modules today! #HUG #hashicorp #HUGYDE @chiche #IaC"
+   - "🔄 Implemented reusable Terraform modules today! #HUG #hashicorp #HUGMERU @awsaimlkenyaug #IaC"
 
 
 

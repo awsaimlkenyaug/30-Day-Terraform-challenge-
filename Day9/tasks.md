@@ -18,7 +18,7 @@
    - "Advanced Terraform Module Usage: Versioning, Nesting, and Reuse Across Environments"
    - "Best Practices for Managing Module Versions in Terraform"
 6. **Social Media Post**: 
-   - "🔄 Expanded my knowledge of reusable Terraform modules by adding versioning and deploying across environments! #HUG #hashicorp #HUGYDE @chiche #IaC"
+   - "🔄 Expanded my knowledge of reusable Terraform modules by adding versioning and deploying across environments! #HUG #hashicorp #HUGMERU @awsaimlkenyaug #IaC"
 
 
 

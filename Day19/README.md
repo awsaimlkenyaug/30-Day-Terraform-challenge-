@@ -27,7 +27,7 @@ By the end of today, you should understand the strategies for convincing your te
    - **Title**: "How to Convince Your Team to Adopt Infrastructure as Code (IaC)"
 
 ### 5. **Social Media Post**
-   - **Text**: "🚀 Today, I explored strategies to adopt Infrastructure as Code (IaC) in teams. Convincing the boss and working incrementally are key! #30daytfchallenge #HUG #hashicorp #HUGYDE @Chi Che. #IaC #terraform"
+   - **Text**: "🚀 Today, I explored strategies to adopt Infrastructure as Code (IaC) in teams. Convincing the boss and working incrementally are key! #30daytfchallenge #HUG #hashicorp #HUGMERU @awsaimlkenyaug #IaC #terraform"
 
 ## How to Submit Your Work
 

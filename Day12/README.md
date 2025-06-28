@@ -24,7 +24,7 @@ Welcome to Day 12 of the Terraform 30-Day Challenge! Today, you will learn how t
    - **Title**: "Mastering Zero-Downtime Deployments with Terraform"
 
 ### 5. **Social Media Post**
-   - **Text**: "🚀 Successfully deployed a zero-downtime update using Terraform! #30daytfchallenge #HUG #hashicorp #HUGYDE @Chi Che. #IaC #terraform"
+   - **Text**: "🚀 Successfully deployed a zero-downtime update using Terraform! #30daytfchallenge #HUG #hashicorp #HUGMERU @awsaimlkenyaug #IaC #terraform"
 
 ### 7. **Activity**
    - **Screencast**: Record a screencast of your zero-downtime deployment process and share it on YouTube. Walk through your Terraform code and explain how blue/green or canary deployments work in practice.

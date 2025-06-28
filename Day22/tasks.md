@@ -16,7 +16,7 @@
    - "Putting It All Together: Application and Infrastructure Workflows with Terraform"
    - **Bonus**: Reflect on your key learnings from the 30-day challenge so far.
 5. **Social Media Post**: 
-   - "🎉 Finished reading Terraform: Up & Running! Combining application and infrastructure workflows today with Terraform Cloud and Sentinel policies. Next up: more hands-on projects! #30daytfchallenge #HUG #hashicorp #HUGYDE @Chi Che. #IaC #terraform"
+   - "🎉 Finished reading Terraform: Up & Running! Combining application and infrastructure workflows today with Terraform Cloud and Sentinel policies. Next up: more hands-on projects! #30daytfchallenge #HUG #hashicorp #HUGMERU @awsaimlkenyaug #IaC #terraform"
 
 ### Submission Instructions
 

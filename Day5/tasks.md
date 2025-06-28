@@ -11,7 +11,7 @@
    - Scale your web server cluster using Terraform to handle increased load.
    - understand state files and how to mange this file.
 4. **Blog Post ideas**: "mananging high traffic applications with aws elastic load balanacer and terraform, Best pratices for managing state files ".
-5. **Social Media Post**:"🚀 Scaled my infrastructure with aws elactic load balancer today and using Terraform! #30daytfchallenge #HUG #hashicorp #HUGYDE @chiche #IaC"
+5. **Social Media Post**:"🚀 Scaled my infrastructure with aws elactic load balancer today and using Terraform! #30daytfchallenge #HUG #hashicorp #HUGMERU @awsaimlkenyaug #IaC"
 
 - Update the `day5-update-your-github-username.md` file with your name, task completed, date, and time. Embed your Terraform code and architecture diagrams inside the markdown file.
 - Commit the file to your `day5-scaling-infrastructure` branch.

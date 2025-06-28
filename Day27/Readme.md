@@ -38,7 +38,7 @@ This project will test your knowledge of Terraform's best practices, modularity,
 ---
 
 ## Social Media Post
-- "🚀 Built a 3-tier multi-region high-availability infrastructure using AWS and Terraform! #30daytfchallenge #HUG #hashicorp #HUGYDE @Chi Che. #IaC #terraform"
+- "🚀 Built a 3-tier multi-region high-availability infrastructure using AWS and Terraform! #30daytfchallenge #HUG #hashicorp #HUGMERU @awsaimlkenyaug #IaC #terraform"
 
 ---
 

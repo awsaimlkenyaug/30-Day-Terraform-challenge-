@@ -22,10 +22,10 @@ Welcome to Day 5 of the Terraform 30-Day Challenge! Today, we will focus on scal
    - **Goal**: Successfully Deploy a load balancer and understand state .
 
 ### 4. **Blog Post**
-   - **Title**: "mananging high traffic applications with aws elastic load balanacer and terraform"
+   - **Title**: "mananging high traffic applications with aws elastic load balancer and terraform"
 
 ### 5. **Social Media Post**
-   - **Text**: "🚀 Scaled my infrastructure with aws elactic load balancer today and using Terraform! #30daytfchallenge #HUG #hashicorp #HUGYDE @chiche #IaC"
+   - **Text**: "🚀 Scaled my infrastructure with aws elactic load balancer today and using Terraform! #30daytfchallenge #HUG #hashicorp #HUGMERU @awsaimlkenyaug #IaC"
 
 
 ## How to Submit Your Work
