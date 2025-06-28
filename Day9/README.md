@@ -29,7 +29,7 @@ Welcome to Day 9 of the Terraform 30-Day Challenge! Today, we will build on the 
    - **Title**: "Advanced Terraform Module Usage: Versioning, Nesting, and Reuse Across Environments"
 
 ### 6. **Social Media Post**
-   - **Text**: "🔄 Expanded my knowledge of reusable Terraform modules by adding versioning and deploying across environments! #HUG #hashicorp #HUGYDE @chiche #IaC"
+   - **Text**: "🔄 Expanded my knowledge of reusable Terraform modules by adding versioning and deploying across environments! #HUG #hashicorp #HUGMERU @awsaimlkenyaug #IaC"
 
 ## How to Submit Your Work
 The submissions folder has been updated with a [submissionTemplate](https://github.com/chiche-ds/30-Day-Terraform-challenge-/blob/main/Day9/Submissions/submissionTemplate.md) file. Use this file as a template to create your daily update.md file in the submission folder 

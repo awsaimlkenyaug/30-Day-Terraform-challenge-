@@ -27,7 +27,7 @@
 ---
 
 ## Social Media Post:
-- "🌍 Successfully deployed a 3-tier multi-region infrastructure with high availability using Terraform and AWS! #30daytfchallenge #HUG #hashicorp #HUGYDE @Chi Che. #IaC #terraform"
+- "🌍 Successfully deployed a 3-tier multi-region infrastructure with high availability using Terraform and AWS! #30daytfchallenge #HUG #hashicorp #HUGMERU @awsaimlkenyaug #IaC #terraform"
 
 ---
 

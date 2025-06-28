@@ -27,7 +27,7 @@ Welcome to Day 16 of the Terraform 30-Day Challenge! Today, we're stepping up ou
    - **Title**: "Creating Production-Grade Infrastructure with Terraform"
 
 ### 5. **Social Media Post**
-   - **Text**: "🚀 Built my first production-grade infrastructure using Terraform today! #30daytfchallenge #HUG #hashicorp #HUGYDE @Chi Che. #IaC #terraform
+   - **Text**: "🚀 Built my first production-grade infrastructure using Terraform today! #30daytfchallenge #HUG #hashicorp #HUGMERU @awsaimlkenyaug #IaC #terraform
 "
 
 

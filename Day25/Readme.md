@@ -62,7 +62,7 @@ project-root/
 - **Title**: "Deploying a Static Website on AWS S3 with Terraform: A Beginner's Guide"
 
 ## Social Media Post
-- **Text**: "🚀 Deployed my first static website on AWS S3 with Terraform today! Learning best practices is key to success. #30daytfchallenge #HUG #hashicorp #HUGYDE @Chi Che. #IaC #terraform"
+- **Text**: "🚀 Deployed my first static website on AWS S3 with Terraform today! Learning best practices is key to success. #30daytfchallenge #HUG #hashicorp #HUGMERU @awsaimlkenyaug #IaC #terraform"
 
 ---
 

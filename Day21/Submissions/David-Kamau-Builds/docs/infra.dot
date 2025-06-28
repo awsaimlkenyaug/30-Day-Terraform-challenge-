@@ -1,0 +1,54 @@
+digraph INFRA {
+  node [ color = "black", fillcolor = "#E6E6E6", height =1, style = "filled,bold,rounded", fontname = "Arial" ];
+  "webapp-vpc" [ label = "webapp-vpc
+(AWS::EC2::VPC)" ];
+  "webapp-igw" [ label = "webapp-igw
+(AWS::EC2::InternetGateway)" ];
+  "public-subnet-1" [ label = "public-subnet-1
+(AWS::EC2::Subnet)" ];
+  "public-subnet-2" [ label = "public-subnet-2
+(AWS::EC2::Subnet)" ];
+  "public-rt" [ label = "public-rt
+(AWS::EC2::RouteTable)" ];
+  "alb-sg" [ label = "alb-sg
+(AWS::EC2::SecurityGroup)" ];
+  "web-sg" [ label = "web-sg
+(AWS::EC2::SecurityGroup)" ];
+  "webapp-alb" [ label = "webapp-alb
+(AWS::ElasticLoadBalancingV2::LoadBalancer)", shape =rectangle, fillcolor = "#B7E0FF" ];
+  "webapp-tg" [ label = "webapp-tg
+(AWS::ElasticLoadBalancingV2::TargetGroup)", shape =rectangle, fillcolor = "#B7E0FF" ];
+  "web-launch-template" [ label = "web-launch-template
+(AWS::EC2::LaunchTemplate)", shape =rectangle, fillcolor = "#B7E0FF" ];
+  "webapp-asg" [ label = "webapp-asg
+(AWS::AutoScaling::AutoScalingGroup)", shape =rectangle, fillcolor = "#B7E0FF" ];
+  "webapp-database" [ label = "webapp-database
+(AWS::RDS::DBInstance)", shape =cylinder, fillcolor = "#FFCFB3" ];
+  "webapp-db-subnet-group" [ label = "webapp-db-subnet-group
+(AWS::RDS::DBSubnetGroup)", shape =cylinder, fillcolor = "#FFCFB3" ];
+  "webapp-db-sg" [ label = "webapp-db-sg
+(AWS::EC2::SecurityGroup)" ];
+  "webapp-igw" -> "webapp-vpc";
+  "public-subnet-1" -> "webapp-vpc";
+  "public-subnet-2" -> "webapp-vpc";
+  "public-rt" -> "webapp-vpc";
+  "public-rt" -> "webapp-igw";
+  "alb-sg" -> "webapp-vpc";
+  "web-sg" -> "webapp-vpc";
+  "web-sg" -> "alb-sg";
+  "webapp-alb" -> "alb-sg";
+  "webapp-alb" -> "public-subnet-1";
+  "webapp-alb" -> "public-subnet-2";
+  "webapp-tg" -> "webapp-vpc";
+  "web-launch-template" -> "web-sg";
+  "webapp-asg" -> "web-launch-template";
+  "webapp-asg" -> "public-subnet-1";
+  "webapp-asg" -> "public-subnet-2";
+  "webapp-asg" -> "webapp-tg";
+  "webapp-database" -> "webapp-db-subnet-group";
+  "webapp-database" -> "webapp-db-sg";
+  "webapp-db-subnet-group" -> "public-subnet-1";
+  "webapp-db-subnet-group" -> "public-subnet-2";
+  "webapp-db-sg" -> "webapp-vpc";
+  "webapp-db-sg" -> "web-sg";
+}

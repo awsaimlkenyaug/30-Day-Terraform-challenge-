@@ -30,7 +30,7 @@ Welcome to Day 7 of the Terraform 30-Day Challenge! Today, we will continue expl
    - **Title**: "State Isolation: Layout vs Workspace"
 
 ### 6. **Social Media Post**
-   - **Text**: "🗂 Learned how to manage Terraform state effectively today. Crucial for consistent deployments. #30daytfchallenge #HUG #hashicorp #HUGYDE @chiche #IaC"
+   - **Text**: "🗂 Learned how to manage Terraform state effectively today. Crucial for consistent deployments. #30daytfchallenge #HUG #hashicorp #HUGMERU @awsaimlkenyaug #IaC"
 
 ## How to Submit Your Work
 

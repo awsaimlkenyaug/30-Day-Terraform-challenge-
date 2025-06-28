@@ -9,7 +9,7 @@ g = Github(os.environ['GITHUB_TOKEN'])
 repo = g.get_repo(os.environ['GITHUB_REPOSITORY'])
 
 def get_week_number():
-    start_date = datetime(2025, 5, 26)  # Challenge start date
+    start_date = datetime(2024, 5, 20)  # Updated Challenge start date
     today = datetime.now()
     delta = today - start_date
     return (delta.days // 7) + 1
@@ -83,7 +83,7 @@ def create_blog_reminder():
 
 def create_daily_task_reminder():
     # Calculate day number
-    start_date = datetime(2025, 5, 26)  # Challenge start date
+    start_date = datetime(2024, 5, 20)  # Updated Challenge start date
     today = datetime.now()
     delta = today - start_date
     day_number = delta.days + 1

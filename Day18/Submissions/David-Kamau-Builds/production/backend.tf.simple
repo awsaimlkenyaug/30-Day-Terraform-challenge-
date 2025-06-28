@@ -1,0 +1,3 @@
+terraform {
+  # Using local backend for CI/CD pipeline
+}

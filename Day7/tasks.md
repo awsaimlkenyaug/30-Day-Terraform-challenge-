@@ -23,7 +23,7 @@
    - "State Isolation: Layout vs Workspace"
    - "Best Practices for Isolating Terraform State in Multi-Environment Setups"
 6. **Social Media Post**: 
-   - "🗂 Learned how to manage Terraform state effectively today. Crucial for consistent deployments. #30daytfchallenge #HUG #hashicorp #HUGYDE @chiche #IaC"
+   - "🗂 Learned how to manage Terraform state effectively today. Crucial for consistent deployments. #30daytfchallenge #HUG #hashicorp #HUGMERU @awsaimlkenyaug #IaC"
 
 
 

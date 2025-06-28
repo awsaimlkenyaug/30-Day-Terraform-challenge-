@@ -26,7 +26,7 @@ By the end of today, you should feel more confident about the exam objectives an
    - **Title**: "Preparing for the Terraform Associate Exam - Key Resources and Tips"
 
 ### 5. **Social Media Post**
-   - **Text**: "🎯 Brushing up on Terraform concepts and preparing for the certification exam. #30daytfchallenge #HUG #hashicorp #HUGYDE @Chi Che. #IaC #terraform #examready"
+   - **Text**: "🎯 Brushing up on Terraform concepts and preparing for the certification exam. #30daytfchallenge #HUG #hashicorp #HUGMERU @awsaimlkenyaug #IaC #terraform #examready"
 
 ## How to Submit Your Work
 

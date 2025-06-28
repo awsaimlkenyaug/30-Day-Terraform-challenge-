@@ -6,10 +6,10 @@ from collections import defaultdict
 
 # Define check-in dates
 CHECKIN_DATES = [
-    "2025-05-24",
-    "2025-05-31",
-    "2025-06-07",
-    "2025-06-14"
+    "2024-05-24",
+    "2024-05-31",
+    "2024-06-07",
+    "2024-06-14"
 ]
 
 def calculate_points(pr, commits, comments):

@@ -12,7 +12,7 @@
 4. **Blog Post Ideas**: 
    - "How to Convince Your Team to Adopt Infrastructure as Code (IaC)"
 5. **Social Media Post**: 
-   - "🚀 Today, I explored strategies to adopt Infrastructure as Code (IaC) in teams. Convincing the boss and working incrementally are key! #30daytfchallenge #HUG #hashicorp #HUGYDE @Chi Che. #IaC #terraform"
+   - "🚀 Today, I explored strategies to adopt Infrastructure as Code (IaC) in teams. Convincing the boss and working incrementally are key! #30daytfchallenge #HUG #hashicorp #HUGMERU @awsaimlkenyaug #IaC #terraform"
 
 
 
