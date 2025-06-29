@@ -19,42 +19,30 @@ provider "aws" {
   region = "us-east-1"
 }
 
-resource "aws_security_group" "allow_ssh" {
-  name_prefix = "allow-ssh"
-
-  ingress {
-    from_port   = 22
-    to_port     = 22
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
-  egress {
-    from_port   = 0
-    to_port     = 0
-    protocol    = "-1"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
+# VPC
+resource "aws_vpc" "main" {
+  cidr_block = "10.0.0.0/16"
 
   tags = {
-    Name        = "SSH SG"
-    Environment = "dev"
+    Name = "Day22-VPC"
   }
 }
 
-resource "aws_instance" "single" {
-  ami                    = "ami-0c02fb55956c7d316"
-  instance_type          = "t2.micro"
-  vpc_security_group_ids = [aws_security_group.allow_ssh.id]
-
-  user_data = <<-EOF
-              #!/bin/bash
-              echo "Single Server is running" > /var/www/html/index.html
-              EOF
+# Subnet
+resource "aws_subnet" "main" {
+  vpc_id                  = aws_vpc.main.id
+  cidr_block              = "10.0.1.0/24"
+  availability_zone       = "us-east-1a"
+  map_public_ip_on_launch = true
 
   tags = {
-    Name        = "Day22-SingleServer"
-    Environment = "dev"
+    Name = "Day22-Subnet"
   }
 }
-#####trigger_TCP
+
+# Internet Gateway
+resource "aws_internet_gateway" "gw" {
+  vpc_id = aws_vpc.main.id
+
+  tags = {
+    Name = "Da
