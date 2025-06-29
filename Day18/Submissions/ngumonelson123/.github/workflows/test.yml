@@ -1,0 +1,29 @@
+name: Terraform Test
+
+on:
+  push:
+    branches: [ "week3", "day18-automated-testing" ]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Go
+      uses: actions/setup-go@v4
+      with:
+        go-version: '1.20'
+
+    - name: Install Terraform
+      uses: hashicorp/setup-terraform@v3
+      with:
+        terraform_version: 1.6.0
+
+    - name: Run Terratest
+      run: |
+        cd Day18/Submissions/ngumonelson123/terraform/single-server/test
+        go test -v

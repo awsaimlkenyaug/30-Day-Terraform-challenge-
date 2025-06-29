@@ -1,28 +1,29 @@
+
 # Day 11 Submission
 
 ## Personal Information
-- **Name:** [Your Name]
-- **Date:** [Date of Submission]
-- **GitHub Username:** [Your GitHub Username]
+- **Name:** Nelson Ngumo
+- **Date:** 2025-06-25
+- **GitHub Username:** ngumonelson123
 
 ## Task Completion
-- [ ] Read Chapter 2 of "Terraform: Up & Running"
-- [ ] Completed Required Hands-on Labs
-- [ ] Deployed Single Server
-- [ ] Deployed Web Server
-- [ ] Created Infrastructure Diagrams
+- [x] Read Chapter 5 of "Terraform: Up & Running"
+- [x] Completed Required Hands-on Labs
+- [x] Deployed Single Server
+- [x] Deployed Web Server
+- [x] Created Infrastructure Diagrams
 
 ## Infrastructure Details
 
 ### Single Server Deployment
-- **Region:** [AWS Region]
-- **Instance Type:** [EC2 Instance Type]
-- **Key Features:** [List key configurations]
+- **Region:** us-east-1
+- **Instance Type:** t2.micro
+- **Key Features:** Conditional deployment using `count`, toggle with `create_instance` variable.
 
 ### Web Server Deployment
-- **Region:** [AWS Region]
-- **Instance Type:** [EC2 Instance Type]
-- **Key Features:** [List key configurations]
+- **Region:** us-east-1
+- **Instance Type:** t2.micro (only if environment is `prod`)
+- **Key Features:** Environment-based deployment using conditional expressions.
 
 ## Infrastructure Diagrams
 Please place your infrastructure diagrams in the `architecture` folder with the following files:
@@ -30,31 +31,32 @@ Please place your infrastructure diagrams in the `architecture` folder with the 
 - `web-server.png` - Diagram for the web server deployment
 
 ## Blog Post
-- **Title:** [Your Blog Post Title]
-- **Link:** [URL to your blog post]
+- **Title:** Mastering Loops and Conditionals in Terraform
+- **Link:** [Your Blog Post URL]
 
 ## Social Media
-- **Platform:** [Twitter/LinkedIn]
-- **Post Link:** [URL to your social media post]
+- **Platform:** LinkedIn
+- **Post Link:** [Your LinkedIn Post URL]
 
 ## Notes and Observations
-[Share your key learnings, challenges faced, and how you overcame them]
+Learned how to use `count`, `for_each`, and conditionals to control resource creation dynamically. Conditionals add flexibility for deploying infrastructure based on environment or flags.
 
 ## Additional Resources Used
-[List any additional resources you found helpful]
+- Terraform Docs on [Conditionals](https://developer.hashicorp.com/terraform/language/expressions/conditionals)
+- Terraform Registry Examples
 
 ## Time Spent
-- Reading: [X hours]
-- Infrastructure Deployment: [X hours]
-- Diagram Creation: [X hours]
-- Blog Writing: [X hours]
-- Total: [X hours]
+- Reading: 1 hour
+- Infrastructure Deployment: 1 hour
+- Diagram Creation: 20 mins
+- Blog Writing: 30 mins
+- Total: 2.5 hours
 
 ## Repository Structure
 ```
 Day11/
 └── Submissions/
-    └── [Your GitHub Username]/
+    └── ngumonelson123/
         ├── architecture/
         │   ├── single-server.png
         │   └── web-server.png
@@ -64,7 +66,4 @@ Day11/
         │   └── web-server/
         │       └── main.tf
         └── submission.md
-``` 
-
-
-
+```
