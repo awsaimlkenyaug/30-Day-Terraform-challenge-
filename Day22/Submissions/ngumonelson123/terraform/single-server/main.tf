@@ -45,4 +45,69 @@ resource "aws_internet_gateway" "gw" {
   vpc_id = aws_vpc.main.id
 
   tags = {
-    Name = "Da
+    Name = "Day22-IGW"
+  }
+}
+
+# Route Table
+resource "aws_route_table" "rt" {
+  vpc_id = aws_vpc.main.id
+
+  route {
+    cidr_block = "0.0.0.0/0"
+    gateway_id = aws_internet_gateway.gw.id
+  }
+
+  tags = {
+    Name = "Day22-RouteTable"
+  }
+}
+
+# Associate Route Table with Subnet
+resource "aws_route_table_association" "a" {
+  subnet_id      = aws_subnet.main.id
+  route_table_id = aws_route_table.rt.id
+}
+
+# Security Group for SSH
+resource "aws_security_group" "allow_ssh" {
+  name_prefix = "allow-ssh"
+  vpc_id      = aws_vpc.main.id
+
+  ingress {
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  tags = {
+    Name        = "SSH SG"
+    Environment = "dev"
+  }
+}
+
+# EC2 Instance
+resource "aws_instance" "single" {
+  ami                    = "ami-0c02fb55956c7d316"
+  instance_type          = "t2.micro"
+  subnet_id              = aws_subnet.main.id
+  vpc_security_group_ids = [aws_security_group.allow_ssh.id]
+
+  user_data = <<-EOF
+              #!/bin/bash
+              echo "Single Server is running" > /var/www/html/index.html
+              EOF
+
+  tags = {
+    Name        = "Day22-SingleServer"
+    Environment = "dev"
+  }
+}
