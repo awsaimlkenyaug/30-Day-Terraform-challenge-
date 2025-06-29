@@ -1,70 +1,65 @@
 # Day 16 Submission
 
 ## Personal Information
-- **Name:** [Your Name]
-- **Date:** [Date of Submission]
-- **GitHub Username:** [Your GitHub Username]
+- **Name:** Nelson Ngumo
+- **Date:** 2025-06-28
+- **GitHub Username:** ngumonelson123
 
 ## Task Completion
-- [ ] Read Chapter 2 of "Terraform: Up & Running"
-- [ ] Completed Required Hands-on Labs
-- [ ] Deployed Single Server
+- [x] Read Chapter 8 of "Terraform: Up & Running"
+- [x] Completed Required Hands-on Labs
+- [x] Deployed Single Server
 - [ ] Deployed Web Server
-- [ ] Created Infrastructure Diagrams
+- [x] Created Infrastructure Diagrams
 
 ## Infrastructure Details
 
 ### Single Server Deployment
-- **Region:** [AWS Region]
-- **Instance Type:** [EC2 Instance Type]
-- **Key Features:** [List key configurations]
-
-### Web Server Deployment
-- **Region:** [AWS Region]
-- **Instance Type:** [EC2 Instance Type]
-- **Key Features:** [List key configurations]
+- **Region:** us-east-1
+- **Instance Type:** t2.micro
+- **Key Features:**
+  - Automated VPC, Subnet, Internet Gateway
+  - Public Subnet with SSH-enabled Security Group
+  - EC2 Instance provisioned with tagged name
+  - Terraform-managed state in S3 + DynamoDB
 
 ## Infrastructure Diagrams
-Please place your infrastructure diagrams in the `architecture` folder with the following files:
-- `single-server.png` - Diagram for the single server deployment
-- `web-server.png` - Diagram for the web server deployment
+- `single-server.png` saved in `architecture/`
 
 ## Blog Post
-- **Title:** [Your Blog Post Title]
-- **Link:** [URL to your blog post]
+- **Title:** Building Production-Grade Infrastructure with Terraform
+- **Link:** [Add your blog post URL]
 
 ## Social Media
-- **Platform:** [Twitter/LinkedIn]
-- **Post Link:** [URL to your social media post]
+- **Platform:** LinkedIn
+- **Post Link:** [Add your LinkedIn post URL]
 
 ## Notes and Observations
-[Share your key learnings, challenges faced, and how you overcame them]
+- Learned how to modularize infrastructure for reusability.
+- Faced VPC-related deployment errors but resolved with full automation.
+- Understanding backend state and remote locking was crucial.
 
 ## Additional Resources Used
-[List any additional resources you found helpful]
+- Terraform Docs
+- AWS Docs on VPC and Subnetting
+- HashiCorp Learn Tutorials
 
 ## Time Spent
-- Reading: [X hours]
-- Infrastructure Deployment: [X hours]
-- Diagram Creation: [X hours]
-- Blog Writing: [X hours]
-- Total: [X hours]
+- Reading: 1.5 hours
+- Infrastructure Deployment: 2 hours
+- Diagram Creation: 30 mins
+- Blog Writing: 45 mins
+- Total: ~4.75 hours
 
 ## Repository Structure
-```
 Day16/
 └── Submissions/
-    └── [Your GitHub Username]/
-        ├── architecture/
-        │   ├── single-server.png
-        │   └── web-server.png
-        ├── terraform/
-        │   ├── single-server/
-        │   │   └── main.tf
-        │   └── web-server/
-        │       └── main.tf
-        └── submission.md
-``` 
-
-
-
+└── ngumonelson123/
+├── architecture/
+│ └── single-server.png
+├── terraform/
+│ ├── single-server/
+│ │ └── main.tf
+│ └── web-server/
+│ └── main.tf
+└── submission.md
