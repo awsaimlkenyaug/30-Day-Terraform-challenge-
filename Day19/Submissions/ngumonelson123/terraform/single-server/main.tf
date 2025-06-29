@@ -20,4 +20,3 @@ resource "aws_instance" "example" {
     Name = "Day19Server"
   }
 }
-# Triggering Day 19 run
