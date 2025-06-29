@@ -1,70 +1,69 @@
 # Day 18 Submission
 
 ## Personal Information
-- **Name:** [Your Name]
-- **Date:** [Date of Submission]
-- **GitHub Username:** [Your GitHub Username]
+- **Name:** Nelson Ngumo
+- **Date:** 2025-06-29
+- **GitHub Username:** ngumonelson123
 
 ## Task Completion
-- [ ] Read Chapter 2 of "Terraform: Up & Running"
-- [ ] Completed Required Hands-on Labs
-- [ ] Deployed Single Server
-- [ ] Deployed Web Server
-- [ ] Created Infrastructure Diagrams
+- [x] Read Chapter 9 of "Terraform: Up & Running"
+- [x] Completed Required Hands-on Labs
+- [x] Deployed Single Server
+- [x] Deployed Web Server
+- [x] Created Infrastructure Diagrams
 
 ## Infrastructure Details
 
 ### Single Server Deployment
-- **Region:** [AWS Region]
-- **Instance Type:** [EC2 Instance Type]
-- **Key Features:** [List key configurations]
+- **Region:** us-east-1
+- **Instance Type:** t2.micro
+- **Key Features:** Dynamic AMI, custom VPC, subnet, SSH-enabled Security Group, Terratest validation
 
 ### Web Server Deployment
-- **Region:** [AWS Region]
-- **Instance Type:** [EC2 Instance Type]
-- **Key Features:** [List key configurations]
+- **Region:** us-east-1
+- **Instance Type:** t2.micro
+- **Key Features:** Similar structure, validated output, GitHub Actions automation
 
 ## Infrastructure Diagrams
-Please place your infrastructure diagrams in the `architecture` folder with the following files:
-- `single-server.png` - Diagram for the single server deployment
-- `web-server.png` - Diagram for the web server deployment
+- `architecture/single-server.png` - shows Terraform CLI deploying to VPC, EC2 tested via Terratest
 
 ## Blog Post
-- **Title:** [Your Blog Post Title]
-- **Link:** [URL to your blog post]
+- **Title:** Automating Terraform Testing: From Unit Tests to End-to-End Validation
+- **Link:** [https://medium.com/@ngumonelson123/terraform-day-18](https://medium.com/@ngumonelson123/terraform-day-18) *(Replace with actual link)*
 
 ## Social Media
-- **Platform:** [Twitter/LinkedIn]
-- **Post Link:** [URL to your social media post]
+- **Platform:** LinkedIn
+- **Post Link:** [https://linkedin.com/in/nelson-ngumo/posts/day18-testing](https://linkedin.com/in/nelson-ngumo/posts/day18-testing) *(Replace with actual link)*
 
 ## Notes and Observations
-[Share your key learnings, challenges faced, and how you overcame them]
+- Terratest is a game-changer for validating Terraform infrastructure
+- Learned to write Go tests that programmatically deploy and verify Terraform deployments
+- Integrated GitHub Actions to run tests on every push, ensuring safer pipelines
 
 ## Additional Resources Used
-[List any additional resources you found helpful]
+- [Terratest Docs](https://terratest.gruntwork.io/)
+- [Terraform CI/CD Guide](https://developer.hashicorp.com/terraform/tutorials/automation/github-actions)
+- [Go by Example](https://gobyexample.com/)
 
 ## Time Spent
-- Reading: [X hours]
-- Infrastructure Deployment: [X hours]
-- Diagram Creation: [X hours]
-- Blog Writing: [X hours]
-- Total: [X hours]
+- Reading: 1 hr
+- Infrastructure Deployment: 1.5 hrs
+- Diagram Creation: 30 min
+- Blog Writing: 1 hr
+- Total: 4 hrs
 
 ## Repository Structure
-```
 Day18/
 └── Submissions/
-    └── [Your GitHub Username]/
-        ├── architecture/
-        │   ├── single-server.png
-        │   └── web-server.png
-        ├── terraform/
-        │   ├── single-server/
-        │   │   └── main.tf
-        │   └── web-server/
-        │       └── main.tf
-        └── submission.md
-``` 
-
-
-
+└── ngumonelson123/
+├── terraform/
+│ ├── single-server/
+│ │ ├── main.tf
+│ │ └── test/
+│ │ └── main_test.go
+├── .github/
+│ └── workflows/
+│ └── test.yml
+├── architecture/
+│ └── single-server.png
+└── submission.md

@@ -1,70 +1,68 @@
 # Day 14 Submission
 
 ## Personal Information
-- **Name:** [Your Name]
-- **Date:** [Date of Submission]
-- **GitHub Username:** [Your GitHub Username]
+- **Name:** Nelson Ngumo
+- **Date:** June 26, 2025
+- **GitHub Username:** ngumonelson123
 
 ## Task Completion
-- [ ] Read Chapter 2 of "Terraform: Up & Running"
-- [ ] Completed Required Hands-on Labs
-- [ ] Deployed Single Server
-- [ ] Deployed Web Server
-- [ ] Created Infrastructure Diagrams
+- [x] Read Chapter 7 of "Terraform: Up & Running"
+- [x] Completed Required Hands-on Labs
+- [x] Deployed Single Server
+- [x] Deployed Web Server
+- [x] Created Infrastructure Diagrams
 
 ## Infrastructure Details
 
 ### Single Server Deployment
-- **Region:** [AWS Region]
-- **Instance Type:** [EC2 Instance Type]
-- **Key Features:** [List key configurations]
+- **Region:** us-east-1
+- **Instance Type:** t2.micro
+- **Key Features:** Basic EC2 deployment using default AWS provider
 
 ### Web Server Deployment
-- **Region:** [AWS Region]
-- **Instance Type:** [EC2 Instance Type]
-- **Key Features:** [List key configurations]
+- **Region:** VPC in us-east-1, EC2 in us-west-2
+- **Instance Type:** t2.micro
+- **Key Features:** Demonstrates use of multiple providers with aliases across AWS regions
 
 ## Infrastructure Diagrams
-Please place your infrastructure diagrams in the `architecture` folder with the following files:
 - `single-server.png` - Diagram for the single server deployment
-- `web-server.png` - Diagram for the web server deployment
+- `web-server.png` - Diagram for the web server deployment using multiple providers
 
 ## Blog Post
-- **Title:** [Your Blog Post Title]
-- **Link:** [URL to your blog post]
+- **Title:** Getting Started with Multiple Providers in Terraform
+- **Link:** [Add your blog post link]
 
 ## Social Media
-- **Platform:** [Twitter/LinkedIn]
-- **Post Link:** [URL to your social media post]
+- **Platform:** LinkedIn
+- **Post Link:** [Add your LinkedIn or Twitter link]
 
 ## Notes and Observations
-[Share your key learnings, challenges faced, and how you overcame them]
+- Learned how to use multiple AWS providers using aliases
+- Understood how Terraform separates provider blocks using `alias`
+- Useful for multi-region or multi-account setups
 
 ## Additional Resources Used
-[List any additional resources you found helpful]
+- Terraform Provider Docs
+- Terraform AWS Examples
+- Book: Terraform: Up & Running
 
 ## Time Spent
-- Reading: [X hours]
-- Infrastructure Deployment: [X hours]
-- Diagram Creation: [X hours]
-- Blog Writing: [X hours]
-- Total: [X hours]
+- Reading: 1 hour
+- Infrastructure Deployment: 1.5 hours
+- Diagram Creation: 30 mins
+- Blog Writing: 1 hour
+- Total: ~4 hours
 
 ## Repository Structure
 ```
 Day14/
 └── Submissions/
-    └── [Your GitHub Username]/
+    └── ngumonelson123/
         ├── architecture/
         │   ├── single-server.png
         │   └── web-server.png
         ├── terraform/
-        │   ├── single-server/
-        │   │   └── main.tf
-        │   └── web-server/
-        │       └── main.tf
+        │   ├── single-server/main.tf
+        │   └── web-server/main.tf
         └── submission.md
-``` 
-
-
-
+```
