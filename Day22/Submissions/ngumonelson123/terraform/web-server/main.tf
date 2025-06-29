@@ -69,11 +69,11 @@ resource "aws_route_table_association" "a" {
   route_table_id = aws_route_table.rt.id
 }
 
-# Security Group
 resource "aws_security_group" "allow_web" {
   name   = "allow-web"
   vpc_id = aws_vpc.main.id
 
+  # Allow HTTP
   ingress {
     from_port   = 80
     to_port     = 80
@@ -81,6 +81,7 @@ resource "aws_security_group" "allow_web" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
+  # Allow SSH
   ingress {
     from_port   = 22
     to_port     = 22
@@ -88,6 +89,7 @@ resource "aws_security_group" "allow_web" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
+  # Allow all outbound
   egress {
     from_port   = 0
     to_port     = 0
