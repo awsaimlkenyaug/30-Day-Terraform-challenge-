@@ -1,20 +1,3 @@
-terraform {
-  backend "remote" {
-    organization = "nelson_hcp"
-
-    workspaces {
-      name = "day22-single-server"
-    }
-  }
-
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 5.0"
-    }
-  }
-}
-
 provider "aws" {
   region = "us-east-1"
 }
@@ -24,7 +7,7 @@ resource "aws_vpc" "main" {
   cidr_block = "10.0.0.0/16"
 
   tags = {
-    Name = "Day22-VPC"
+    Name = "single-vpc"
   }
 }
 
@@ -36,7 +19,7 @@ resource "aws_subnet" "main" {
   map_public_ip_on_launch = true
 
   tags = {
-    Name = "Day22-Subnet"
+    Name = "single-subnet"
   }
 }
 
@@ -45,7 +28,7 @@ resource "aws_internet_gateway" "gw" {
   vpc_id = aws_vpc.main.id
 
   tags = {
-    Name = "Day22-IGW"
+    Name = "single-igw"
   }
 }
 
@@ -59,30 +42,24 @@ resource "aws_route_table" "rt" {
   }
 
   tags = {
-    Name = "Day22-RouteTable"
+    Name = "single-rt"
   }
 }
 
-# Associate Route Table with Subnet
+# Route Table Association
 resource "aws_route_table_association" "a" {
   subnet_id      = aws_subnet.main.id
   route_table_id = aws_route_table.rt.id
 }
 
+# Security Group
 resource "aws_security_group" "allow_ssh" {
-  name_prefix = "allow-ssh"
-  vpc_id      = aws_vpc.main.id
+  name   = "allow-ssh"
+  vpc_id = aws_vpc.main.id
 
   ingress {
     from_port   = 22
     to_port     = 22
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
-  ingress {
-    from_port   = 80
-    to_port     = 80
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
@@ -95,26 +72,20 @@ resource "aws_security_group" "allow_ssh" {
   }
 
   tags = {
-    Name        = "SSH SG"
-    Environment = "dev"
+    Name = "single-sg"
   }
 }
 
-
 # EC2 Instance
 resource "aws_instance" "single" {
-  ami                    = "ami-0c02fb55956c7d316"
-  instance_type          = "t2.micro"
-  subnet_id              = aws_subnet.main.id
-  vpc_security_group_ids = [aws_security_group.allow_ssh.id]
-
-  user_data = <<-EOF
-              #!/bin/bash
-              echo "Single Server is running" > /var/www/html/index.html
-              EOF
+  ami                         = "ami-08c40ec9ead489470"
+  instance_type               = "t2.micro"
+  subnet_id                   = aws_subnet.main.id
+  vpc_security_group_ids      = [aws_security_group.allow_ssh.id]
+  associate_public_ip_address = true
+  key_name                    = "terraform-key"
 
   tags = {
-    Name        = "Day22-SingleServer"
-    Environment = "dev"
+    Name = "single-server"
   }
 }

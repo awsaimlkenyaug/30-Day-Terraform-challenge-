@@ -1,34 +1,17 @@
-terraform {
-  backend "remote" {
-    organization = "nelson_hcp"
-
-    workspaces {
-      name = "day22-single-server"
-    }
-  }
-
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "~> 5.0"
-    }
-  }
-}
-
 provider "aws" {
   region = "us-east-1"
 }
 
-# VPC
+# Create VPC
 resource "aws_vpc" "main" {
   cidr_block = "10.0.0.0/16"
 
   tags = {
-    Name = "Day22-VPC"
+    Name = "web-vpc"
   }
 }
 
-# Subnet
+# Create Subnet
 resource "aws_subnet" "main" {
   vpc_id                  = aws_vpc.main.id
   cidr_block              = "10.0.1.0/24"
@@ -36,7 +19,7 @@ resource "aws_subnet" "main" {
   map_public_ip_on_launch = true
 
   tags = {
-    Name = "Day22-Subnet"
+    Name = "web-subnet"
   }
 }
 
@@ -45,7 +28,7 @@ resource "aws_internet_gateway" "gw" {
   vpc_id = aws_vpc.main.id
 
   tags = {
-    Name = "Day22-IGW"
+    Name = "web-igw"
   }
 }
 
@@ -59,30 +42,31 @@ resource "aws_route_table" "rt" {
   }
 
   tags = {
-    Name = "Day22-RouteTable"
+    Name = "web-rt"
   }
 }
 
-# Associate Route Table with Subnet
+# Associate route table with subnet
 resource "aws_route_table_association" "a" {
   subnet_id      = aws_subnet.main.id
   route_table_id = aws_route_table.rt.id
 }
 
-resource "aws_security_group" "allow_ssh" {
-  name_prefix = "allow-ssh"
+# Security Group to allow HTTP and SSH
+resource "aws_security_group" "allow_web" {
+  name        = "allow-web"
   vpc_id      = aws_vpc.main.id
 
   ingress {
-    from_port   = 22
-    to_port     = 22
+    from_port   = 80
+    to_port     = 80
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
 
   ingress {
-    from_port   = 80
-    to_port     = 80
+    from_port   = 22
+    to_port     = 22
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
@@ -95,26 +79,30 @@ resource "aws_security_group" "allow_ssh" {
   }
 
   tags = {
-    Name        = "SSH SG"
-    Environment = "dev"
+    Name = "web-sg"
   }
 }
 
-
-# EC2 Instance
-resource "aws_instance" "single" {
-  ami                    = "ami-0c02fb55956c7d316"
+# EC2 Web Server with NGINX
+resource "aws_instance" "web" {
+  ami                    = "ami-08c40ec9ead489470" # Amazon Linux 2
   instance_type          = "t2.micro"
   subnet_id              = aws_subnet.main.id
-  vpc_security_group_ids = [aws_security_group.allow_ssh.id]
+  vpc_security_group_ids = [aws_security_group.allow_web.id]
+  key_name               = "terraform-key"
+
+  associate_public_ip_address = true
 
   user_data = <<-EOF
               #!/bin/bash
-              echo "Single Server is running" > /var/www/html/index.html
+              yum update -y
+              amazon-linux-extras install nginx1 -y
+              systemctl enable nginx
+              systemctl start nginx
+              echo "<h1>Deployed via Terraform - Nelson</h1>" > /usr/share/nginx/html/index.html
               EOF
 
   tags = {
-    Name        = "Day22-SingleServer"
-    Environment = "dev"
+    Name = "web-server"
   }
 }
