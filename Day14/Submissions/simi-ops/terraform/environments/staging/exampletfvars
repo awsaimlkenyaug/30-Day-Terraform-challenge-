@@ -1,0 +1,9 @@
+environment = "staging"
+aws_region  = "us-west-2"
+
+tags = {
+  Environment = "staging"
+  Project     = "30-day-terraform-challenge"
+  Owner       = "simi-ops"
+  CostCenter  = "engineering"
+}

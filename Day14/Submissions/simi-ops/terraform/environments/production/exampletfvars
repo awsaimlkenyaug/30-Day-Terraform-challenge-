@@ -1,0 +1,10 @@
+environment   = "production"
+aws_region    = "us-east-1"
+backup_region = "us-west-2"
+
+tags = {
+  Environment = "production"
+  Project     = "30-day-terraform-challenge"
+  Owner       = "simi-ops"
+  CostCenter  = "engineering"
+}

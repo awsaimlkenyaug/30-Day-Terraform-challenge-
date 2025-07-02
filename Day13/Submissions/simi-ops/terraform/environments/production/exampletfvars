@@ -1,0 +1,9 @@
+environment = "production"
+aws_region  = "us-east-1"
+
+tags = {
+  Environment = "production"
+  Project     = "30-day-terraform-challenge"
+  Owner       = "simi-ops"
+  CostCenter  = "engineering"
+}
