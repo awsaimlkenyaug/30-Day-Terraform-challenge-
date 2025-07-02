@@ -1,12 +1,4 @@
-terraform {
-  backend "s3" {
-    bucket         = "bucketandrewmeistherein"
-    key            = "envs/dev/terraform.tfstate"
-    region         = "eu-north-1"
-    use_lockfile   = true  
-    encrypt        = true
-  }
-}
+
 
 terraform {
   required_providers {
