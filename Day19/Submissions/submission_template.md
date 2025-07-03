@@ -1,70 +1,36 @@
 # Day 19 Submission
 
 ## Personal Information
-- **Name:** [Your Name]
-- **Date:** [Date of Submission]
-- **GitHub Username:** [Your GitHub Username]
+- **Name:** Nelson Ngumo
+- **Date:** 2025-06-29
+- **GitHub Username:** ngumonelson123
 
 ## Task Completion
-- [ ] Read Chapter 2 of "Terraform: Up & Running"
-- [ ] Completed Required Hands-on Labs
-- [ ] Deployed Single Server
-- [ ] Deployed Web Server
-- [ ] Created Infrastructure Diagrams
+- [x] Connected GitHub Repo to Terraform Cloud
+- [x] Set up a new Terraform Cloud Workspace (`day19-single-server`)
+- [x] Added environment variables for AWS credentials
+- [x] Wrote a production-ready `main.tf` to deploy an EC2 instance
+- [x] Successfully triggered a plan and applied via Terraform Cloud
+- [x] Dynamically retrieved latest AMI using `aws_ami`
+- [x] Wrote blog and shared insights on gradual IaC adoption
+- [x] Destroyed infrastructure using Terraform Cloud
 
 ## Infrastructure Details
 
-### Single Server Deployment
-- **Region:** [AWS Region]
-- **Instance Type:** [EC2 Instance Type]
-- **Key Features:** [List key configurations]
+### EC2 Instance Deployment
+- **Provider:** AWS
+- **Region:** us-east-1
+- **Instance Type:** t2.micro
+- **AMI:** Dynamically fetched latest Amazon Linux 2 AMI
+- **Tags:** Name = Day19Server
 
-### Web Server Deployment
-- **Region:** [AWS Region]
-- **Instance Type:** [EC2 Instance Type]
-- **Key Features:** [List key configurations]
+## Diagram
+- See attached: `day19_iac_architecture.png`
 
-## Infrastructure Diagrams
-Please place your infrastructure diagrams in the `architecture` folder with the following files:
-- `single-server.png` - Diagram for the single server deployment
-- `web-server.png` - Diagram for the web server deployment
+## Blog & LinkedIn
+- **Blog Post:** "Day 19 of Terraform Challenge – Adopting Infrastructure as Code with Terraform Cloud"
+- **LinkedIn Highlight:** Celebrated successful IaC deployment with real-time AWS provisioning from VCS push.
 
-## Blog Post
-- **Title:** [Your Blog Post Title]
-- **Link:** [URL to your blog post]
+---
 
-## Social Media
-- **Platform:** [Twitter/LinkedIn]
-- **Post Link:** [URL to your social media post]
-
-## Notes and Observations
-[Share your key learnings, challenges faced, and how you overcame them]
-
-## Additional Resources Used
-[List any additional resources you found helpful]
-
-## Time Spent
-- Reading: [X hours]
-- Infrastructure Deployment: [X hours]
-- Diagram Creation: [X hours]
-- Blog Writing: [X hours]
-- Total: [X hours]
-
-## Repository Structure
-```
-Day19/
-└── Submissions/
-    └── [Your GitHub Username]/
-        ├── architecture/
-        │   ├── single-server.png
-        │   └── web-server.png
-        ├── terraform/
-        │   ├── single-server/
-        │   │   └── main.tf
-        │   └── web-server/
-        │       └── main.tf
-        └── submission.md
-``` 
-
-
-
+✅ Challenge Completed Successfully!

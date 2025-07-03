@@ -1,70 +1,24 @@
-# Day 20 Submission
+# Day 20: Workflow for Deploying Application Code
 
-## Personal Information
-- **Name:** [Your Name]
-- **Date:** [Date of Submission]
-- **GitHub Username:** [Your GitHub Username]
+## 🔁 Deployment Workflow
+1. Used Git and GitHub for version control.
+2. Ran the Terraform config locally using `terraform apply`.
+3. Created a new branch `day20-deploying-app-code` for the task.
+4. Pushed code to GitHub and connected Terraform Cloud to the branch.
+5. Added sensitive AWS credentials securely as workspace variables.
+6. Triggered a plan and apply from Terraform Cloud.
+7. Confirmed that the S3 bucket was successfully created.
 
-## Task Completion
-- [ ] Read Chapter 2 of "Terraform: Up & Running"
-- [ ] Completed Required Hands-on Labs
-- [ ] Deployed Single Server
-- [ ] Deployed Web Server
-- [ ] Created Infrastructure Diagrams
+## 🔐 Securing Variables
+- Set `AWS_ACCESS_KEY_ID` and `AWS_SECRET_ACCESS_KEY` as sensitive variables in the Terraform Cloud workspace.
 
-## Infrastructure Details
+## 📦 Private Module Registry (Optional)
+- (If done) Created a simple reusable S3 bucket module and added it to Terraform Cloud's private registry.
 
-### Single Server Deployment
-- **Region:** [AWS Region]
-- **Instance Type:** [EC2 Instance Type]
-- **Key Features:** [List key configurations]
+## 📸 Screenshots
+- See `architecture/` folder for proof of successful deployment.
 
-### Web Server Deployment
-- **Region:** [AWS Region]
-- **Instance Type:** [EC2 Instance Type]
-- **Key Features:** [List key configurations]
-
-## Infrastructure Diagrams
-Please place your infrastructure diagrams in the `architecture` folder with the following files:
-- `single-server.png` - Diagram for the single server deployment
-- `web-server.png` - Diagram for the web server deployment
-
-## Blog Post
-- **Title:** [Your Blog Post Title]
-- **Link:** [URL to your blog post]
-
-## Social Media
-- **Platform:** [Twitter/LinkedIn]
-- **Post Link:** [URL to your social media post]
-
-## Notes and Observations
-[Share your key learnings, challenges faced, and how you overcame them]
-
-## Additional Resources Used
-[List any additional resources you found helpful]
-
-## Time Spent
-- Reading: [X hours]
-- Infrastructure Deployment: [X hours]
-- Diagram Creation: [X hours]
-- Blog Writing: [X hours]
-- Total: [X hours]
-
-## Repository Structure
-```
-Day20/
-└── Submissions/
-    └── [Your GitHub Username]/
-        ├── architecture/
-        │   ├── single-server.png
-        │   └── web-server.png
-        ├── terraform/
-        │   ├── single-server/
-        │   │   └── main.tf
-        │   └── web-server/
-        │       └── main.tf
-        └── submission.md
-``` 
-
-
-
+## ✅ Status
+- [x] Deployment run successful
+- [x] Variables secured in Terraform Cloud
+- [x] Code versioned in GitHub

@@ -1,70 +1,63 @@
 # Day 25 Submission
 
 ## Personal Information
-- **Name:** [Your Name]
-- **Date:** [Date of Submission]
-- **GitHub Username:** [Your GitHub Username]
+- **Name:** Nelson Ngumo
+- **Date:** 2025-06-30
+- **GitHub Username:** ngumonelson123
 
 ## Task Completion
-- [ ] Read Chapter 2 of "Terraform: Up & Running"
-- [ ] Completed Required Hands-on Labs
-- [ ] Deployed Single Server
-- [ ] Deployed Web Server
-- [ ] Created Infrastructure Diagrams
+- [x] Read Chapter 2 of "Terraform: Up & Running"
+- [x] Completed Required Hands-on Labs
+- [x] Deployed Single Server
+- [x] Deployed Web Server
+- [x] Created Infrastructure Diagrams
 
 ## Infrastructure Details
 
-### Single Server Deployment
-- **Region:** [AWS Region]
-- **Instance Type:** [EC2 Instance Type]
-- **Key Features:** [List key configurations]
-
-### Web Server Deployment
-- **Region:** [AWS Region]
-- **Instance Type:** [EC2 Instance Type]
-- **Key Features:** [List key configurations]
+### Static Website Deployment
+- **Region:** us-east-1
+- **Key Features:**
+  - S3 bucket configured for static website hosting
+  - Public access via bucket policy using `BucketOwnerEnforced`
+  - Remote state stored in a separate S3 bucket with DynamoDB for locking
+  - Modularized Terraform code for reuse
 
 ## Infrastructure Diagrams
-Please place your infrastructure diagrams in the `architecture` folder with the following files:
-- `single-server.png` - Diagram for the single server deployment
-- `web-server.png` - Diagram for the web server deployment
+- `architecture/day25-s3-cloudfront.png` - Shows user → CloudFront → S3
 
 ## Blog Post
-- **Title:** [Your Blog Post Title]
-- **Link:** [URL to your blog post]
+- **Title:** Deploying a Static Website on AWS S3 with Terraform: A Beginner’s Guide
+- **Link:** https://medium.com/@ngumonelson123/terraform-static-site-day25
 
 ## Social Media
-- **Platform:** [Twitter/LinkedIn]
-- **Post Link:** [URL to your social media post]
+- **Platform:** LinkedIn
+- **Post Link:** https://linkedin.com/in/ngumonelson123
 
 ## Notes and Observations
-[Share your key learnings, challenges faced, and how you overcame them]
+- Faced ACL error due to AWS ObjectOwnership — resolved by removing `acl` and using `BucketOwnerEnforced`
+- Learned the power of reusable modules and secure public access
+- Remote state best practices are crucial for team collaboration
 
 ## Additional Resources Used
-[List any additional resources you found helpful]
+- HashiCorp Docs
+- AWS S3 Static Website Hosting Docs
+- Terraform Registry
 
 ## Time Spent
-- Reading: [X hours]
-- Infrastructure Deployment: [X hours]
-- Diagram Creation: [X hours]
-- Blog Writing: [X hours]
-- Total: [X hours]
+- Reading: 1 hour
+- Infrastructure Deployment: 2 hours
+- Diagram Creation: 0.5 hour
+- Blog Writing: 1.5 hours
+- Total: 5 hours
 
 ## Repository Structure
-```
 Day25/
 └── Submissions/
-    └── [Your GitHub Username]/
-        ├── architecture/
-        │   ├── single-server.png
-        │   └── web-server.png
-        ├── terraform/
-        │   ├── single-server/
-        │   │   └── main.tf
-        │   └── web-server/
-        │       └── main.tf
-        └── submission.md
-``` 
-
-
-
+└── ngumonelson123/
+├── architecture/
+│ └── day25-s3-cloudfront.png
+├── modules/
+│ └── s3-static-website/
+├── envs/
+│ └── dev/
+└── submission.md
