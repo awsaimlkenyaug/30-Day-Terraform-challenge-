@@ -2,7 +2,7 @@
 
 ## Personal Information
 - **Name:** Simi Mwanza
-- **Date:** 28th May 2025
+- **Date:** 29th May 2025
 - **GitHub Username:** simi-ops
 
 ## Task Completion
@@ -55,7 +55,7 @@ Please place your infrastructure diagrams in the `architecture` folder with the 
 ```
 Day3/
 └── Submissions/
-    └── [Your GitHub Username]/
+    └── simi-ops/
         ├── architecture/
         │   ├── single-server.png
         │   └── web-server.png

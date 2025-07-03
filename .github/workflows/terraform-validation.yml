@@ -5,6 +5,9 @@ on:
     branches:
       - "week*"
     types: [opened, synchronize, reopened]
+    paths:
+      - '**/*.tf'
+      - '**/*.tfvars'
 
 jobs:
   terraform-validation:
@@ -55,7 +58,6 @@ jobs:
             echo "### ✅ File Structure Check Passed" >> $GITHUB_ENV
             echo "- All $FILES_CHECKED Terraform files follow the correct structure" >> $GITHUB_ENV
             echo "EOF" >> $GITHUB_ENV
-          fi
 
       - name: Security and Syntax Check
         id: security
@@ -68,8 +70,10 @@ jobs:
 
           for tf_file in $(find . -name "*.tf" -type f); do
             FILE_HAS_ISSUES=false
+week2-progress
 
-            # Check for hardcoded credentials
+   
+ week2
             if CREDS=$(grep -n -i "access_key\|secret_key\|password\|token" "$tf_file"); then
               SECURITY_ISSUES=true
               FILE_HAS_ISSUES=true
@@ -80,8 +84,10 @@ jobs:
               echo "\`\`\`" >> $GITHUB_ENV
               echo "" >> $GITHUB_ENV
             fi
+week2-progress
 
             # Check for public access
+ week2
             if PUBLIC=$(grep -n -i "acl.*=.*public" "$tf_file"); then
               SECURITY_ISSUES=true
               FILE_HAS_ISSUES=true
@@ -92,8 +98,10 @@ jobs:
               echo "\`\`\`" >> $GITHUB_ENV
               echo "" >> $GITHUB_ENV
             fi
+week2-progress
 
             # Check for malformed tags
+ week2
             if TAGS=$(grep -A5 "tags.*=.*{" "$tf_file" | grep -E '=\s*$|=\s*"[^"]*$'); then
               SECURITY_ISSUES=true
               FILE_HAS_ISSUES=true
@@ -104,8 +112,7 @@ jobs:
               echo "\`\`\`" >> $GITHUB_ENV
               echo "" >> $GITHUB_ENV
             fi
-
-            # Check for missing closing brackets
+            
             if grep -n "{" "$tf_file" | wc -l > bracket_open && grep -n "}" "$tf_file" | wc -l > bracket_close; then
               if [ "$(cat bracket_open)" -ne "$(cat bracket_close)" ]; then
                 SECURITY_ISSUES=true
@@ -170,8 +177,12 @@ jobs:
           for dir in $(find . -name "*.tf" -type f -exec dirname {} \; | sort -u); do
             cd $dir
             echo "Checking directory: \`$dir\`" >> $GITHUB_ENV
+week2-progress
 
             # Initialize without backend and providers
+=======
+            
+ week2
             if ! terraform init -backend=false > init_output 2>&1; then
               VALIDATION_ISSUES=true
               echo "HAS_ISSUES=true" >> $GITHUB_ENV
@@ -184,8 +195,7 @@ jobs:
               echo "✅ Initialization successful" >> $GITHUB_ENV
               echo "" >> $GITHUB_ENV
             fi
-
-            # Run validation
+week2
             if ! terraform validate -no-color > validate_output 2>&1; then
               VALIDATION_ISSUES=true
               echo "HAS_ISSUES=true" >> $GITHUB_ENV
@@ -216,18 +226,25 @@ jobs:
             const format = process.env.FORMAT_RESULTS || '';
             const validation = process.env.VALIDATION_RESULTS || '';
             const hasIssues = process.env.HAS_ISSUES === 'true';
+ week2-progress
 
+=======
+ week2
             let comment = '## 📋 Terraform Validation Summary\n\n';
             comment += hasIssues ?
               '### Status: Changes Required ⚠️\n' :
               '### Status: All Checks Passed ✅\n';
+week2-progress
 
+ week2
             comment += '\n## Detailed Results\n\n';
             comment += fileStructure + '\n';
             comment += security + '\n';
             comment += format + '\n';
             comment += validation;
+ week2-progress
 
+ week2
             github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,

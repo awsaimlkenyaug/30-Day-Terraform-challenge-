@@ -1,3 +1,4 @@
+week2-progress
 .terraform.lock.hcl
 backend.hcl
 terraform.tfstate
@@ -27,27 +28,32 @@ crash.log
 crash.*.log
 
 # Exclude all .tfvars files, which are likely to contain sensitive data
+=======
+
+ week2
 *.tfvars
 *.tfvars.json
 
-# Ignore override files as they are usually used for local dev
+# Ignore environment files with secrets
+.env
+.env.local
+.env.*.local
+
+# Ignore override files used for local development (usually not shared)
 override.tf
 override.tf.json
 *_override.tf
 *_override.tf.json
 
-# Ignore CLI configuration files
+# Ignore CLI config files (often contain credentials)
 .terraformrc
 terraform.rc
 
-# IDE and editor files
-.idea/
-.vscode/
-*.swp
-*.swo
-*~
+# Ignore crash logs
+crash.log
+crash.*.log
 
-# OS generated files
+# Ignore OS generated files
 .DS_Store
 .DS_Store?
 ._*
@@ -56,21 +62,37 @@ terraform.rc
 ehthumbs.db
 Thumbs.db
 
-# Logs
+# Ignore IDE/editor files
+.idea/
+.vscode/
+.history/
+
+# Ignore editor swap/temp files
+*.swp
+*.swo
+*~
+
+# Ignore logs
 *.log
 
-# Local environment files
-.env
-.env.local
-.env.*.local
-
-# Dependency directories
+# Ignore dependency directories (optional)
 node_modules/
 vendor/
 
-# Build outputs
-dist/
-build/
+# You can track Terraform state files and backend configs if you want to keep history
+# so do NOT ignore:
+# terraform.tfstate
+# terraform.tfstate.backup
+ .terraform.lock.hcl
+# backend.hcl
+# main.tf
+# variables.tf
+# outputs.tf
+# .terraform directories
+.terraform/
+terraform.tfstate*
+crash.log
+*.tfvars
+*.log
 *.zip
-*.tar.gz
 

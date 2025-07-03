@@ -67,7 +67,7 @@ Please place your configuration screenshots and validation files in the `setup-v
 ```
 Day2/
 └── Submissions/
-    └── [Your GitHub Username]/
+    └── simi-ops/
         ├── setup-validation/
         │   ├── terraform-version.txt
         │   ├── aws-config-validation.txt

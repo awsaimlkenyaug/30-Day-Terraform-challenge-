@@ -1,0 +1,3 @@
+terraform version
+Terraform v1.12.1
+on windows_amd64

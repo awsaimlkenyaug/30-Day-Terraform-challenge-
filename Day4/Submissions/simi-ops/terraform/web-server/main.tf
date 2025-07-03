@@ -27,7 +27,7 @@ resource "aws_security_group" "ec2_sg" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"] 
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
   ingress {
@@ -59,8 +59,8 @@ resource "aws_security_group" "ec2_sg" {
 }
 
 resource "aws_instance" "web_server" {
-  ami           = data.aws_ami.amazon_linux.id
-  instance_type = var.instance_type            
+  ami                    = data.aws_ami.amazon_linux.id
+  instance_type          = var.instance_type
   vpc_security_group_ids = [aws_security_group.ec2_sg.id]
 
   user_data = <<-EOF
