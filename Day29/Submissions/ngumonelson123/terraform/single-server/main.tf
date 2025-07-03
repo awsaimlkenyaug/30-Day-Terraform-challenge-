@@ -47,7 +47,7 @@ resource "aws_security_group" "ssh" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
-
+#security gropus
 resource "aws_network_interface" "main" {
   subnet_id       = aws_subnet.main.id
   security_groups = [aws_security_group.ssh.id]
