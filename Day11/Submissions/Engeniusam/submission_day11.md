@@ -8,7 +8,13 @@
 ## Task Completion
 - [✔] Read Chapter 5 (Pages 160-169) of "Terraform: Up & Running"
 - [✔] Completed Required Hands-on Labs
+- [✔] Blog Post
 - [✔] Twitter Post
+
+
+## Blog Post
+- **Title:** Understanding Module Sources in Terraform
+- **Link:** https://medium.com/@engeniusam/understanding-module-sources-in-terraform-6550feac76c9
 
 ## Social Media
 - **Platform:** Twitter
