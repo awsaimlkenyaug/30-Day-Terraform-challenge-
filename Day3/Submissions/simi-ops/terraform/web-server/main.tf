@@ -11,7 +11,7 @@ resource "aws_security_group" "ec2_sg" {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"] 
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
   ingress {
@@ -43,8 +43,8 @@ resource "aws_security_group" "ec2_sg" {
 }
 
 resource "aws_instance" "web_server" {
-  ami           = "ami-04999cd8f2624f834" 
-  instance_type = "t2.micro"             
+  ami                    = "ami-04999cd8f2624f834"
+  instance_type          = "t2.micro"
   vpc_security_group_ids = [aws_security_group.ec2_sg.id]
 
   user_data = <<-EOF

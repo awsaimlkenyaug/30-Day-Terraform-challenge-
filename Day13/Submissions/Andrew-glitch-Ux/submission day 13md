@@ -1,0 +1,140 @@
+# Day 13 Submission
+
+## Personal Information
+- **Name:** Andrew Muntet
+- **Date:** 14/06/2025
+- **GitHub Username:** Andrew-glitch-Ux
+
+## Task Completion
+- [x] Successfully injected secrets into Terraform via local encrypted GPG file
+- [x] Created a decryption script (`decrypt-secrets.sh`) and validated it locally
+- [x] Deployed RDS MySQL securely using secrets from `secrets.json`
+- [x] Used S3 (encrypted) backend and DynamoDB for state locking
+- [x] Completed draw.io architecture diagram for Lab 15
+
+## Infrastructure Details
+
+## Lab 14: Zero-Downtime Deployment with ASG and Launch Template Versioning
+- **Region:** eu-north-1
+- **Instance Type:** t3.micro
+- **Key Features:**
+  - Reuse of VPC, subnets, and IGW from Lab 13
+  - Launch Template with version-aware `user_data`
+  - Updated ASG strategy to support rolling deployments
+  - ALB health checks to manage instance traffic
+  - EC2 instances replaced without downtime
+  - Verified deployment using ALB DNS
+
+### Lab 15
+- **Region:** eu-north-1
+- **Instance Type:** db.t3.micro (RDS MySQL)
+- **Key Features:** 
+  - Secure GPG-based secrets decryption (`secrets.json.gpg`)
+  - Private subnet RDS deployment with custom SG
+  - Terraform backend using S3 with encryption
+  - DynamoDB used for Terraform state locking
+  - No secret exposure in Terraform outputs or logs
+
+## Infrastructure Diagrams
+Please place your infrastructure diagrams in the `architecture` folder with the following files:
+- `single-server.png` - Diagram for the single server deployment
+- `web-server.png` - Diagram for the web server deployment
+
+## Blog Post
+- **Title:** 
+- **Link:** 
+
+## Social Media
+- **Platform:** LinkedIn
+- **Post Link:** [https://www.linkedin.com/feed/update/urn:li:activity:7339452353047076867/ ]
+
+## Notes and Observations
+- Using `locals` + `jsondecode(file(...))` is a clean way to inject secrets securely
+- Learned how to decrypt secrets at runtime and avoid hardcoding
+- Faced JSON parsing issues at first—solved by validating GPG output format
+- Identifiers in RDS must be lowercase and hyphenated—resolved a TF error caused by underscores
+- S3 + DynamoDB backend helped ensure reliable, safe deployments
+
+## Additional Resources Used
+- Terraform AWS Provider Docs
+- GPG Manual (for encryption/decryption steps)
+- Stack Overflow (JSON + Terraform local variables tips)
+
+## Time Spent
+- Reading: 1 hour
+- Infrastructure Deployment: 4 hours
+- Diagram Creation: 40 minutes
+- Blog Writing: 20minutes
+- Total: 6 hours
+
+## Repository Structure
+Day13/
+└── Submissions/
+└── Andrew-glitch-Ux/
+├── Architecture/
+│ ├── lab14.drawio.png
+│ └── lab15.drawio.png
+├── lab14/
+│ ├── live/
+│ │ └── dev/
+│ │ ├── .terraform/
+│ │ │ ├── modules/
+│ │ │ ├── modules.json
+│ │ │ └── providers/
+│ │ │ ├── LICENSE.txt
+│ │ │ └── terraform-provider-aws_v5.99.1_x5.exe
+│ │ ├── .terraform.lock.hcl
+│ │ ├── .terraform.tfstate.lock.info
+│ │ ├── main.tf
+│ │ ├── outputs.tf
+│ │ ├── provider.tf
+│ │ ├── terraform.tfstate
+│ │ ├── terraform.tfvars
+│ │ └── variables.tf
+│ └── modules/
+│ ├── alb/
+│ │ ├── main.tf
+│ │ ├── outputs.tf
+│ │ └── variables.tf
+│ ├── asg/
+│ │ ├── main.tf
+│ │ ├── outputs.tf
+│ │ ├── user_data.sh
+│ │ └── variables.tf
+│ └── vpc/
+│ ├── main.tf
+│ ├── outputs.tf
+│ └── variables.tf
+├── lab15/
+│ ├── .terraform/
+│ │ ├── modules/
+│ │ │ └── modules.json
+│ │ ├── providers/
+│ │ │ ├── LICENSE.txt
+│ │ │ └── terraform-provider-aws_v5.100.0_x5.exe
+│ │ └── terraform.tfstate
+│ ├── modules/
+│ │ ├── db/
+│ │ │ ├── main.tf
+│ │ │ ├── outputs.tf
+│ │ │ └── variables.tf
+│ │ └── vpc/
+│ │ ├── main.tf
+│ │ ├── outputs.tf
+│ │ └── variables.tf
+│ ├── scripts/
+│ │ └── decrypt-secrets.sh
+│ ├── secrets/
+│ │ ├── secrets.json.gpg
+│ │ └── secrets.json (gitignored)
+│ ├── .terraform.lock.hcl
+│ ├── backend.tf
+│ ├── main.tf
+│ ├── outputs.tf
+│ ├── terraform.tfvars
+│ └── variables.tf
+├── daily update.md
+├── submission day 13.md
+└── README.md
+├── submission_template.md
+└── tasks.md

@@ -1,0 +1,112 @@
+# Day 2 Submission
+
+## Personal Information
+- **Name:** [Andrew Muntet]
+- **Date:** [31-05-2025]
+- **GitHub Username:** [Andrew-glitch-Ux]
+
+## Task Completion
+- [x] Read Chapter 2 of "Terraform: Up & Running" (Setting Up Your AWS Account & Installing Terraform)
+- [x] Completed Required Hands-on Labs
+  - [x] Lab 01: Setup your AWS Account (if needed)
+  - [x] Lab 02: Install AWS CLI
+  - [x] Lab 03: Installing Terraform and set up Terraform with AWS
+- [x] Set up AWS account
+- [X] Install Terraform locally
+- [X] Install and configure AWS CLI
+- [X] Install Visual Studio Code (VSCode) and add the AWS plugin
+- [X] Configure VSCode to work with AWS
+
+## Setup Validation
+
+### Terraform Installation
+- **Version:** [Terraform v1.12.1on windows_amd64]
+- **Installation Method:** [Installed via Chocolatey]
+- **Path:** [C:\ProgramData\chocolatey\bin\terraform.exe]
+
+### AWS CLI Configuration
+- **Version:** [aws-cli/2.27.26 Python/3.13.3 Windows/11 exe/AMD64]
+- **Default Region:** [eu-north-1]
+- **Profile Configuration:** [1]
+
+### VSCode Configuration
+- **Extensions Installed:** [AWS Toolkit , HashiCorp Terraform]
+- **AWS Plugin Status:** [Configured]
+
+## Configuration Files
+Please place your configuration screenshots and validation files in the `setup-validation` folder:
+- `terraform-version.txt` - Output of `terraform version`
+- `aws-config-validation.txt` - Output of `aws sts get-caller-identity` (sanitized)
+- `vscode-extensions.png` - Screenshot of installed extensions
+
+## Blog Post
+- **Title:** [Your Blog Post Title]
+- **Link:** [URL to your blog post]
+
+## Social Media
+- **Platform:** [Twitter/LinkedIn]
+- **Post Link:** [URL to your social media post]
+
+## Notes and Observations
+[I learned how to perform installations using PowerShell and Chocolatey, which was new to me. Setting up Terraform through Chocolatey and configuring it with AWS helped me understand how infrastructure tools integrate with the cloud. I also learned how to clone a GitHub repository and set it up locally, which improved my confidence in using Git and version control effectively.]
+
+## Additional Resources Used
+[List any additional resources you found helpful for setup and configuration]
+
+## Time Spent
+- Reading: [2 hours]
+- AWS Account Setup: [1/4 hours]
+- Terraform Installation: [1/4 hours]
+- AWS CLI Configuration: [1/4 hours]
+- VSCode Setup: [1/4 hours]
+- Blog Writing: [1/4 hours]
+- Total: [3 hours]
+
+## Repository Structure
+```
+Day2/
+└── Submissions/
+    └── [Andrew-glitch-ux]
+        ├── setup-validation/
+        │   ├── aws-config-validation.txt
+        │   ├── terraform-version.txt
+        │   ├──vscode-extensions.png
+        │   └── vs code.txt
+        │   └── terraform project/
+        │           ├── terraform\providers/
+        │           │   ├── licence.txt
+        │           │   └── terraform-provider-aws
+        │           ├── terraform.lock.hcl
+        │           ├── main.tf
+        │           ├── terraform.tfstate
+        │           └── terraform state back-up
+        │   └── submission day 2
+        ├── daily-update.md
+        ├── README.md
+        └── submission.template
+    └── Tasks.md
+```
+
+## Setup Validation Commands
+Document the commands you used to validate your setup:
+
+```bash
+# Terraform validation
+terraform version
+terraform providers
+
+# AWS CLI validation  
+aws --version
+aws sts get-caller-identity
+aws configure list
+
+# VSCode validation
+code --version
+code --list-extensions | grep -E "(aws|terraform)"
+```
+
+## Troubleshooting Notes
+[Document any issues you encountered and how you resolved them] 
+
+
+
