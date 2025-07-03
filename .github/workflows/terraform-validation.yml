@@ -59,21 +59,30 @@ jobs:
             echo "- All $FILES_CHECKED Terraform files follow the correct structure" >> $GITHUB_ENV
             echo "EOF" >> $GITHUB_ENV
 
-      - name: Security and Syntax Check
-        id: security
-        continue-on-error: true
-        run: |
-          SECURITY_ISSUES=false
-          echo "SECURITY_RESULTS<<EOF" >> $GITHUB_ENV
-          echo "### 🔒 Security and Syntax Check Results" >> $GITHUB_ENV
-          echo "" >> $GITHUB_ENV
+                   - name: Security and Syntax Check
+              id: security
+              continue-on-error: true
+              run: |
+                SECURITY_ISSUES=false
+                echo "SECURITY_RESULTS<<EOF" >> $GITHUB_ENV
+                echo "### 🔒 Security and Syntax Check Results" >> $GITHUB_ENV
+                echo "" >> $GITHUB_ENV
+            
+                for tf_file in $(find . -name "*.tf" -type f); do
+                  FILE_HAS_ISSUES=false
+            
+                  if CREDS=$(grep -n -i "access_key\|secret_key\|password\|token" "$tf_file"); then
+                    SECURITY_ISSUES=true
+                    FILE_HAS_ISSUES=true
+                    echo "HAS_ISSUES=true" >> $GITHUB_ENV
+                    echo "❌ Hardcoded Credentials found in \`$tf_file\`:" >> $GITHUB_ENV
+                    echo "\`\`\`" >> $GITHUB_ENV
+                    echo "$CREDS" >> $GITHUB_ENV
+                    echo "\`\`\`" >> $GITHUB_ENV
+                    echo "" >> $GITHUB_ENV
+                  fi
+                done
 
-          for tf_file in $(find . -name "*.tf" -type f); do
-            FILE_HAS_ISSUES=false
-week2-progress
-
-   
- week2
             if CREDS=$(grep -n -i "access_key\|secret_key\|password\|token" "$tf_file"); then
               SECURITY_ISSUES=true
               FILE_HAS_ISSUES=true
