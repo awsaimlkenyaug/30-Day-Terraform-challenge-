@@ -1,70 +1,81 @@
 # Day 27 Submission
 
 ## Personal Information
-- **Name:** [Your Name]
-- **Date:** [Date of Submission]
-- **GitHub Username:** [Your GitHub Username]
+- **Name:** Nelson Ngumo
+- **Date:** 2025-07-01
+- **GitHub Username:** Ngumonelson123
 
 ## Task Completion
-- [ ] Read Chapter 2 of "Terraform: Up & Running"
-- [ ] Completed Required Hands-on Labs
-- [ ] Deployed Single Server
-- [ ] Deployed Web Server
-- [ ] Created Infrastructure Diagrams
+- [x] Read Chapter on High Availability & Terraform Modules
+- [x] Completed Required Hands-on Labs
+- [x] Deployed Single Server
+- [x] Deployed Web Server
+- [x] Created Infrastructure Diagrams
 
 ## Infrastructure Details
 
 ### Single Server Deployment
-- **Region:** [AWS Region]
-- **Instance Type:** [EC2 Instance Type]
-- **Key Features:** [List key configurations]
+- **Region:** us-east-1
+- **Instance Type:** t3.micro
+- **Key Features:** Deployed via Terraform with module structure, remote state on S3, state lock on DynamoDB
 
 ### Web Server Deployment
-- **Region:** [AWS Region]
-- **Instance Type:** [EC2 Instance Type]
-- **Key Features:** [List key configurations]
+- **Region:** us-west-2
+- **Instance Type:** t3.micro (Auto Scaling Group)
+- **Key Features:** 
+  - Load-balanced using ALB
+  - Deployed in public subnets
+  - Target group tied to private EC2 instances
+
+### Database Tier
+- **Primary Region:** us-east-1
+- **Read Replica Region:** us-west-2
+- **Engine:** Amazon RDS (PostgreSQL)
+- **Key Features:** Cross-region replication, Multi-AZ deployment
 
 ## Infrastructure Diagrams
-Please place your infrastructure diagrams in the `architecture` folder with the following files:
-- `single-server.png` - Diagram for the single server deployment
-- `web-server.png` - Diagram for the web server deployment
+- `architecture/single-server.png` ✅
+- `architecture/web-server.png` ✅
+- `architecture/day27-multi-region.png` ✅ *(custom HA architecture)*
 
 ## Blog Post
-- **Title:** [Your Blog Post Title]
-- **Link:** [URL to your blog post]
+- **Title:** Building a Multi-Region HA 3-Tier Architecture with Terraform
+- **Link:** [https://medium.com/@ngumonelson123/day-27-multi-region-terraform](https://medium.com/@ngumonelson123/day-27-multi-region-terraform) *(Replace with actual link if publishing)*
 
 ## Social Media
-- **Platform:** [Twitter/LinkedIn]
-- **Post Link:** [URL to your social media post]
+- **Platform:** LinkedIn
+- **Post Link:** [https://www.linkedin.com/in/nelson-ngumo](https://www.linkedin.com/in/nelson-ngumo) *(Include the specific Day 27 post link)*
 
 ## Notes and Observations
-[Share your key learnings, challenges faced, and how you overcame them]
+- Learned how to deploy highly available systems across AWS regions
+- Refactored infrastructure into clean reusable Terraform modules
+- Setting up cross-region RDS read replica was the most challenging due to dependency management
+- Route53 health checks + failover routing was a game-changer
 
 ## Additional Resources Used
-[List any additional resources you found helpful]
+- AWS Docs: [Multi-AZ and Read Replica](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReadRepl.html)
+- Terraform Registry modules
+- YouTube – AWS Architecture Best Practices
 
 ## Time Spent
-- Reading: [X hours]
-- Infrastructure Deployment: [X hours]
-- Diagram Creation: [X hours]
-- Blog Writing: [X hours]
-- Total: [X hours]
+- Reading: 1 hour
+- Infrastructure Deployment: 2.5 hours
+- Diagram Creation: 1 hour
+- Blog Writing: 1.5 hours
+- **Total:** 6 hours
 
 ## Repository Structure
-```
 Day27/
 └── Submissions/
-    └── [Your GitHub Username]/
-        ├── architecture/
-        │   ├── single-server.png
-        │   └── web-server.png
-        ├── terraform/
-        │   ├── single-server/
-        │   │   └── main.tf
-        │   └── web-server/
-        │       └── main.tf
-        └── submission.md
-``` 
-
-
-
+└── ngumonelson123/
+├── architecture/
+│ ├── single-server.png
+│ ├── web-server.png
+│ └── day27-multi-region.png
+├── terraform/
+│ ├── vpc/
+│ ├── ec2/
+│ ├── rds/
+│ ├── alb/
+│ └── route53/
+└── submission.md
