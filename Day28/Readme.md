@@ -29,7 +29,7 @@ Today, we focus on preparing for the Terraform Associate Certification exam by t
 ---
 
 ## Social Media Post
-- "🚀 Took my first two practice exams today and learned so much! Excited to keep preparing for the Terraform Associate Certification! #30daytfchallenge #HUG #hashicorp #HUGYDE @Chi Che. #IaC #terraform"
+- "🚀 Took my first two practice exams today and learned so much! Excited to keep preparing for the Terraform Associate Certification! #30daytfchallenge #HUG #hashicorp #HUGMERU @awsaimlkenyaug #IaC #terraform"
 
 ---
 

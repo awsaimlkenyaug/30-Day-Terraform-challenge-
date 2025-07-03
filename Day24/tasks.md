@@ -13,7 +13,7 @@
 4. **Blog Post Ideas**: 
    - "My Final Preparation for the Terraform Associate Exam"
 5. **Social Media Post**: 
-   - "🎓 Final preparations for the Terraform Associate Exam! Time to put all the knowledge into action. #30daytfchallenge #HUG #hashicorp #HUGYDE @Chi Che. #IaC #terraform #examready"
+   - "🎓 Final preparations for the Terraform Associate Exam! Time to put all the knowledge into action. #30daytfchallenge #HUG #hashicorp #HUGMERU @awsaimlkenyaug #IaC #terraform #examready"
 
 ### Submission Instructions
 
