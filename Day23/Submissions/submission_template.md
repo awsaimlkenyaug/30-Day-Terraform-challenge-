@@ -1,70 +1,75 @@
 # Day 23 Submission
 
 ## Personal Information
-- **Name:** [Your Name]
-- **Date:** [Date of Submission]
-- **GitHub Username:** [Your GitHub Username]
+- **Name:** Nelson Ngumo
+- **Date:** 2025-06-29
+- **GitHub Username:** ngumonelson123
 
 ## Task Completion
-- [ ] Read Chapter 2 of "Terraform: Up & Running"
-- [ ] Completed Required Hands-on Labs
-- [ ] Deployed Single Server
-- [ ] Deployed Web Server
-- [ ] Created Infrastructure Diagrams
+- [x] Read Chapter 2 of "Terraform: Up & Running"
+- [x] Completed Required Hands-on Labs
+- [x] Deployed Single Server
+- [x] Deployed Web Server
+- [x] Created Infrastructure Diagrams
 
 ## Infrastructure Details
 
 ### Single Server Deployment
-- **Region:** [AWS Region]
-- **Instance Type:** [EC2 Instance Type]
-- **Key Features:** [List key configurations]
+- **Region:** us-east-1
+- **Instance Type:** t2.micro
+- **Key Features:**
+  - VPC with subnet
+  - Internet connectivity via IGW
+  - EC2 instance with SSH access only
 
 ### Web Server Deployment
-- **Region:** [AWS Region]
-- **Instance Type:** [EC2 Instance Type]
-- **Key Features:** [List key configurations]
+- **Region:** us-east-1
+- **Instance Type:** t2.micro
+- **Key Features:**
+  - VPC with subnet
+  - Public IP with IGW and routing
+  - EC2 instance with NGINX via user_data
+  - Security group for HTTP (80) and SSH (22)
 
 ## Infrastructure Diagrams
-Please place your infrastructure diagrams in the `architecture` folder with the following files:
-- `single-server.png` - Diagram for the single server deployment
-- `web-server.png` - Diagram for the web server deployment
+- `architecture/single-server.png`
+- `architecture/web-server.png`
 
 ## Blog Post
-- **Title:** [Your Blog Post Title]
-- **Link:** [URL to your blog post]
+- **Title:** Preparing for the Terraform Associate Exam – Key Concepts & Strategy
+- **Link:** [https://medium.com/@ngumonelson123/terraform-associate-exam-prep](https://medium.com/@ngumonelson123/terraform-associate-exam-prep)
 
 ## Social Media
-- **Platform:** [Twitter/LinkedIn]
-- **Post Link:** [URL to your social media post]
+- **Platform:** LinkedIn
+- **Post Link:** [https://linkedin.com/in/ngumonelson123](https://linkedin.com/in/ngumonelson123)
 
 ## Notes and Observations
-[Share your key learnings, challenges faced, and how you overcame them]
+- Realized AWS accounts may lack default VPC — resolved by defining custom VPC.
+- Confident deploying end-to-end infrastructure with Terraform.
+- Reviewed key concepts like provider aliasing, user_data, remote backends, and workspaces.
 
 ## Additional Resources Used
-[List any additional resources you found helpful]
+- HashiCorp Docs: Terraform Associate Study Guide
+- YouTube: Terraform Bootcamp by FreeCodeCamp
+- Community Discord Discussions
 
 ## Time Spent
-- Reading: [X hours]
-- Infrastructure Deployment: [X hours]
-- Diagram Creation: [X hours]
-- Blog Writing: [X hours]
-- Total: [X hours]
+- Reading: 1.5 hours
+- Infrastructure Deployment: 2 hours
+- Diagram Creation: 0.5 hours
+- Blog Writing: 1 hour
+- Total: 5 hours
 
 ## Repository Structure
-```
 Day23/
 └── Submissions/
-    └── [Your GitHub Username]/
-        ├── architecture/
-        │   ├── single-server.png
-        │   └── web-server.png
-        ├── terraform/
-        │   ├── single-server/
-        │   │   └── main.tf
-        │   └── web-server/
-        │       └── main.tf
-        └── submission.md
-``` 
-
-
-
+└── ngumonelson123/
+├── architecture/
+│ ├── single-server.png
+│ └── web-server.png
+├── terraform/
+│ ├── single-server/
+│ │ └── main.tf
+│ └── web-server/
+│ └── main.tf
+└── submission.md

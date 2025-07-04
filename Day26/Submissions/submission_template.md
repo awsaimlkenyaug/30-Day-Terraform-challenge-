@@ -1,60 +1,95 @@
-# Day 26 Submission
+Day 26 Submission
+Personal Information
+Name: Nelson Ngumo
 
-## Personal Information
-- **Name:** [Your Name]
-- **Date:** [Date of Submission]
-- **GitHub Username:** [Your GitHub Username]
+Date: 2025-06-29
 
-## Task Completion
-- [ ] Read Chapter 2 of "Terraform: Up & Running"
-- [ ] Completed Required Hands-on Labs
-- [ ] Deployed Single Server
-- [ ] Deployed Web Server
-- [ ] Created Infrastructure Diagrams
+GitHub Username: ngumonelson123
 
-## Infrastructure Details
+Task Completion
+ Read Chapter 2 of "Terraform: Up & Running"
 
-### Single Server Deployment
-- **Region:** [AWS Region]
-- **Instance Type:** [EC2 Instance Type]
-- **Key Features:** [List key configurations]
+ Completed Required Hands-on Labs
 
-### Web Server Deployment
-- **Region:** [AWS Region]
-- **Instance Type:** [EC2 Instance Type]
-- **Key Features:** [List key configurations]
+ Deployed Single Server
 
-## Infrastructure Diagrams
-Please place your infrastructure diagrams in the `architecture` folder with the following files:
-- `single-server.png` - Diagram for the single server deployment
-- `web-server.png` - Diagram for the web server deployment
+ Deployed Web Server
 
-## Blog Post
-- **Title:** [Your Blog Post Title]
-- **Link:** [URL to your blog post]
+ Created Infrastructure Diagrams
 
-## Social Media
-- **Platform:** [Twitter/LinkedIn]
-- **Post Link:** [URL to your social media post]
+Infrastructure Details
+Single Server Deployment
+Region: us-east-1
 
-## Notes and Observations
-[Share your key learnings, challenges faced, and how you overcame them]
+Instance Type: t2.micro
 
-## Additional Resources Used
-[List any additional resources you found helpful]
+Key Features:
 
-## Time Spent
-- Reading: [X hours]
-- Infrastructure Deployment: [X hours]
-- Diagram Creation: [X hours]
-- Blog Writing: [X hours]
-- Total: [X hours]
+Security group with HTTP (80) and SSH (22) access
 
-## Repository Structure
-```
+Remote state stored in S3 with locking via DynamoDB
+
+Tagged for environment and automation
+
+Web Server Deployment
+Region: us-east-1
+
+Instance Type: t2.micro (via Launch Template)
+
+Key Features:
+
+Load Balanced with AWS ELB
+
+Auto Scaling Group with min/max/desired instances
+
+CloudWatch alarms to scale based on CPU utilization
+
+Modular structure for EC2, ELB, and ASG
+
+Infrastructure Diagrams
+single-server.png ✅
+
+web-server.png ✅
+
+Blog Post
+Title: Building a Scalable Web App with Terraform, ELB & Auto Scaling
+
+Link: https://medium.com/@ngumonelson123/day26-scalable-terraform-iac
+
+Social Media
+Platform: LinkedIn
+
+Post Link: https://www.linkedin.com/posts/ngumonelson123_day26-terraform-scalable-iac-activity-
+
+Notes and Observations
+Modularization made it easier to manage complex infrastructure.
+
+Faced challenges in linking Launch Template with ASG; resolved via dependency outputs.
+
+Learned how CloudWatch alarms enhance elasticity with autoscaling triggers.
+
+Additional Resources Used
+Terraform Registry Modules
+
+AWS Auto Scaling & ELB Documentation
+
+YouTube: Terraform Auto Scaling with ELB by FreeCodeCamp
+
+Time Spent
+Reading: 1.5 hours
+
+Infrastructure Deployment: 3 hours
+
+Diagram Creation: 1 hour
+
+Blog Writing: 1 hour
+
+Total: 6.5 hours
+
+Repository Structure
 Day26/
 └── Submissions/
-    └── [Your GitHub Username]/
+    └── ngumonelson123/
         ├── architecture/
         │   ├── single-server.png
         │   └── web-server.png
@@ -64,7 +99,3 @@ Day26/
         │   └── web-server/
         │       └── main.tf
         └── submission.md
-``` 
-
-
-

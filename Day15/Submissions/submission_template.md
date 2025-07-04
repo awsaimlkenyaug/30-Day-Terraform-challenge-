@@ -1,28 +1,28 @@
 # Day 15 Submission
 
 ## Personal Information
-- **Name:** [Your Name]
-- **Date:** [Date of Submission]
-- **GitHub Username:** [Your GitHub Username]
+- **Name:** Nelson Ngumo
+- **Date:** 2025-06-26
+- **GitHub Username:** ngumonelson123
 
 ## Task Completion
-- [ ] Read Chapter 2 of "Terraform: Up & Running"
-- [ ] Completed Required Hands-on Labs
-- [ ] Deployed Single Server
-- [ ] Deployed Web Server
-- [ ] Created Infrastructure Diagrams
+- [x] Read Chapter 7 of "Terraform: Up & Running"
+- [x] Completed Required Hands-on Labs
+- [x] Deployed Single Server
+- [x] Deployed Web Server
+- [x] Created Infrastructure Diagrams
 
 ## Infrastructure Details
 
 ### Single Server Deployment
-- **Region:** [AWS Region]
-- **Instance Type:** [EC2 Instance Type]
-- **Key Features:** [List key configurations]
+- **Region:** us-east-1
+- **Instance Type:** t2.micro
+- **Key Features:** Deployed using module with provider aliasing, reusable design
 
 ### Web Server Deployment
-- **Region:** [AWS Region]
-- **Instance Type:** [EC2 Instance Type]
-- **Key Features:** [List key configurations]
+- **Region:** us-west-2
+- **Instance Type:** t2.micro
+- **Key Features:** Separate provider alias, modular EC2 provisioning across region
 
 ## Infrastructure Diagrams
 Please place your infrastructure diagrams in the `architecture` folder with the following files:
@@ -30,41 +30,46 @@ Please place your infrastructure diagrams in the `architecture` folder with the 
 - `web-server.png` - Diagram for the web server deployment
 
 ## Blog Post
-- **Title:** [Your Blog Post Title]
-- **Link:** [URL to your blog post]
+- **Title:** Scaling IaC with Terraform: Multi-Cloud & Local Container Deployment
+- **Link:** [https://medium.com/@nelsonmbui88]
 
 ## Social Media
-- **Platform:** [Twitter/LinkedIn]
-- **Post Link:** [URL to your social media post]
+- **Platform:** LinkedIn
+- **Post Link:** [https://www.linkedin.com/posts/nelson-ngumo-869033162_30dayterraformchallenge-terraform-iac-activity-7344112695010287617-mbHa?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAACbNrBEBpmqmiEP6hVsk2sv4gd_ZU_n3IzM]
 
 ## Notes and Observations
-[Share your key learnings, challenges faced, and how you overcame them]
+- Used provider aliases to manage multi-region EC2 provisioning
+- Refactored EC2 provisioning into a reusable module
+- Deployed Docker container using Terraform locally
+- Deployed Kubernetes namespace using Terraform on Minikube
+- Learned how to structure multi-cloud and local resources within a unified Terraform setup
 
 ## Additional Resources Used
-[List any additional resources you found helpful]
+- Terraform Docs on Providers & Modules
+- Docker Provider Registry
+- Kubernetes Provider Registry
 
 ## Time Spent
-- Reading: [X hours]
-- Infrastructure Deployment: [X hours]
-- Diagram Creation: [X hours]
-- Blog Writing: [X hours]
-- Total: [X hours]
+- Reading: 1 hour
+- Infrastructure Deployment: 2 hours
+- Diagram Creation: 1 hour
+- Blog Writing: 1 hour
+- Total: 5 hours
 
 ## Repository Structure
 ```
 Day15/
 └── Submissions/
-    └── [Your GitHub Username]/
+    └── ngumonelson123/
         ├── architecture/
         │   ├── single-server.png
         │   └── web-server.png
         ├── terraform/
         │   ├── single-server/
         │   │   └── main.tf
-        │   └── web-server/
+        │   ├── web-server/
+        │   │   └── main.tf
+        │   └── kubernetes-cluster/
         │       └── main.tf
         └── submission.md
-``` 
-
-
-
+```
