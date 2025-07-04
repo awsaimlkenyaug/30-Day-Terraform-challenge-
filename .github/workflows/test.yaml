@@ -1,0 +1,42 @@
+name: Terraform CI with Terratest
+
+on:
+  push:
+    branches: [ week4]
+  pull_request:
+    branches: [ week4 ]
+
+jobs:
+  terraform-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: '1.21'
+
+      - name: Install Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.8.0
+
+      - name: Set up AWS Credentials
+        if: secrets.JULIETWANJIKU1 != ''
+        uses: aws-actions/configure-aws-credentials@v3
+        with:
+          aws-access-key-id: ${{ secrets.JULIETWANJIKU2 }}
+          aws-secret-access-key: ${{ secrets.JULIETWANJIKU1 }} 
+          aws-region: us-west-2
+
+      - name: Run Terratest
+        run: |
+          if [ -z "${{ secrets.JULIETWANJIKU1 }}" ]; then
+            echo "Skipping tests: secrets unavailable in forked PR."
+            exit 0
+          fi
+          cd Day16/Submissions/julietwainoi/terraform/tests
+          go test -v

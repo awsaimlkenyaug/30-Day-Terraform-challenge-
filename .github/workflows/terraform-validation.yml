@@ -5,12 +5,16 @@ on:
     branches:
       - "week*"
     types: [opened, synchronize, reopened]
+    paths:
+      - '**/*.tf'
+      - '**/*.tfvars'
 
 jobs:
   terraform-validation:
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -55,7 +59,6 @@ jobs:
             echo "### ✅ File Structure Check Passed" >> $GITHUB_ENV
             echo "- All $FILES_CHECKED Terraform files follow the correct structure" >> $GITHUB_ENV
             echo "EOF" >> $GITHUB_ENV
-          fi
 
       - name: Security and Syntax Check
         id: security
@@ -105,7 +108,6 @@ jobs:
               echo "" >> $GITHUB_ENV
             fi
 
-            # Check for missing closing brackets
             if grep -n "{" "$tf_file" | wc -l > bracket_open && grep -n "}" "$tf_file" | wc -l > bracket_close; then
               if [ "$(cat bracket_open)" -ne "$(cat bracket_close)" ]; then
                 SECURITY_ISSUES=true
@@ -212,20 +214,20 @@ jobs:
         with:
           script: |
             const fileStructure = process.env.FILE_STRUCTURE_RESULTS || '';
-            const security = process.env.SECURITY_RESULTS || '';
-            const format = process.env.FORMAT_RESULTS || '';
-            const validation = process.env.VALIDATION_RESULTS || '';
-            const hasIssues = process.env.HAS_ISSUES === 'true';
+            const security     = process.env.SECURITY_RESULTS     || '';
+            const format       = process.env.FORMAT_RESULTS       || '';
+            const validation   = process.env.VALIDATION_RESULTS   || '';
+            const hasIssues    = process.env.HAS_ISSUES === 'true';
 
             let comment = '## 📋 Terraform Validation Summary\n\n';
-            comment += hasIssues ?
-              '### Status: Changes Required ⚠️\n' :
-              '### Status: All Checks Passed ✅\n';
+            comment += hasIssues
+              ? '### Status: Changes Required ⚠️\n'
+              : '### Status: All Checks Passed ✅\n';
 
             comment += '\n## Detailed Results\n\n';
             comment += fileStructure + '\n';
-            comment += security + '\n';
-            comment += format + '\n';
+            comment += security     + '\n';
+            comment += format       + '\n';
             comment += validation;
 
             github.rest.issues.createComment({
