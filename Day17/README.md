@@ -28,7 +28,7 @@ Welcome to Day 17 of the Terraform 30-Day Challenge! Today, we’ll dive into th
    - **Title**: "The Importance of Manual Testing in Terraform"
 
 ### 5. **Social Media Post**
-   - **Text**: "🔍 Spent the day diving into manual testing for Terraform code—an essential step in ensuring infrastructure stability before deploying to production! #30daytfchallenge #HUG #hashicorp #HUGYDE @Chi Che. #IaC #terraform
+   - **Text**: "🔍 Spent the day diving into manual testing for Terraform code—an essential step in ensuring infrastructure stability before deploying to production! #30daytfchallenge #HUG #hashicorp #HUGMERU @awsaimlkenyaug #IaC #terraform
 "
 
 ### 6. **Activity**

@@ -14,7 +14,7 @@
 4. **Blog Post Ideas**: 
    - "A Workflow for Deploying Infrastructure Code with Terraform"
 5. **Social Media Post**: 
-   - "🔧 Deploying infrastructure code with version control and Terraform Cloud's private registry. Ready for production! #30daytfchallenge #HUG #hashicorp #HUGYDE @Chi Che. #IaC #terraform"
+   - "🔧 Deploying infrastructure code with version control and Terraform Cloud's private registry. Ready for production! #30daytfchallenge #HUG #hashicorp #HUGMERU @awsaimlkenyaug #IaC #terraform"
 
 ### Submission Instructions
 

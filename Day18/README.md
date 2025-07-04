@@ -31,7 +31,7 @@ Welcome to Day 18 of the Terraform 30-Day Challenge! Today, we will dive into th
    - **Title**: "Automating Terraform Testing: From Unit Tests to End-to-End Validation"
 
 ### 6. **Social Media Post**
-   - **Text**: "🚀 Automated testing for my Terraform code is now up and running—confidence in infrastructure has never been higher! #30daytfchallenge #HUG #hashicorp #HUGYDE @Chi Che. #IaC #terraform"
+   - **Text**: "🚀 Automated testing for my Terraform code is now up and running—confidence in infrastructure has never been higher! #30daytfchallenge #HUG #hashicorp #HUGMERU @awsaimlkenyaug #IaC #terraform"
 
 ## How to Submit Your Work
 
