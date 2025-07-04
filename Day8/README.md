@@ -25,13 +25,13 @@ Welcome to Day 8 of the Terraform 30-Day Challenge! Today, we will focus on crea
    - **Title**: "Building Reusable Infrastructure with Terraform Modules"
 
 ### 6. **Social Media Post**
-   - **Text**: "🔄 Implemented reusable Terraform modules today! #HUG #hashicorp #HUGYDE @chiche #IaC"
+   - **Text**: "🔄 Implemented reusable Terraform modules today! #HUG #hashicorp #HUGMERU @awsaimlkenyaug #IaC"
 
 ## How to Submit Your Work
 
 ### 1. **Create the `day8-update-your-github-username.md` File**
    - Include your Terraform code and any architecture diagrams in the markdown file.
-   - Document your Terraform module, including the inputs, outputs, and how it’s used.
+   - Document your Terraform module, including the inputs, outputs, and how it's used.
    - Save the file in your `day8-reusable-modules` branch.
 
 ### 2. **Commit Your Changes**

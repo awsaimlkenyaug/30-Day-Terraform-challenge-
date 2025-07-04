@@ -1,0 +1,21 @@
+name: Destroy Infrastructure
+
+on:
+  workflow_dispatch:
+
+env:
+  TF_CLOUD_ORGANIZATION: "david-kamau-org"
+  TF_WORKSPACE: "web-server-prod"
+
+jobs:
+  destroy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: hashicorp/setup-terraform@v3
+      with:
+        cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
+    - run: terraform init
+      working-directory: ./David-Kamau-Builds/Work-flow/terraform
+    - run: terraform destroy -auto-approve
+      working-directory: ./David-Kamau-Builds/Work-flow/terraform

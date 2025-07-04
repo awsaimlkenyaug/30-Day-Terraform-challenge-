@@ -15,7 +15,7 @@
 4. **Blog Post Ideas**: 
    - "Preparing for the Terraform Associate Exam - Key Resources and Tips"
 5. **Social Media Post**: 
-   - "🎯 Brushing up on Terraform concepts and preparing for the certification exam. #30daytfchallenge #HUG #hashicorp #HUGYDE @Chi Che. #IaC #terraform #examready"
+   - "🎯 Brushing up on Terraform concepts and preparing for the certification exam. #30daytfchallenge #HUG #hashicorp #HUGMERU @awsaimlkenyaug #IaC #terraform #examready"
 
 ### Submission Instructions
 

@@ -28,7 +28,7 @@ Welcome to Day 4 of the Terraform 30-Day Challenge! Today, we’re building on t
   
 
 ### 5. **Social Media Post**
-   - **Text**: "🔥 Deployed a highly available web app today! I'm beginning to enjoy the benefits of IaC. #30daytfchallenge #HUG #hashicorp #HUGYDE @chiche #IaC"
+   - **Text**: "🔥 Deployed a highly available web app today! I'm beginning to enjoy the benefits of IaC. #30daytfchallenge #HUG #hashicorp #HUGMERU @awsaimlkenyaug #IaC"
    
 ## How to Submit Your Work
 #### Hint: syncfork -> create day 4 branch -> create your day4-update.md file -> commit -> pull request
